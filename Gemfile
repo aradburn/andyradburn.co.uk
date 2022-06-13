@@ -15,8 +15,12 @@ gem "minima", "~> 2.5"
 gem "github-pages", "~> 226", group: :jekyll_plugins
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.12"
+  gem "jekyll-feed"
+  gem "jekyll-seo-tag", github: "jekyll/jekyll-seo-tag"
+  gem "jekyll-sitemap"
+  gem "jekyll-paginate-v2", ">= 3.0"
 end
+gem "minimal-categorized"
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
@@ -31,3 +35,9 @@ gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 # Lock `http_parser.rb` gem to `v0.6.x` on JRuby builds since newer versions of the gem
 # do not have a Java counterpart.
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
+
+gem "kramdown-parser-gfm"
+gem "kramdown-syntax-coderay"
+#seo
+
+gem "webrick", "~> 1.7"
