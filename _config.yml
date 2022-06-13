@@ -17,7 +17,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-
+destination: docs
 title: Andy Radburn
 tagline: Andy Radburn's Website
 email: andyradburn.co.uk@btinternet.com
