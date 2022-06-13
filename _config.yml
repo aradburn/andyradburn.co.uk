@@ -60,10 +60,10 @@ pagination:
 
 include:
     - .nojekyll
+    - CNAME
 
 exclude:
     - CHANGELOG.md
-    - CNAME
     - Gemfile
     - Gemfile.lock
     - LICENSE
