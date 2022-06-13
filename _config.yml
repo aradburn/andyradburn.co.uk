@@ -58,6 +58,9 @@ pagination:
   sort_field: 'date'
   sort_reverse: true
 
+include:
+    - .nojekyll
+
 exclude:
     - CHANGELOG.md
     - CNAME
