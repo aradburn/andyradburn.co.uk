@@ -1,1 +1,3 @@
+User-agent: *
+Disallow:
 Sitemap: https://andyradburn.co.uk/sitemap.xml
