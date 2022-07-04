@@ -61,6 +61,7 @@ pagination:
 include:
     - .nojekyll
     - CNAME
+    - googlec155f574991bb7d4.html
 
 exclude:
     - CHANGELOG.md
