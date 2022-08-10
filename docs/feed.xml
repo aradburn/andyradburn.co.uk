@@ -1,36 +1,50 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="https://andyradburn.co.uk/feed.xml" rel="self" type="application/atom+xml" /><link href="https://andyradburn.co.uk/" rel="alternate" type="text/html" /><updated>2022-08-09T11:44:34+01:00</updated><id>https://andyradburn.co.uk/feed.xml</id><title type="html">Andy Radburn</title><subtitle>Andy Radburn's website.</subtitle><author><name>aradburn</name></author><entry><title type="html">Dubbal Videos</title><link href="https://andyradburn.co.uk/videos.html" rel="alternate" type="text/html" title="Dubbal Videos" /><published>2022-08-08T00:00:00+01:00</published><updated>2022-08-08T00:00:00+01:00</updated><id>https://andyradburn.co.uk/videos</id><content type="html" xml:base="https://andyradburn.co.uk/videos.html">&lt;p align=&quot;center&quot;&gt;
-  &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/VOGi_H0PJfQ&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;/p&gt;
-&lt;p align=&quot;center&quot;&gt;
-  &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/GPljPbC-4pE&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;/p&gt;
-&lt;p align=&quot;center&quot;&gt;
-  &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/nVDS2jsS1bQ&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="https://andyradburn.co.uk/feed.xml" rel="self" type="application/atom+xml" /><link href="https://andyradburn.co.uk/" rel="alternate" type="text/html" /><updated>2022-08-10T12:08:22+01:00</updated><id>https://andyradburn.co.uk/feed.xml</id><title type="html">Andy Radburn</title><subtitle>Andy Radburn's website.</subtitle><author><name>aradburn</name></author><entry><title type="html">Dubbal - Return Of The Lonesome Traveller</title><link href="https://andyradburn.co.uk/music-return-of-the-lonesome-traveller.html" rel="alternate" type="text/html" title="Dubbal - Return Of The Lonesome Traveller" /><published>2022-08-10T00:00:00+01:00</published><updated>2022-08-10T00:00:00+01:00</updated><id>https://andyradburn.co.uk/music-return-of-the-lonesome-traveller</id><content type="html" xml:base="https://andyradburn.co.uk/music-return-of-the-lonesome-traveller.html">&lt;div class=&quot;bandcamp-container&quot;&gt;
+  &lt;iframe style=&quot;border: 0; width: 350px; height: 588px;&quot; src=&quot;https://bandcamp.com/EmbeddedPlayer/album=866792602/size=large/bgcol=333333/linkcol=3282B8/transparent=true/&quot; seamless=&quot;&quot;&gt;&lt;a href=&quot;https://kevellis.bandcamp.com/album/the-return-of-the-lonesome-traveller&quot;&gt;The Return Of The Lonesome Traveller by Dubbal&lt;/a&gt;&lt;/iframe&gt;
+&lt;/div&gt;</content><author><name>aradburn</name></author><category term="dubbal" /><summary type="html">The Return Of The Lonesome Traveller by Dubbal</summary></entry><entry><title type="html">Buy Occator by Sonic Arcana from Bandcamp</title><link href="https://andyradburn.co.uk/occator.html" rel="alternate" type="text/html" title="Buy Occator by Sonic Arcana from Bandcamp" /><published>2022-08-10T00:00:00+01:00</published><updated>2022-08-10T00:00:00+01:00</updated><id>https://andyradburn.co.uk/occator</id><content type="html" xml:base="https://andyradburn.co.uk/occator.html">&lt;div class=&quot;bandcamp-container&quot;&gt;
+  &lt;iframe style=&quot;border: 0; width: 350px; height: 588px;&quot; src=&quot;https://bandcamp.com/EmbeddedPlayer/album=755602290/size=large/bgcol=333333/linkcol=4ec5ec/transparent=true/&quot; seamless=&quot;&quot;&gt;&lt;a href=&quot;https://sonicarcana.bandcamp.com/album/occator&quot;&gt;Occator by Sonic Arcana&lt;/a&gt;&lt;/iframe&gt;
+&lt;/div&gt;</content><author><name>aradburn</name></author><category term="sonicarcana" /><category term="sonicarcana," /><category term="home" /><summary type="html">Occator by Sonic Arcana</summary></entry><entry><title type="html">Dubbal Music on Discogs</title><link href="https://andyradburn.co.uk/music.html" rel="alternate" type="text/html" title="Dubbal Music on Discogs" /><published>2022-08-09T00:00:00+01:00</published><updated>2022-08-09T00:00:00+01:00</updated><id>https://andyradburn.co.uk/music</id><content type="html" xml:base="https://andyradburn.co.uk/music.html">&lt;p&gt;
+  &lt;a href=&quot;https://www.discogs.com/artist/5744059-Dubbal&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Dubbal on Discogs&lt;/a&gt;
+&lt;/p&gt;</content><author><name>aradburn</name></author><category term="dubbal" /><summary type="html">Dubbal on Discogs</summary></entry><entry><title type="html">Dubbal Videos</title><link href="https://andyradburn.co.uk/videos.html" rel="alternate" type="text/html" title="Dubbal Videos" /><published>2022-08-08T00:00:00+01:00</published><updated>2022-08-08T00:00:00+01:00</updated><id>https://andyradburn.co.uk/videos</id><content type="html" xml:base="https://andyradburn.co.uk/videos.html">&lt;h1&gt;2022&lt;/h1&gt;
+&lt;h3 style=&quot;padding-left: 2em&quot;&gt;Summer Of Love Party 2022 - Videos coming soon...&lt;/h3&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h3 style=&quot;padding-left: 2em&quot;&gt;Blind Cat Resurrected Festival 2022&lt;/h3&gt;
 
-&lt;h2&gt;Wingies Festival 2019&lt;/h2&gt;
-&lt;p align=&quot;center&quot;&gt;
-  &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/n5PoOMcR_CU&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;/p&gt;
+&lt;div class=&quot;video-container&quot;&gt;
+  &lt;iframe class=&quot;video-content&quot; src=&quot;https://www.youtube.com/embed/GPljPbC-4pE&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
 
-&lt;h2&gt;Summer Of Love Party 2022&lt;/h2&gt;
-&lt;p align=&quot;center&quot;&gt;
-  &lt;iframe src=&quot;https://www.facebook.com/plugins/video.php?height=314&amp;amp;href=https%3A%2F%2Fwww.facebook.com%2Falan.shaw.319%2Fvideos%2F581912833630467%2F&amp;amp;show_text=false&amp;amp;width=560&amp;amp;t=0&quot; width=&quot;560&quot; height=&quot;314&quot; style=&quot;border:none;overflow:hidden&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;true&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share&quot;&gt;&lt;/iframe&gt;
-&lt;/p&gt;
-&lt;p align=&quot;center&quot;&gt;
-  &lt;iframe src=&quot;https://www.facebook.com/plugins/video.php?height=314&amp;amp;href=https%3A%2F%2Fwww.facebook.com%2Falan.shaw.319%2Fvideos%2F733237417908532%2F&amp;amp;show_text=false&amp;amp;width=560&amp;amp;t=0&quot; width=&quot;560&quot; height=&quot;314&quot; style=&quot;border:none;overflow:hidden&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;true&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share&quot;&gt;&lt;/iframe&gt;
-&lt;/p&gt;
-&lt;p align=&quot;center&quot;&gt;
-  &lt;iframe src=&quot;https://www.facebook.com/plugins/video.php?height=314&amp;amp;href=https%3A%2F%2Fwww.facebook.com%2Falan.shaw.319%2Fvideos%2F1187873088735904%2F&amp;amp;show_text=false&amp;amp;width=560&amp;amp;t=0&quot; width=&quot;560&quot; height=&quot;314&quot; style=&quot;border:none;overflow:hidden&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;true&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share&quot;&gt;&lt;/iframe&gt;
-&lt;/p&gt;
-&lt;p align=&quot;center&quot;&gt;
-  &lt;iframe src=&quot;https://www.facebook.com/plugins/video.php?height=314&amp;amp;href=https%3A%2F%2Fwww.facebook.com%2Falan.shaw.319%2Fvideos%2F1470065176377985%2F&amp;amp;show_text=false&amp;amp;width=560&amp;amp;t=0&quot; width=&quot;560&quot; height=&quot;314&quot; style=&quot;border:none;overflow:hidden&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;true&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share&quot;&gt;&lt;/iframe&gt;
-&lt;/p&gt;
+&lt;h1&gt;2021&lt;/h1&gt;
+&lt;div class=&quot;video-container&quot;&gt;
+  &lt;iframe class=&quot;video-content&quot; src=&quot;https://www.youtube.com/embed/4o_v1ZA9CZs&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
 
-&lt;h2&gt;Cosmic Puffin Festival 2016&lt;/h2&gt;
-&lt;p align=&quot;center&quot;&gt;
-  &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/vKd6_5kRKe8&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;/p&gt;</content><author><name>aradburn</name></author><category term="dubbal" /><summary type="html"></summary></entry><entry><title type="html">Dubbal Gigs 2022</title><link href="https://andyradburn.co.uk/gigs.html" rel="alternate" type="text/html" title="Dubbal Gigs 2022" /><published>2022-06-11T00:00:00+01:00</published><updated>2022-06-11T00:00:00+01:00</updated><id>https://andyradburn.co.uk/gigs</id><content type="html" xml:base="https://andyradburn.co.uk/gigs.html">&lt;table&gt;
+&lt;div class=&quot;video-container&quot;&gt;
+  &lt;iframe class=&quot;video-content&quot; src=&quot;https://www.youtube.com/embed/TDjOBc7M5nc&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h1&gt;2020&lt;/h1&gt;
+&lt;div class=&quot;video-container&quot;&gt;
+  &lt;iframe class=&quot;video-content&quot; src=&quot;https://www.youtube.com/embed/nVDS2jsS1bQ&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h1&gt;2019&lt;/h1&gt;
+&lt;div class=&quot;video-container&quot;&gt;
+  &lt;iframe class=&quot;video-content&quot; src=&quot;https://www.youtube.com/embed/VOGi_H0PJfQ&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;video-container&quot;&gt;
+  &lt;iframe class=&quot;video-content&quot; src=&quot;https://www.youtube.com/embed/n5PoOMcR_CU&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h1&gt;2016&lt;/h1&gt;
+&lt;div class=&quot;video-container&quot;&gt;
+  &lt;iframe class=&quot;video-content&quot; src=&quot;https://www.youtube.com/embed/vKd6_5kRKe8&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h1&gt;2015&lt;/h1&gt;
+&lt;div class=&quot;video-container&quot;&gt;
+  &lt;iframe class=&quot;video-content&quot; src=&quot;https://www.youtube.com/embed/NGe2pFo81JM&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</content><author><name>aradburn</name></author><category term="dubbal" /><summary type="html">2022 Summer Of Love Party 2022 - Videos coming soon... Blind Cat Resurrected Festival 2022</summary></entry><entry><title type="html">Dubbal Gigs 2022</title><link href="https://andyradburn.co.uk/gigs.html" rel="alternate" type="text/html" title="Dubbal Gigs 2022" /><published>2022-06-11T00:00:00+01:00</published><updated>2022-06-11T00:00:00+01:00</updated><id>https://andyradburn.co.uk/gigs</id><content type="html" xml:base="https://andyradburn.co.uk/gigs.html">&lt;table&gt;
   &lt;colgroup&gt;
     &lt;col class=&quot;col1&quot; /&gt;
     &lt;col class=&quot;col2&quot; /&gt;

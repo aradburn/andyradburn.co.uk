@@ -55,6 +55,30 @@ main {
             padding: 0;
             margin-bottom: 1em;
         }
+        .video-container {
+            position: relative;
+            text-align:center;
+            width: 80%;
+            height: 0;
+            margin-left:auto;
+            margin-right:auto;
+            padding-bottom: 56.25%;
+            margin-bottom: 5rem;
+        }
+        .video-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .bandcamp-container {
+            position: relative;
+            width: 100%;
+            text-align:center;
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+        }
     }
 
     .pager {
