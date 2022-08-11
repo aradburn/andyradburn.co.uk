@@ -100,9 +100,12 @@
     }
 
     th, td {
+      font-size: 1.0em;
       padding-left: 12px;
       padding-right: 12px;
       vertical-align:top;
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
 
     .col1 {

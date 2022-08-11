@@ -6,19 +6,21 @@ category: home
     <div class="post-feed">
         {{ content }}
         {% for post in paginator.posts %}
-        {% if post.categories contains page.category %}
+        {% if post.categories contains page.category and post.subcategory != 'discography' %}
         <hr>
         <article>
             <header>
                 <p class="article-date">{{ post.date | date: "%Y-%m-%d" }}</p>
                 <h2>
                     {% if post.external_url %}
-                    <a href="{{ post.external_url | relative_url }}" target="_blank">
-                        {% else %}
-                        <a href="{{ post.url | relative_url }}">
-                            {% endif %}
-                            {{ post.title }}
-                        </a>
+                      <a href="{{ post.external_url | relative_url }}" target="_blank">
+                        {{ post.title }}
+                      </a>
+                    {% else %}
+                      <a href="{{ post.url | relative_url }}">
+                        {{ post.title }}
+                      </a>
+                    {% endif %}
                 </h2>
             </header>
             <section>
@@ -27,20 +29,20 @@ category: home
                         <img
                             click-to-enlarge 
                             {% if post.image_alt %}
-                            alt="{{ post.image_alt }}"
+                              alt="{{ post.image_alt }}"
                             {% endif %}
                             class="post-feed_image"
                             src="{{ post.image | relative_url }}"
                             {% if post.responsiveImage %}
-                            srcset="{% for img in post.responsiveImage %}{{ img.src | relative_url }} {{ img.size }}w{% if forloop.last == false %},{% endif %}{% endfor %}"
-                            sizes="30vw"
+                              srcset="{% for img in post.responsiveImage %}{{ img.src | relative_url }} {{ img.size }}w{% if forloop.last == false %},{% endif %}{% endfor %}"
+                              sizes="30vw"
                             {% endif %}
                         />
                     </div>
                 </figure>
                 <p>
                     {% if post.description %}
-                    {{ post.description }}
+                        {{ post.description }}
                     {% else %}
                         <div class="post-content">
                             {{ post.content }}

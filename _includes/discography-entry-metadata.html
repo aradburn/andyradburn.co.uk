@@ -1,9 +1,9 @@
 {% if include.currPost.type %}
 <p class="discography-album_type">
-    release type: {{ include.currPost.type }}
+    Release Type: {{ include.currPost.type }}
 </p>
 <p class="discography-album_release-date">
-    release date: {{ include.currPost.date | date_to_long_string }}
+    Release Year: {{ include.currPost.date | date: "%Y" }}
 </p>
 {% endif %}
 
@@ -36,7 +36,7 @@
 {% assign buyArray = include.currPost.buy | size %}
 {% if buyArray != 0 %}
 <p class="discography-album_buy">
-    buy from:
+    Buy {{ include.currPost.title }} from:
     {% for buy in include.currPost.buy %}
     <a href="{{ buy.url }}" target="_blank">{{ buy.name }}</a>
     {% if forloop.last == false %}

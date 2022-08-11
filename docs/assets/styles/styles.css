@@ -1,7 +1,5 @@
 h1 { text-transform: uppercase; font-weight: 700; text-rendering: optimizeLegibility; color: #BBE1FA; text-align: center; font-size: 2.5em; letter-spacing: -1px; padding: 0.5em; }
 
-h2 { text-align: center; }
-
 h2, h3 a { font-weight: 500; font-size: 1.4em; line-height: 1.4em; color: #BBE1FA; }
 
 * { padding: 0; margin: 0; box-sizing: border-box; line-height: 1.7em; }
@@ -16,7 +14,7 @@ main .content-container .content-separator:last-child { margin: 30px auto 0 auto
 main .content-container fieldset { border: none; padding: 0; margin-bottom: 1em; }
 main .content-container .video-container { position: relative; text-align: center; width: 80%; height: 0; margin-left: auto; margin-right: auto; padding-bottom: 56.25%; margin-bottom: 5rem; }
 main .content-container .video-content { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-main .content-container .bandcamp-container { position: relative; width: 100%; text-align: center; padding-bottom: 1rem; margin-bottom: 1rem; }
+main .content-container .bandcamp-container { position: relative; width: 100%; padding-bottom: 1rem; margin-bottom: 1rem; }
 main .pager { margin-top: 40px; height: 60px; width: 100%; }
 main .pager li { position: absolute; display: inline; padding: 8px; margin: 10px; }
 main .pager li.previous { left: 0; }
@@ -104,10 +102,14 @@ footer p { margin: 0; }
 .post-feed_image { max-width: 100%; max-height: 80vh; border: 0; margin: auto; }
 .post-feed .discography-album_title { display: none; }
 .post-feed .discography-album_summary { margin-top: 3vw; }
-.post-feed th, .post-feed td { padding-left: 12px; padding-right: 12px; vertical-align: top; }
+.post-feed th, .post-feed td { padding-left: 12px; padding-right: 12px; padding-bottom: 8px; vertical-align: top; }
+@media only screen and (max-device-width: 767px) { .post-feed th, .post-feed td { font-size: 0.5em; overflow-wrap: break-word; word-break: break-word; padding-left: 1em; padding-right: 1em; } }
 .post-feed .col1 { width: 25%; }
 .post-feed .col2 { width: 50%; }
 .post-feed .col3 { width: 25%; }
+@media only screen and (max-device-width: 767px) { .post-feed .col1 { width: 25%; }
+  .post-feed .col2 { width: 35%; }
+  .post-feed .col3 { width: 40%; } }
 
 .post { font-size: 1.2em; color: #BBE1FA; }
 .post a { cursor: pointer; text-decoration: underline; text-decoration-color: transparent; transition: 0.4s; -webkit-text-decoration-color: transparent; -moz-text-decoration-color: transparent; color: #3282B8; }
@@ -132,7 +134,7 @@ footer p { margin: 0; }
 .post .post-metadata a:hover { text-decoration-color: #BBE1FA; -webkit-text-decoration-color: #BBE1FA; -moz-text-decoration-color: #BBE1FA; }
 .post .post-cover_image { display: block; max-width: 100%; width: auto; background-repeat: no-repeat; background-size: cover; height: auto; max-height: 65vh; margin: auto; }
 .post a { font-size: 1em; }
-.post th, .post td { padding-left: 12px; padding-right: 12px; vertical-align: top; }
+.post th, .post td { font-size: 1.0em; padding-left: 12px; padding-right: 12px; vertical-align: top; overflow-wrap: break-word; word-break: break-word; }
 .post .col1 { width: 25%; }
 .post .col2 { width: 50%; }
 .post .col3 { width: 25%; }
@@ -158,7 +160,7 @@ footer p { margin: 0; }
 .discography .discography-album_cover img, .post-feed .discography-album_cover img, .discography .post-feed-album_cover img, .post-feed .post-feed-album_cover img { max-height: 20vw; }
 @media only screen and (max-device-width: 767px) { .discography .discography-album_cover, .post-feed .discography-album_cover, .discography .post-feed-album_cover, .post-feed .post-feed-album_cover { width: 40vw; height: 40vw; margin: auto; }
   .discography .discography-album_cover img, .post-feed .discography-album_cover img, .discography .post-feed-album_cover img, .post-feed .post-feed-album_cover img { width: 40vw; height: 40vw; max-height: 40vw; } }
-.discography .discography-album p, .discography .discography-album a, .post-feed .discography-album p, .post-feed .discography-album a, .discography .post-feed-album p, .discography .post-feed-album a, .post-feed .post-feed-album p, .post-feed .post-feed-album a { font-size: 0.9em; line-height: 1em; font-weight: 300; padding-bottom: 0.5em; color: #BBE1FA; }
+.discography .discography-album p, .discography .discography-album a, .post-feed .discography-album p, .post-feed .discography-album a, .discography .post-feed-album p, .discography .post-feed-album a, .post-feed .post-feed-album p, .post-feed .post-feed-album a { font-size: 1.2em; line-height: 1.5em; font-weight: 300; padding-bottom: 0.5em; color: #BBE1FA; }
 .discography .discography-album a, .post-feed .discography-album a, .discography .post-feed-album a, .post-feed .post-feed-album a { text-decoration: underline; text-decoration-color: transparent; transition: 0.4s; -webkit-text-decoration-color: transparent; -moz-text-decoration-color: transparent; }
 .discography .discography-album a:hover, .post-feed .discography-album a:hover, .discography .post-feed-album a:hover, .post-feed .post-feed-album a:hover { text-decoration-color: #BBE1FA; -webkit-text-decoration-color: #BBE1FA; -moz-text-decoration-color: #BBE1FA; }
 .discography .discography-album section, .post-feed .discography-album section, .discography .post-feed-album section, .post-feed .post-feed-album section { width: 100%; }
