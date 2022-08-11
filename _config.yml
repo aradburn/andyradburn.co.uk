@@ -53,7 +53,7 @@ plugins:
 permalink: /:title.html
 pagination:
   enabled: true
-  per_page: 4
+  per_page: 100
   limit: 0
   sort_field: 'date'
   sort_reverse: true

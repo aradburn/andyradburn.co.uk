@@ -137,6 +137,8 @@ footer p { margin: 0; }
 .post .col2 { width: 50%; }
 .post .col3 { width: 25%; }
 
+.theme-dark-background { background-color: #1B262C !important; }
+
 .cookie-container { position: fixed; padding: 20px 15px; z-index: 100; background-image: radial-gradient(farthest-corner at 25% 0, #1B262C, #1B262C); box-shadow: 0 0 6px 0 #BBE1FA; text-align: center; opacity: 0.95; -webkit-transition: opacity 800ms, visibility 800ms; transition: opacity 800ms, visibility 800ms; bottom: 40px; left: 50px; max-width: 40vw; border-radius: 3px; border: 3px solid #BBE1FA; }
 .cookie-container p { color: #BBE1FA; line-height: 1.6em; margin-bottom: 10px; }
 .cookie-container.hidden { opacity: 0; visibility: hidden; }
