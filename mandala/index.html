@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">-->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link type="text/css" rel="stylesheet" href="mandala.css">
+
+    <!-- MANDALA -->
+    <title>Mandala GWT</title>
+    <script type="text/javascript" src="mandala.nocache.js"></script>
+    <!-- Goat Counter -->
+    <script data-goatcounter="https://aradburn.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
+
+    <!-- Canny SDK -->
+    <script>!function(w,d,i,s){function l(){if(!d.getElementById(i)){var f=d.getElementsByTagName(s)[0],e=d.createElement(s);e.type="text/javascript",e.async=!0,e.src="https://canny.io/sdk.js",f.parentNode.insertBefore(e,f)}}if("function"!=typeof w.Canny){var c=function(){c.q.push(arguments)};c.q=[],w.Canny=c,"complete"===d.readyState?l():w.attachEvent?w.attachEvent("onload",l):w.addEventListener("load",l,!1)}}(window,document,"canny-jssdk","script");</script>
+
+    <!-- Use the Canny SDK to identify the current user of your website -->
+    <script>
+        Canny('identify', {
+          appID: '63454a8f5ba7f04821e5b156',
+          user: {
+            // Replace these values with the current user's data
+            email: 'loddle@btinternet.com',
+            name: 'Mandala',
+            id: 'Mandala',
+
+            // These fields are optional, but recommended:
+            // avatarURL: user.avatarURL,
+            // created: new Date(user.created).toISOString(),
+          },
+        });
+    </script>
+</head>
+<body>
+<noscript>
+    <div style="width: 22em; position: absolute; left: 50%; margin-left: -11em; RGBColor: red; background-RGBColor: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+        Your web browser must have JavaScript enabled
+        in order for this application to display correctly.
+    </div>
+</noscript>
+<div id="error"></div>
+</body>
+</html>
