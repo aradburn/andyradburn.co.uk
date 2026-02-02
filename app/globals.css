@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-surface text-text antialiased;
+    -webkit-tap-highlight-color: rgba(201, 162, 39, 0.25);
+  }
+  a {
+    @apply underline decoration-transparent transition-[text-decoration-color] duration-300 hover:decoration-accent;
+  }
+  h1 {
+    @apply font-display font-bold tracking-tight;
+  }
+  .prose-invert {
+    --tw-prose-body: theme("colors.text");
+    --tw-prose-headings: theme("colors.text");
+    --tw-prose-links: theme("colors.accent");
+    --tw-prose-bold: theme("colors.text");
+    --tw-prose-counters: theme("colors.accent");
+    --tw-prose-quotes: theme("colors.text-muted");
+    --tw-prose-quote-borders: theme("colors.accent");
+    --tw-prose-hr: theme("colors.surface-border");
+  }
+}
+
+@layer utilities {
+  .focus\:not-sr-only:focus,
+  .focus-visible\:not-sr-only:focus-visible {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+}
