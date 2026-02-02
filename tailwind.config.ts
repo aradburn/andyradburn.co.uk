@@ -9,15 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        surface: "#0f1410",
-        "surface-elevated": "#1a2118",
-        "surface-border": "#2a3328",
-        text: "#f5f0e6",
-        "text-muted": "#a8a098",
-        accent: "#c9a227",
-        "accent-dim": "#8b7320",
-        "accent-warm": "#b87333",
-        "accent-teal": "#2d6a6a",
+        surface: "#01261C",
+        "surface-elevated": "#014034",
+        "surface-border": "#0d5345",
+        text: "#F2DEA0",
+        "text-muted": "#BF9F63",
+        accent: "#58A681",
+        "accent-dim": "#3d8a6a",
+        "accent-warm": "#BF9F63",
       },
       fontFamily: {
         sans: ["Arvo", "Georgia", "serif"],
@@ -26,7 +25,7 @@ const config: Config = {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-stage":
-          "linear-gradient(180deg, transparent 0%, rgba(15,20,16,0.6) 50%, rgba(15,20,16,0.95) 100%)",
+          "linear-gradient(180deg, transparent 0%, rgba(1,64,52,0.6) 50%, rgba(1,64,52,0.95) 100%)",
       },
     },
   },

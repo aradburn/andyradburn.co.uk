@@ -39,7 +39,7 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400&family=Manrope:wght@400;500;600;700&display=swap"
         />
-        <meta name="theme-color" content="#0f1410" />
+        <meta name="theme-color" content="#014034" />
         <script
           src="https://kit.fontawesome.com/79c31398dc.js"
           crossOrigin="anonymous"
