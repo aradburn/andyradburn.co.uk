@@ -4,16 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a263aaeb-5f60-4ec3-8b84-51751d71383c" name="Changes" comment="Updated design v1 better colours.">
-      <change afterPath="$PROJECT_DIR$/app/background.css" afterDir="false" />
+    <list default="true" id="a263aaeb-5f60-4ec3-8b84-51751d71383c" name="Changes" comment="Updated design v2 better layout.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/[section]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/[section]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/discography/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/discography/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/background.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/background.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/PostFeed.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/PostFeed.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbal/_posts/2015-01-06-dubbal-dubbal-one.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/dubbal/_posts/2015-01-06-dubbal-dubbal-one.markdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbal/_posts/2020-02-29-dubbal-return-of-the-lonesome-traveller.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/dubbal/_posts/2020-02-29-dubbal-return-of-the-lonesome-traveller.markdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/markdown.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/markdown.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next-env.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postcss.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/postcss.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,18 +43,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="WARN_ABOUT_CRLF" value="false" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "aradburn"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;aradburn&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/aradburn/andyradburn.co.uk.git",
-    "accountId": "be7cf77e-06ef-4201-9d32-a82e0c7f38e8"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/aradburn/andyradburn.co.uk.git&quot;,
+    &quot;accountId&quot;: &quot;be7cf77e-06ef-4201-9d32-a82e0c7f38e8&quot;
   }
-}]]></component>
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="$TORCHAUDIO_USE_BACKEND_DISPATCHER$" />
   </component>
@@ -73,7 +79,7 @@
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/andy/Art/git/andyradburn.co.uk",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "vcs.Git"
+    "settings.editor.selected.configurable": "works.szabope.plugins.mypy.configurable.MypyConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -88,7 +94,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-3944b0c99280-6d6dccd035ac-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.30387.127" />
+        <option value="bundled-python-sdk-4762d8aabb82-6d6dccd035ac-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.30387.173" />
       </set>
     </attachedChunks>
   </component>
@@ -315,7 +321,23 @@
       <option name="project" value="LOCAL" />
       <updated>1770072475847</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Updated design v2 better layout.">
+      <option name="closed" value="true" />
+      <created>1770132723157</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1770132723159</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Updated design v2 better layout.">
+      <option name="closed" value="true" />
+      <created>1770132730641</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1770132730641</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -347,7 +369,8 @@
     <MESSAGE value="New Mandala version 0.2.0." />
     <MESSAGE value="Updated design v1." />
     <MESSAGE value="Updated design v1 better colours." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated design v1 better colours." />
+    <MESSAGE value="Updated design v2 better layout." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated design v2 better layout." />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

@@ -1,5 +1,6 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: true,
   images: { unoptimized: true },
@@ -7,6 +8,9 @@ const nextConfig = {
   // For project site (username.github.io/repo), set basePath: '/repo-name'
   basePath: "",
   assetPrefix: "",
+  turbopack: {
+    root: process.cwd(),
+  },
 };
 
 export default nextConfig;

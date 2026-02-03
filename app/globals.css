@@ -1,6 +1,18 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+@theme {
+  --color-surface: #01261c;
+  --color-surface-elevated: #014034;
+  --color-surface-border: #bf9f63;
+  --color-text: #f2dea0;
+  --color-text-muted: #bf9f63;
+  --color-accent: #58a681;
+  --color-accent-dim: #3d8a6a;
+  --color-accent-warm: #bf9f63;
+  --font-sans: Arvo, Georgia, serif;
+  --font-display: Manrope, system-ui, sans-serif;
+}
 
 @layer base {
   html {
@@ -17,14 +29,14 @@
     @apply font-display font-bold tracking-tight;
   }
   .prose-invert {
-    --tw-prose-body: theme("colors.text");
-    --tw-prose-headings: theme("colors.text");
-    --tw-prose-links: theme("colors.accent");
-    --tw-prose-bold: theme("colors.text");
-    --tw-prose-counters: theme("colors.accent");
-    --tw-prose-quotes: theme("colors.text-muted");
-    --tw-prose-quote-borders: theme("colors.accent");
-    --tw-prose-hr: theme("colors.surface-border");
+    --tw-prose-body: var(--color-text);
+    --tw-prose-headings: var(--color-text);
+    --tw-prose-links: var(--color-accent);
+    --tw-prose-bold: var(--color-text);
+    --tw-prose-counters: var(--color-accent);
+    --tw-prose-quotes: var(--color-text-muted);
+    --tw-prose-quote-borders: var(--color-accent);
+    --tw-prose-hr: var(--color-surface-border);
   }
 }
 

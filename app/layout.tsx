@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "./background.css";
+import { getMenu, getMetaData } from "@/lib/data";
+import { Header } from "@/components/Header";
 import { Layout } from "@/components/Layout";
 
 export const metadata: Metadata = {
@@ -14,6 +16,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const menu = getMenu();
+  const meta = getMetaData();
   return (
     <html lang="en">
       <head>
@@ -48,7 +52,10 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <Layout>{children}</Layout>
+        <Header menu={menu} meta={meta} />
+        <Layout menu={menu} meta={meta}>
+          {children}
+        </Layout>
       </body>
     </html>
   );

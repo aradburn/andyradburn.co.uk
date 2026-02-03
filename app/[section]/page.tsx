@@ -34,9 +34,9 @@ export function generateStaticParams() {
 export default async function SectionPage({
   params,
 }: {
-  params: { section: string };
+  params: Promise<{ section: string }>;
 }) {
-  const { section } = params;
+  const { section } = await params;
   const config = SECTIONS[section];
   if (!config) notFound();
 
@@ -56,14 +56,9 @@ export default async function SectionPage({
         </h1>
         <p className="text-lg text-text-muted">{config.subtitle}</p>
       </header>
-      <div className="flex flex-col">
+      <div className="flex flex-col gap-6">
         {postsWithHtml.map(({ post, contentHtml }, i) => (
           <div key={`${post.category}-${post.slug}`}>
-            {i > 0 &&
-                <div className="art-nouveau-divider">
-
-                </div>
-            }
             <PostFeedItem post={post} contentHtml={contentHtml} />
           </div>
         ))}
