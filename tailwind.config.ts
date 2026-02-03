@@ -11,7 +11,7 @@ const config: Config = {
       colors: {
         surface: "#01261C",
         "surface-elevated": "#014034",
-        "surface-border": "#0d5345",
+        "surface-border": "#BF9F63",
         text: "#F2DEA0",
         "text-muted": "#BF9F63",
         accent: "#58A681",

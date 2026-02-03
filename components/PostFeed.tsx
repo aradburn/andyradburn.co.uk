@@ -42,7 +42,7 @@ export function PostFeedItem({
   const external = !!post.frontMatter.external_url;
 
   return (
-    <article className="w-full rounded-xl border border-surface-border bg-surface-elevated/80 py-6 px-6 shadow-sm transition-shadow hover:shadow-md hover:border-accent/30">
+    <article className="w-full rounded-xl border-2 border-surface-border bg-surface-elevated py-6 px-6 shadow-sm transition-shadow hover:shadow-md">
       <header>
         {post.frontMatter.date && (
           <p className="text-right text-sm text-text-muted">

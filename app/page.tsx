@@ -12,7 +12,7 @@ export default async function HomePage() {
   );
   return (
     <div className="max-w-full">
-      <header className="mb-10 border-b border-surface-border pb-8">
+      <header className="mb-10 border-b border-surface-border pb-2">
         <h1 className="mb-2 font-display text-4xl font-bold tracking-tight text-text sm:text-5xl md:text-6xl">
           Andy Radburn
         </h1>

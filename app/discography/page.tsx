@@ -12,7 +12,7 @@ export default async function DiscographyPage() {
   );
   return (
     <div className="max-w-full">
-      <header className="mb-10 border-b border-surface-border pb-8">
+      <header className="mb-10 border-b border-surface-border pb-2">
         <h1 className="font-display text-4xl font-bold tracking-tight text-text sm:text-5xl">
           Discography
         </h1>

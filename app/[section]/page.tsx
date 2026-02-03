@@ -50,7 +50,7 @@ export default async function SectionPage({
 
   return (
     <div className="max-w-full">
-      <header className="mb-10 border-b border-surface-border pb-8">
+      <header className="mb-10 border-b border-surface-border pb-2">
         <h1 className="mb-2 font-display text-4xl font-bold tracking-tight text-text sm:text-5xl">
           {config.title}
         </h1>
@@ -59,7 +59,11 @@ export default async function SectionPage({
       <div className="flex flex-col">
         {postsWithHtml.map(({ post, contentHtml }, i) => (
           <div key={`${post.category}-${post.slug}`}>
-            {i > 0 && <hr className="my-6 border-surface-border" />}
+            {i > 0 &&
+                <div className="art-nouveau-divider">
+
+                </div>
+            }
             <PostFeedItem post={post} contentHtml={contentHtml} />
           </div>
         ))}

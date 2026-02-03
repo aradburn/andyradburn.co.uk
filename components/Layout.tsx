@@ -9,7 +9,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <Header menu={menu} meta={meta} />
       <main
         id="main-content"
-        className="fixed inset-x-0 top-16 flex max-h-[calc(100vh-4rem)] min-h-[calc(100vh-4rem)] flex-col overflow-y-auto overflow-x-hidden bg-surface scroll-mt-16"
+        className="magicbackground fixed inset-x-0 top-16 flex max-h-[calc(100vh-4rem)] min-h-[calc(100vh-4rem)] flex-col overflow-y-auto overflow-x-hidden bg-surface scroll-mt-16"
       >
         <div className="relative z-0 min-h-0 flex-1 px-4 py-8 sm:px-6 md:px-8">
           <div className="mx-auto max-w-5xl">{children}</div>
