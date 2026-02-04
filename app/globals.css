@@ -1,0 +1,46 @@
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-surface text-text antialiased;
+    -webkit-tap-highlight-color: color-mix(
+      in srgb,
+      var(--color-accent) 25%,
+      transparent
+    );
+  }
+  a {
+    @apply underline decoration-transparent transition-[text-decoration-color] duration-300 hover:decoration-accent;
+  }
+  h1 {
+    @apply font-display font-bold tracking-tight;
+  }
+  .prose-invert {
+    --tw-prose-body: var(--color-text);
+    --tw-prose-headings: var(--color-text);
+    --tw-prose-links: var(--color-accent);
+    --tw-prose-bold: var(--color-text);
+    --tw-prose-counters: var(--color-accent);
+    --tw-prose-quotes: var(--color-text-muted);
+    --tw-prose-quote-borders: var(--color-accent);
+    --tw-prose-hr: var(--color-surface-border);
+  }
+}
+
+@layer utilities {
+  .focus\:not-sr-only:focus,
+  .focus-visible\:not-sr-only:focus-visible {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+}
