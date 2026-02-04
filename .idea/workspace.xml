@@ -4,12 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a263aaeb-5f60-4ec3-8b84-51751d71383c" name="Changes" comment="Update to latest library versions.">
+    <list default="true" id="a263aaeb-5f60-4ec3-8b84-51751d71383c" name="Changes" comment="Responsive content for small widths.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/background.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/background.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/PostFeed.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/PostFeed.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bubbledubble/_posts/2009-04-01-bubbledubble-cosmic-puffin.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/bubbledubble/_posts/2009-04-01-bubbledubble-cosmic-puffin.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bubbledubble/_posts/2011-01-01-bubbledubble-twilight-phenomena.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/bubbledubble/_posts/2011-01-01-bubbledubble-twilight-phenomena.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bubbledubble/_posts/2022-08-09-bubbledubble-discogs.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/bubbledubble/_posts/2022-08-09-bubbledubble-discogs.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbal/_posts/2015-01-06-dubbal-dubbal-one.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/dubbal/_posts/2015-01-06-dubbal-dubbal-one.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbal/_posts/2020-02-29-dubbal-return-of-the-lonesome-traveller.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/dubbal/_posts/2020-02-29-dubbal-return-of-the-lonesome-traveller.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbal/_posts/2022-06-10-dubbal-were-at-glasto.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/dubbal/_posts/2022-06-10-dubbal-were-at-glasto.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbal/_posts/2022-06-11-dubbal-gigs.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/dubbal/_posts/2022-06-11-dubbal-gigs.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbal/_posts/2022-08-08-dubbal-videos.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/dubbal/_posts/2022-08-08-dubbal-videos.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbal/_posts/2022-08-09-dubbal-discogs.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/dubbal/_posts/2022-08-09-dubbal-discogs.markdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sonicarcana/_posts/2006-01-01-sonic-arcana-mythical-immortal.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/sonicarcana/_posts/2006-01-01-sonic-arcana-mythical-immortal.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sonicarcana/_posts/2010-01-08-sonic-arcana-past-echoes.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/sonicarcana/_posts/2010-01-08-sonic-arcana-past-echoes.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sonicarcana/_posts/2012-08-10-sonic-arcana-hidden-artifact.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/sonicarcana/_posts/2012-08-10-sonic-arcana-hidden-artifact.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sonicarcana/_posts/2020-08-10-sonic-arcana-kepler-452b.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/sonicarcana/_posts/2020-08-10-sonic-arcana-kepler-452b.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sonicarcana/_posts/2021-05-07-sonic-arcana-occator.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/sonicarcana/_posts/2021-05-07-sonic-arcana-occator.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sonicarcana/_posts/2022-06-10-sonic-arcana-flashfm.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/sonicarcana/_posts/2022-06-10-sonic-arcana-flashfm.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -335,7 +346,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770161600785</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Responsive content for small widths.">
+      <option name="closed" value="true" />
+      <created>1770167350576</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1770167350576</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -369,7 +388,8 @@
     <MESSAGE value="Updated design v1 better colours." />
     <MESSAGE value="Updated design v2 better layout." />
     <MESSAGE value="Update to latest library versions." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update to latest library versions." />
+    <MESSAGE value="Responsive content for small widths." />
+    <option name="LAST_COMMIT_MESSAGE" value="Responsive content for small widths." />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

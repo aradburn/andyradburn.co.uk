@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Glastonbury Festival
-categories: dubbal, home
+categories: [ dubbal, home ]
 image: assets/img/dubbal/were-at-glasto.jpg
 image_alt: Dubbal at Glastonbury Festival
 ---

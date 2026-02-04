@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dubbal - Dubbal on Bandcamp
-categories: dubbal
+categories: [ dubbal ]
 ---
 First Studio album by Dubbal released January 6, 2015
 <br/>

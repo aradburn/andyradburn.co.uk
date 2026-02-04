@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dubbal Videos
-categories: dubbal
+categories: [ dubbal ]
 ---
 
 <h1>2022</h1>

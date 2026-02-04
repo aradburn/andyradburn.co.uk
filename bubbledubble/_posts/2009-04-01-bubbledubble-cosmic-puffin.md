@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Cosmic Puffin
-categories: bubbledubble discography
+categories: [ bubbledubble, discography ]
 subcategory: discography
 type: CD, Download
 buy:

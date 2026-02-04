@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dubbal Gigs 2022
-categories: dubbal, home
+categories: [ dubbal, home ]
 image: assets/img/dubbal/logo-v7-blue-640x360.png
 image_alt: Dubbal Logo
 ---

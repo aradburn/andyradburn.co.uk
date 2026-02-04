@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Twilight Phenomena
-categories: bubbledubble discography
+categories: [ bubbledubble, discography ]
 subcategory: discography
 type: CD, Download
 buy:
