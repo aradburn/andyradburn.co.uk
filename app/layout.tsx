@@ -51,11 +51,15 @@ export default function RootLayout({
           async
         />
       </head>
-      <body>
+      <body className="flex min-h-screen flex-col">
+        <div className="h-16 shrink-0" aria-hidden />
         <Header menu={menu} meta={meta} />
-        <Layout menu={menu} meta={meta}>
-          {children}
-        </Layout>
+        <Layout menu={menu}>{children}</Layout>
+        <footer className="shrink-0 border-t border-surface-border bg-surface/90 py-6 text-center text-sm text-text-muted">
+          <p>
+            Copyright &copy; {new Date().getFullYear()} {meta.author}
+          </p>
+        </footer>
       </body>
     </html>
   );

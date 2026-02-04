@@ -42,7 +42,7 @@ export function PostFeedItem({
   const external = !!post.frontMatter.external_url;
 
   return (
-    <article className="w-full rounded-xl border-2 border-surface-border bg-surface-elevated py-6 px-6 shadow-sm transition-shadow hover:shadow-md">
+    <article className="min-w-0 w-full max-w-full rounded-xl border-2 border-surface-border bg-surface-elevated py-4 px-4 shadow-sm transition-shadow hover:shadow-md sm:py-6 sm:px-6">
       <header>
         {post.frontMatter.date && (
           <p className="text-right text-sm text-text-muted">
@@ -56,20 +56,20 @@ export function PostFeedItem({
         </h2>
       </header>
       {showImage && imgSrc && (
-        <figure className="my-4 max-w-full overflow-hidden rounded-lg">
+        <figure className="my-4 min-w-0 max-w-full overflow-hidden rounded-lg">
           <Image
             src={imgSrc}
             alt={post.frontMatter.image_alt || post.frontMatter.title}
             width={192}
             height={192}
-            className="max-h-[80vh] w-auto max-w-full"
+            className="max-h-[50vh] w-auto max-w-full object-contain sm:max-h-[80vh]"
           />
         </figure>
       )}
-      <section className="text-text">
+      <section className="min-w-0 overflow-x-hidden text-text">
         {fullContent && contentHtml ? (
           <div
-            className="prose prose-invert max-w-none prose-a:text-accent"
+            className="prose prose-invert max-w-none break-words overflow-x-hidden prose-a:text-accent"
             dangerouslySetInnerHTML={{ __html: contentHtml }}
           />
         ) : post.frontMatter.description ? (
@@ -115,7 +115,7 @@ export function DiscographyEntry({
   const fullContent = !!contentHtml;
 
   return (
-    <article className="mb-10 flex flex-col gap-4 rounded-xl border border-surface-border bg-surface-elevated/80 p-6 shadow-sm transition-shadow hover:shadow-md hover:border-accent/30 md:flex-row">
+    <article className="mb-10 flex min-w-0 max-w-full flex-col gap-4 rounded-xl border border-surface-border bg-surface-elevated/80 p-4 shadow-sm transition-shadow hover:shadow-md hover:border-accent/30 sm:p-6 md:flex-row">
       {imgSrc && (
         <figure className="h-[20vw] w-[20vw] max-h-[320px] max-w-[320px] shrink-0 overflow-hidden rounded-lg md:mr-4">
           <Image
