@@ -1,3 +1,4 @@
+import { cache } from "react";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -13,13 +14,13 @@ function loadYaml<T>(filename: string): T {
   return yaml.load(raw) as T;
 }
 
-export function getMenu(): MenuData {
+export const getMenu = cache(function getMenu(): MenuData {
   return loadYaml<MenuData>("menu.yml");
-}
+});
 
-export function getMetaData(): MetaData {
+export const getMetaData = cache(function getMetaData(): MetaData {
   return loadYaml<MetaData>("metaData.yml");
-}
+});
 
 const POSTS_DIRS = [
   { dir: path.join(ROOT, "dubbal", "_posts"), category: "dubbal" },
@@ -40,6 +41,11 @@ function slugFromFilename(filename: string): string {
     .replace(/\.md$/, "");
 }
 
+function dateFromFilename(filename: string): string | undefined {
+  const match = filename.match(/^(\d{4}-\d{2}-\d{2})/);
+  return match ? match[1] : undefined;
+}
+
 export function getAllPosts(): Post[] {
   const posts: Post[] = [];
   for (const { dir, category } of POSTS_DIRS) {
@@ -56,17 +62,18 @@ export function getAllPosts(): Post[] {
       const normalizedCategories = Array.isArray(categories)
         ? categories
         : [categories].filter(Boolean);
+      const frontMatterDate = data.date
+        ? typeof data.date === "string"
+          ? data.date
+          : (data.date as Date).toISOString().slice(0, 10)
+        : dateFromFilename(file);
       posts.push({
         slug,
         category,
         frontMatter: {
           ...data,
           title: data.title ?? slug,
-          date: data.date
-            ? typeof data.date === "string"
-              ? data.date
-              : (data.date as Date).toISOString().slice(0, 10)
-            : undefined,
+          date: frontMatterDate,
           categories: normalizedCategories,
         } as PostFrontMatter,
         content,
@@ -76,7 +83,8 @@ export function getAllPosts(): Post[] {
       });
     }
   }
-  return posts.sort((a, b) => {
+  // Reverse chronological order (newest first)
+  return posts.toSorted((a, b) => {
     const dA = a.frontMatter.date || "";
     const dB = b.frontMatter.date || "";
     return dB.localeCompare(dA);
