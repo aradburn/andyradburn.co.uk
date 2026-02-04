@@ -6,13 +6,6 @@ import { usePathname } from "next/navigation";
 import { useState, useCallback } from "react";
 import type { MenuData, MetaData } from "@/lib/types";
 
-const CONTACT_LABELS: Record<string, string> = {
-  "fab fa-soundcloud": "SoundCloud",
-  "fab fa-twitter": "Twitter",
-  "fas fa-envelope": "Email",
-  "fas fa-rss": "RSS",
-};
-
 function NavLinks({ menu }: { menu: MenuData }) {
   const pathname = usePathname();
   return (
@@ -99,19 +92,6 @@ export function Header({ menu, meta }: { menu: MenuData; meta: MetaData }) {
         </nav>
 
         <div className="flex items-center gap-2">
-          {menu.menu_contacts?.map((c, i) => (
-            <a
-              key={i}
-              href={c.url || "#"}
-              target={c.target}
-              rel="noopener noreferrer"
-              aria-label={CONTACT_LABELS[c.faicon] ?? "External link"}
-              className="rounded p-2 text-text-muted transition-[color,background-color] hover:bg-accent/10 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface"
-            >
-              <i className={c.faicon} aria-hidden />
-            </a>
-          ))}
-
           <button
             type="button"
             onClick={() => setOpen(!open)}
@@ -162,20 +142,6 @@ export function Header({ menu, meta }: { menu: MenuData; meta: MetaData }) {
           <ul className="flex flex-col gap-1 px-4">
             <NavLinks menu={menu} />
           </ul>
-          <div className="mt-4 flex justify-center gap-2 border-t border-surface-border pt-4">
-            {menu.menu_contacts?.map((c, i) => (
-              <a
-                key={i}
-                href={c.url || "#"}
-                target={c.target}
-                rel="noopener noreferrer"
-                aria-label={CONTACT_LABELS[c.faicon] ?? "External link"}
-                className="rounded p-3 text-text-muted transition-colors hover:text-accent focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface"
-              >
-                <i className={c.faicon} aria-hidden />
-              </a>
-            ))}
-          </div>
         </nav>
       </div>
     </header>

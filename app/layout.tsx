@@ -4,6 +4,7 @@ import "./globals.css";
 import "./background.css";
 import { getMenu, getMetaData } from "@/lib/data";
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { Layout } from "@/components/Layout";
 
 const arvo = Arvo({
@@ -66,13 +67,7 @@ export default function RootLayout({
         <div className="h-16 shrink-0" aria-hidden />
         <Header menu={menu} meta={meta} />
         <Layout>{children}</Layout>
-        <footer className="shrink-0 border-t border-surface-border bg-surface/90 py-6 text-center text-sm text-text-muted">
-          <p>
-            Copyright &copy;{" "}
-            <span suppressHydrationWarning>{new Date().getFullYear()}</span>{" "}
-            {meta.author}
-          </p>
-        </footer>
+        <Footer menu={menu} meta={meta} />
       </body>
     </html>
   );
