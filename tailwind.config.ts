@@ -14,7 +14,7 @@ const config: Config = {
         "surface-border": "#BF9F63",
         text: "#F2DEA0",
         "text-muted": "#BF9F63",
-        accent: "#58A681",
+        accent: "#f8eecf",
         "accent-dim": "#3d8a6a",
         "accent-warm": "#BF9F63",
       },

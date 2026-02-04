@@ -1,26 +1,17 @@
 @import "tailwindcss";
 @config "../tailwind.config.ts";
 
-@theme {
-  --color-surface: #01261c;
-  --color-surface-elevated: #014034;
-  --color-surface-border: #bf9f63;
-  --color-text: #f2dea0;
-  --color-text-muted: #bf9f63;
-  --color-accent: #58a681;
-  --color-accent-dim: #3d8a6a;
-  --color-accent-warm: #bf9f63;
-  --font-sans: Arvo, Georgia, serif;
-  --font-display: Manrope, system-ui, sans-serif;
-}
-
 @layer base {
   html {
     color-scheme: dark;
   }
   body {
     @apply bg-surface text-text antialiased;
-    -webkit-tap-highlight-color: rgba(88, 166, 129, 0.25);
+    -webkit-tap-highlight-color: color-mix(
+      in srgb,
+      var(--color-accent) 25%,
+      transparent
+    );
   }
   a {
     @apply underline decoration-transparent transition-[text-decoration-color] duration-300 hover:decoration-accent;
