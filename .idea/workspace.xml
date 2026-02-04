@@ -4,23 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a263aaeb-5f60-4ec3-8b84-51751d71383c" name="Changes" comment="Responsive content for small widths.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bubbledubble/_posts/2009-04-01-bubbledubble-cosmic-puffin.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/bubbledubble/_posts/2009-04-01-bubbledubble-cosmic-puffin.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bubbledubble/_posts/2011-01-01-bubbledubble-twilight-phenomena.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/bubbledubble/_posts/2011-01-01-bubbledubble-twilight-phenomena.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bubbledubble/_posts/2022-08-09-bubbledubble-discogs.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/bubbledubble/_posts/2022-08-09-bubbledubble-discogs.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbal/_posts/2015-01-06-dubbal-dubbal-one.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/dubbal/_posts/2015-01-06-dubbal-dubbal-one.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbal/_posts/2020-02-29-dubbal-return-of-the-lonesome-traveller.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/dubbal/_posts/2020-02-29-dubbal-return-of-the-lonesome-traveller.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbal/_posts/2022-06-10-dubbal-were-at-glasto.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/dubbal/_posts/2022-06-10-dubbal-were-at-glasto.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbal/_posts/2022-06-11-dubbal-gigs.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/dubbal/_posts/2022-06-11-dubbal-gigs.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbal/_posts/2022-08-08-dubbal-videos.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/dubbal/_posts/2022-08-08-dubbal-videos.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbal/_posts/2022-08-09-dubbal-discogs.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/dubbal/_posts/2022-08-09-dubbal-discogs.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sonicarcana/_posts/2006-01-01-sonic-arcana-mythical-immortal.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/sonicarcana/_posts/2006-01-01-sonic-arcana-mythical-immortal.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sonicarcana/_posts/2010-01-08-sonic-arcana-past-echoes.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/sonicarcana/_posts/2010-01-08-sonic-arcana-past-echoes.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sonicarcana/_posts/2012-08-10-sonic-arcana-hidden-artifact.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/sonicarcana/_posts/2012-08-10-sonic-arcana-hidden-artifact.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sonicarcana/_posts/2020-08-10-sonic-arcana-kepler-452b.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/sonicarcana/_posts/2020-08-10-sonic-arcana-kepler-452b.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sonicarcana/_posts/2021-05-07-sonic-arcana-occator.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/sonicarcana/_posts/2021-05-07-sonic-arcana-occator.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sonicarcana/_posts/2022-06-10-sonic-arcana-flashfm.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/sonicarcana/_posts/2022-06-10-sonic-arcana-flashfm.md" afterDir="false" />
+    <list default="true" id="a263aaeb-5f60-4ec3-8b84-51751d71383c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,19 +55,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "dev-redesign",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/andy/Art/git/andyradburn.co.uk",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "works.szabope.plugins.mypy.configurable.MypyConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev-redesign&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/andy/Art/git/andyradburn.co.uk&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;works.szabope.plugins.mypy.configurable.MypyConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
