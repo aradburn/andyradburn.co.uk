@@ -22,7 +22,18 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   title: "Andy Radburn",
   description: "Andy Radburn's website.",
-  openGraph: { title: "Andy Radburn", description: "Andy Radburn's website." },
+  openGraph: {
+      title: "Andy Radburn",
+//       type: "website",
+      description: "Andy Radburn's website."
+      // TODO
+//       "og_image": og_image,
+//       "og:site_name" content="Musigree"/>
+//       "og_url": og_url,
+  },
+//   other: {
+//     http-equiv: ['meta1', 'meta2'],
+//   },
 };
 
 export default function RootLayout({
@@ -35,6 +46,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/*
+        <meta
+          httpEquiv="Content-Security-Policy"
+          content="default-src 'self'; script-src 'self' data: 'unsafe-eval'; script-src-elem 'self' data: 'unsafe-inline'; style-src 'self'; style-src-elem 'self' 'unsafe-inline'; style-src-attr 'self' 'unsafe-inline' 'unsafe-hashes'; object-src 'none'; frame-src 'self' https://bandcamp.com ; child-src 'self'; img-src 'self' data:; font-src 'self' https://*.fontawesome.com; connect-src 'self' http://localhost ws://localhost https://*.fontawesome.com; manifest-src 'self'; base-uri 'self'; form-action 'self'; media-src 'self' data:; worker-src 'self'"
+        />
+        <meta
+          name="referrer"
+          content="origin-when-crossorigin"
+        />
+        */}
         <link
           rel="apple-touch-icon"
           sizes="180x180"
