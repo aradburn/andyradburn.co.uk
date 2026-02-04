@@ -57,7 +57,7 @@ export default async function SectionPage({
         <p className="text-lg text-text-muted">{config.subtitle}</p>
       </header>
       <div className="flex flex-col gap-6">
-        {postsWithHtml.map(({ post, contentHtml }, i) => (
+        {postsWithHtml.map(({ post, contentHtml }) => (
           <div key={`${post.category}-${post.slug}`}>
             <PostFeedItem post={post} contentHtml={contentHtml} />
           </div>

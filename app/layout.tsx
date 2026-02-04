@@ -1,9 +1,22 @@
 import type { Metadata } from "next";
+import { Arvo, Manrope } from "next/font/google";
 import "./globals.css";
 import "./background.css";
 import { getMenu, getMetaData } from "@/lib/data";
 import { Header } from "@/components/Header";
 import { Layout } from "@/components/Layout";
+
+const arvo = Arvo({
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
+const manrope = Manrope({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-display",
+});
 
 export const metadata: Metadata = {
   title: "Andy Radburn",
@@ -40,10 +53,6 @@ export default function RootLayout({
         />
         <link rel="manifest" href="/assets/img/site.webmanifest" />
         <link rel="shortcut icon" href="/assets/img/favicon.ico" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400&family=Manrope:wght@400;500;600;700&display=swap"
-        />
         <meta name="theme-color" content="#014034" />
         <script
           src="https://kit.fontawesome.com/79c31398dc.js"
@@ -51,10 +60,12 @@ export default function RootLayout({
           async
         />
       </head>
-      <body className="flex min-h-screen flex-col">
+      <body
+        className={`${arvo.variable} ${manrope.variable} flex min-h-screen flex-col`}
+      >
         <div className="h-16 shrink-0" aria-hidden />
         <Header menu={menu} meta={meta} />
-        <Layout menu={menu}>{children}</Layout>
+        <Layout>{children}</Layout>
         <footer className="shrink-0 border-t border-surface-border bg-surface/90 py-6 text-center text-sm text-text-muted">
           <p>
             Copyright &copy; {new Date().getFullYear()} {meta.author}
