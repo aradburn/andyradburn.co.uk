@@ -6,8 +6,10 @@
     "dev": "next dev",
     "build": "node scripts/copy-assets.mjs && next build",
     "start": "next start",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint . --ext ts,tsx --fix",
+    "check-types": "tsc --noEmit",
+    "check-updates": "npx npm-check-updates"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
