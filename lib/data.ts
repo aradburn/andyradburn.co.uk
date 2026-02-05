@@ -3,7 +3,14 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import yaml from "js-yaml";
-import type { MenuData, MetaData, Post, PostFrontMatter } from "./types";
+import type {
+  MenuData,
+  MetaData,
+  Post,
+  PostFrontMatter,
+  SectionConfig,
+  SectionsConfig,
+} from "./types";
 
 const DATA_DIR = path.join(process.cwd(), "_data");
 const ROOT = process.cwd();
@@ -21,6 +28,17 @@ export const getMenu = cache(function getMenu(): MenuData {
 export const getMetaData = cache(function getMetaData(): MetaData {
   return loadYaml<MetaData>("metaData.yml");
 });
+
+export const getSectionsConfig = cache(
+  function getSectionsConfig(): SectionsConfig {
+    return loadYaml<SectionsConfig>("sections.yml");
+  },
+);
+
+export function getSectionConfig(section: string): SectionConfig | null {
+  const config = getSectionsConfig();
+  return config[section] ?? null;
+}
 
 const POSTS_DIRS = [
   { dir: path.join(ROOT, "dubbal", "_posts"), category: "dubbal" },

@@ -79,3 +79,19 @@ export const SECTION_CATEGORIES = [
   "discography",
 ] as const;
 export type SectionCategory = (typeof SECTION_CATEGORIES)[number];
+
+export interface SectionHeroConfig {
+  image: string;
+  image_alt: string;
+  heading?: string;
+  subheading?: string;
+}
+
+export interface SectionConfig {
+  title: string;
+  subtitle: string;
+  description: string;
+  hero: SectionHeroConfig | null;
+}
+
+export type SectionsConfig = Record<string, SectionConfig>;

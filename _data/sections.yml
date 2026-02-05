@@ -1,0 +1,39 @@
+# Per-section config for dubbal, sonicarcana, bubbledubble (and collaborations).
+# Used for page metadata and hero panel. Posts still come from each section's _posts folder.
+
+dubbal:
+  title: Dubbal
+  subtitle: Psychedelic Space Rock and Dubby Reggae Beats
+  description: Dubbal – psychedelic space rock and dubby reggae beats. Gigs, releases and news.
+  hero:
+    image: assets/img/dubbal/logo-v7-black-2048x1152.png
+    image_alt: Dubbal Logo
+    # Optional overrides; when absent, title/subtitle above are used
+    # heading: Dubbal
+    # subheading: Psychedelic Space Rock and Dubby Reggae Beats
+
+sonicarcana:
+  title: Sonic Arcana
+  subtitle: Electronic Space Ragas and Dubby Eastern Beats
+  description: Sonic Arcana – electronic space ragas and dubby eastern beats. Releases and news.
+  hero:
+    image: assets/img/misc/flashfm-album.jpg
+    image_alt: Sonic Arcana Flash FM
+    # heading: Sonic Arcana
+    # subheading: Electronic Space Ragas and Dubby Eastern Beats
+
+bubbledubble:
+  title: BubbleDubble
+  subtitle: Live Dubby Electronic Beats
+  description: BubbleDubble – live dubby electronic beats. Releases and news.
+  hero:
+    image: assets/img/bubbledubble/cosmic-puffin.jpg
+    image_alt: BubbleDubble Cosmic Puffin
+    # heading: BubbleDubble
+    # subheading: Live Dubby Electronic Beats
+
+collaborations:
+  title: Collaborations
+  subtitle: Guest appearances with other bands
+  description: Collaborations and guest appearances with other bands.
+  hero: null

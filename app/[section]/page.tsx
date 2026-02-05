@@ -1,34 +1,33 @@
 import { notFound } from "next/navigation";
-import { getPostsByCategory } from "@/lib/data";
-import { markdownToHtml } from "@/lib/markdown";
-import { PostFeedItem } from "@/components/PostFeed";
+import type { Metadata } from "next";
+import { getSectionConfig, getMetaData } from "@/lib/data";
+import { SectionPageContent } from "@/components/SectionPageContent";
 
-const SECTIONS: Record<string, { title: string; subtitle: string }> = {
-  dubbal: {
-    title: "Dubbal",
-    subtitle: "Psychedelic Space Rock and Dubby Reggae Beats",
-  },
-  sonicarcana: {
-    title: "Sonic Arcana",
-    subtitle: "Electronic Space Ragas and Dubby Eastern Beats",
-  },
-  bubbledubble: {
-    title: "BubbleDubble",
-    subtitle: "Live Dubby Electronic Beats",
-  },
-  collaborations: {
-    title: "Collaborations",
-    subtitle: "Guest appearances with other bands",
-  },
-};
+const SECTION_SLUG = "collaborations";
 
 export function generateStaticParams() {
-  return [
-    { section: "dubbal" },
-    { section: "sonicarcana" },
-    { section: "bubbledubble" },
-    { section: "collaborations" },
-  ];
+  return [{ section: SECTION_SLUG }];
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ section: string }>;
+}): Promise<Metadata> {
+  const { section } = await params;
+  if (section !== SECTION_SLUG) return {};
+  const config = getSectionConfig(section);
+  const meta = getMetaData();
+  const title = config ? `${config.title} | ${meta.author}` : meta.author;
+  const description = config?.description ?? undefined;
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description: description ?? undefined,
+    },
+  };
 }
 
 export default async function SectionPage({
@@ -37,32 +36,10 @@ export default async function SectionPage({
   params: Promise<{ section: string }>;
 }) {
   const { section } = await params;
-  const config = SECTIONS[section];
+  if (section !== SECTION_SLUG) notFound();
+
+  const config = getSectionConfig(section);
   if (!config) notFound();
 
-  const posts = getPostsByCategory(section);
-  const postsWithHtml = await Promise.all(
-    posts.map(async (post) => ({
-      post,
-      contentHtml: await markdownToHtml(post.content),
-    })),
-  );
-
-  return (
-    <div className="max-w-full">
-      <header className="mb-10 border-b border-surface-border pb-2">
-        <h1 className="mb-2 font-display text-4xl font-bold tracking-tight text-text sm:text-5xl">
-          {config.title}
-        </h1>
-        <p className="text-lg text-text-muted">{config.subtitle}</p>
-      </header>
-      <div className="flex flex-col gap-6">
-        {postsWithHtml.map(({ post, contentHtml }) => (
-          <div key={`${post.category}-${post.slug}`}>
-            <PostFeedItem post={post} contentHtml={contentHtml} />
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+  return <SectionPageContent section={section} config={config} />;
 }
