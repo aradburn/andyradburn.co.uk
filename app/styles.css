@@ -10,7 +10,7 @@
   }
 
   .post h2 {
-      color: var(--color-accent);
+      color: var(--color-text);
       text-align: center;
       font-size: var(--text-2xl);
       line-height: var(--text-2xl--line-height);
@@ -30,25 +30,25 @@
     color: yellow;
     font-size: var(--text-3xl);
     line-height: var(--text-3xl--line-height);
-    margin-top: 1rem;
-    margin-bottom: 0.8rem;
+    margin-top: 0.66rem;
+    margin-bottom: 0.66rem;
   }
 
   .post h5 {
     color: var(--color-text);
     font-size: var(--text-3xl);
     line-height: var(--text-3xl--line-height);
-    margin-top: 1rem;
-    margin-bottom: 0.8rem;
+    margin-top: 0.66rem;
+    margin-bottom: 0.66rem;
   }
 
   .post p {
     color: var(--color-text);
-    font-size: var(--text-3xl);
-    line-height: var(--text-3xl--line-height);
+    font-size: var(--text-2xl);
+    line-height: var(--text-2xl--line-height);
     display: block;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 0.66rem;
+    margin-bottom: 0.66rem;
   }
 
   .post a {
@@ -56,8 +56,8 @@
     font-size: var(--text-2xl);
     line-height: var(--text-2xl--line-height);
     display: block;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 0.55rem;
+    margin-bottom: 1.2rem;
   }
 
   .post a ::before {
@@ -163,9 +163,12 @@
 
   .bandcamp-container {
     position: relative;
-    width: 100%;
     padding-bottom: 1rem;
+    margin-top: 1rem;
     margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
   }
 
   .magicbackground {
