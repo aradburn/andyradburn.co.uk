@@ -4,36 +4,57 @@
 dubbal:
   title: Dubbal
   subtitle: Psychedelic Space Rock and Dubby Reggae Beats
-  description: Dubbal – psychedelic space rock and dubby reggae beats. Gigs, releases and news.
-  hero:
+  about:
+    description: Dubbal – psychedelic space rock and dubby reggae beats.
     image: assets/img/dubbal/logo-v7-black-2048x1152.png
     image_alt: Dubbal Logo
     # Optional overrides; when absent, title/subtitle above are used
     # heading: Dubbal
     # subheading: Psychedelic Space Rock and Dubby Reggae Beats
+  posts:
+    description: Dubbal News
+  gigs:
+    description: Dubbal Gigs
+  videos:
+    description: Dubbal Videos
 
 sonicarcana:
   title: Sonic Arcana
   subtitle: Electronic Space Ragas and Dubby Eastern Beats
-  description: Sonic Arcana – electronic space ragas and dubby eastern beats. Releases and news.
-  hero:
+  about:
+    description: Sonic Arcana – electronic space ragas and dubby eastern beats.
     image: assets/img/misc/flashfm-album.jpg
     image_alt: Sonic Arcana Flash FM
     # heading: Sonic Arcana
     # subheading: Electronic Space Ragas and Dubby Eastern Beats
+  posts:
+    description: Dubbal News
+  gigs:
+    description: Dubbal Gigs
+  videos:
+    description: Dubbal Videos
 
 bubbledubble:
   title: BubbleDubble
   subtitle: Live Dubby Electronic Beats
   description: BubbleDubble – live dubby electronic beats. Releases and news.
-  hero:
+  about:
     image: assets/img/bubbledubble/cosmic-puffin.jpg
     image_alt: BubbleDubble Cosmic Puffin
     # heading: BubbleDubble
     # subheading: Live Dubby Electronic Beats
+  posts:
+    description: Dubbal News
+  gigs:
+    description: Dubbal Gigs
+  videos:
+    description: Dubbal Videos
 
 collaborations:
   title: Collaborations
   subtitle: Guest appearances with other bands
   description: Collaborations and guest appearances with other bands.
-  hero: null
+  about: null
+  posts: null
+  gigs: null
+  videos: null

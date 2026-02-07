@@ -1,0 +1,22 @@
+/* Bubble Dubble section: overrides global Tailwind theme (scoped to .section-bubbledubble) */
+.section-bubbledubble {
+  /* Colors – warmer, playful palette */
+  --color-surface: #1a2520;
+  --color-surface-elevated: #243830;
+  --color-surface-border: #c4a574;
+  --color-text: #f5e6c8;
+  --color-text-muted: #c4a574;
+  --color-accent: #fff5e6;
+  --color-accent-dim: #4a7c59;
+  --color-accent-warm: #c4a574;
+  /* Fonts */
+  --font-sans: "Arvo", Georgia, serif;
+  --font-display: "Manrope", system-ui, sans-serif;
+  /* Background image */
+  --background-image-gradient-stage: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(36, 56, 48, 0.6) 50%,
+    rgba(36, 56, 48, 0.95) 100%
+  );
+}

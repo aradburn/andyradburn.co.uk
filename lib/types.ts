@@ -80,18 +80,36 @@ export const SECTION_CATEGORIES = [
 ] as const;
 export type SectionCategory = (typeof SECTION_CATEGORIES)[number];
 
-export interface SectionHeroConfig {
+export interface SectionAboutConfig {
   image: string;
   image_alt: string;
   heading?: string;
   subheading?: string;
 }
 
+/** Subsection config for posts (optional description). */
+export interface SectionPostsConfig {
+  description?: string;
+}
+
+/** Subsection config for gigs (optional description). */
+export interface SectionGigsConfig {
+  description?: string;
+}
+
+/** Subsection config for videos (optional description). */
+export interface SectionVideosConfig {
+  description?: string;
+}
+
 export interface SectionConfig {
   title: string;
   subtitle: string;
   description: string;
-  hero: SectionHeroConfig | null;
+  about: SectionAboutConfig | null;
+  posts?: SectionPostsConfig | null;
+  gigs?: SectionGigsConfig | null;
+  videos?: SectionVideosConfig | null;
 }
 
 export type SectionsConfig = Record<string, SectionConfig>;

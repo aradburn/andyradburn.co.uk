@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Arvo, Manrope } from "next/font/google";
 import "./globals.css";
-import "./background.css";
+import "./styles.css";
 import { getMenu, getMetaData } from "@/lib/data";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";

@@ -2,6 +2,25 @@
 @config "../tailwind.config.ts";
 
 @layer base {
+  /* Default theme values – overridden by section-specific CSS (e.g. .section-dubbal) */
+  :root {
+    --color-surface: #01261C;
+    --color-surface-elevated: #014034;
+    --color-surface-border: #BF9F63;
+    --color-text: #F2DEA0;
+    --color-text-muted: #BF9F63;
+    --color-accent: #f8eecf;
+    --color-accent-dim: #3d8a6a;
+    --color-accent-warm: #BF9F63;
+    --font-sans: "Arvo", Georgia, serif;
+    --font-display: "Manrope", system-ui, sans-serif;
+    --background-image-gradient-stage: linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(1, 64, 52, 0.6) 50%,
+      rgba(1, 64, 52, 0.95) 100%
+    );
+  }
   html {
     color-scheme: dark;
   }

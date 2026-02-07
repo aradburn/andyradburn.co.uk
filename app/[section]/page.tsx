@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getSectionConfig, getMetaData } from "@/lib/data";
-import { SectionPageContent } from "@/components/SectionPageContent";
+import { SectionPostFeedContent } from "@/components/SectionPostFeedContent";
 
 const SECTION_SLUG = "collaborations";
 
@@ -41,5 +41,5 @@ export default async function SectionPage({
   const config = getSectionConfig(section);
   if (!config) notFound();
 
-  return <SectionPageContent section={section} config={config} />;
+  return <SectionPostFeedContent section={section} config={config} />;
 }

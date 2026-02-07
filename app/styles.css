@@ -1,5 +1,92 @@
 /* Custom component styles – Tailwind is loaded via globals.css (v4) */
 @layer components {
+
+  .gigs h1 {
+    color: var(--color-text);
+    text-align: center;
+    font-size: var(--text-4xl);
+    line-height: var(--text-4xl--line-height);
+  }
+
+  .gigs h2 {
+      color: var(--color-accent);
+      text-align: center;
+      font-size: var(--text-2xl);
+      line-height: var(--text-2xl--line-height);
+      margin-top: 3rem;
+    }
+
+  .gigs h3 {
+    color: yellow;
+    text-align: center;
+    font-size: var(--text-5xl);
+    line-height: var(--text-5xl--line-height);
+  }
+
+  .gigs p {
+    color: var(--color-text-muted);
+    text-align: center;
+    font-size: var(--text-3xl);
+    line-height: var(--text-3xl--line-height);
+    display: block;
+  }
+
+  .gigs a {
+    color: yellow;
+    text-align: center;
+    font-size: var(--text-2xl);
+    line-height: var(--text-2xl--line-height);
+    display: block;
+  }
+
+  .gigs a ::before {
+    content: '\a';
+  }
+
+  .videos h1 {
+    color: var(--color-text);
+    text-align: center;
+    font-size: var(--text-4xl);
+    line-height: var(--text-4xl--line-height);
+  }
+
+  .videos h2 {
+      color: var(--color-accent);
+      text-align: center;
+      font-size: var(--text-2xl);
+      line-height: var(--text-2xl--line-height);
+      margin-top: 3rem;
+    }
+
+  .videos h3 {
+    color: yellow;
+    text-align: center;
+    font-size: var(--text-5xl);
+    line-height: var(--text-5xl--line-height);
+  }
+
+  .videos p {
+    color: var(--color-text-muted);
+    text-align: center;
+    font-size: var(--text-3xl);
+    line-height: var(--text-3xl--line-height);
+    display: block;
+  }
+
+  .videos a {
+    color: yellow;
+    text-align: center;
+    font-size: var(--text-2xl);
+    line-height: var(--text-2xl--line-height);
+    display: block;
+  }
+
+  .videos a ::before {
+    content: '\a';
+  }
+
+
+
   .bandcamp-container {
     position: relative;
     width: 100%;

@@ -1,0 +1,22 @@
+/* Sonic Arcana section: overrides global Tailwind theme (scoped to .section-sonicarcana) */
+.section-sonicarcana {
+  /* Colors – cooler, more arcane palette */
+  --color-surface: #0d1b1a;
+  --color-surface-elevated: #1a2d2a;
+  --color-surface-border: #5c7c78;
+  --color-text: #e8f4f2;
+  --color-text-muted: #8fb8b2;
+  --color-accent: #c5f0e8;
+  --color-accent-dim: #2d6b63;
+  --color-accent-warm: #8fb8b2;
+  /* Fonts */
+  --font-sans: "Arvo", Georgia, serif;
+  --font-display: "Manrope", system-ui, sans-serif;
+  /* Background image */
+  --background-image-gradient-stage: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(26, 45, 42, 0.6) 50%,
+    rgba(26, 45, 42, 0.95) 100%
+  );
+}
