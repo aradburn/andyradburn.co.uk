@@ -42,18 +42,18 @@ export function PostFeedItem({
   const external = !!post.frontMatter.external_url;
 
   return (
-    <article className="min-w-0 w-full max-w-full rounded-xl border-2 border-surface-border bg-surface-elevated py-4 px-4 shadow-sm transition-shadow hover:shadow-md sm:py-6 sm:px-6">
-      <header>
-        {post.frontMatter.date && (
-          <p className="text-right text-sm text-text-muted">
-            {post.frontMatter.date}
-          </p>
-        )}
-        <h2 className="mb-2 font-display text-xl font-semibold tracking-tight">
+    <article className="post min-w-0 w-full max-w-full rounded-xl border-2 border-surface-border bg-surface-elevated py-4 px-4 shadow-sm transition-shadow hover:shadow-md sm:py-6 sm:px-6">
+      <header className="mb-2 flex items-baseline justify-between gap-3">
+        <h2 className="min-w-0 font-display text-xl font-semibold tracking-tight">
           <PostTitleLink post={post} inline={fullContent}>
             {post.frontMatter.title}
           </PostTitleLink>
         </h2>
+        {post.frontMatter.date && (
+          <span className="shrink-0 text-sm text-text-muted">
+            {post.frontMatter.date}
+          </span>
+        )}
       </header>
       {showImage && imgSrc && (
         <figure className="my-4 min-w-0 max-w-full overflow-hidden rounded-lg">
@@ -115,7 +115,7 @@ export function DiscographyEntry({
   const fullContent = !!contentHtml;
 
   return (
-    <article className="mb-10 flex min-w-0 max-w-full flex-col gap-4 rounded-xl border border-surface-border bg-surface-elevated/80 p-4 shadow-sm transition-shadow hover:shadow-md hover:border-accent/30 sm:p-6 md:flex-row">
+    <article className="discography mb-10 flex min-w-0 lg:min-w-5xl max-w-full flex-col gap-4 rounded-xl border border-surface-border bg-surface-elevated/80 p-4 shadow-sm transition-shadow hover:shadow-md hover:border-accent/30 sm:p-6 md:flex-row">
       {imgSrc && (
         <figure className="h-[20vw] w-[20vw] max-h-[320px] max-w-[320px] shrink-0 overflow-hidden rounded-lg md:mr-4">
           <Image
@@ -133,6 +133,7 @@ export function DiscographyEntry({
             {post.frontMatter.title}
           </PostTitleLink>
         </h2>
+
         {fullContent && contentHtml ? (
           <div
             className="prose prose-invert mb-2 max-w-none text-lg leading-relaxed prose-a:text-accent"
@@ -143,14 +144,17 @@ export function DiscographyEntry({
             {post.frontMatter.description || post.excerpt}
           </p>
         )}
+
         {post.frontMatter.type && (
           <p className="text-sm">Release Type: {post.frontMatter.type}</p>
         )}
+
         {post.frontMatter.date && (
           <p className="text-sm">
             Release Year: {post.frontMatter.date.slice(0, 4)}
           </p>
         )}
+
         {post.frontMatter.buy && post.frontMatter.buy.length > 0 && (
           <p className="text-sm">
             Buy {post.frontMatter.title} from:{" "}
@@ -164,6 +168,7 @@ export function DiscographyEntry({
             ))}
           </p>
         )}
+
         {!fullContent && (
           <p className="mt-2">
             <PostTitleLink post={post} inline={false}>
@@ -173,6 +178,7 @@ export function DiscographyEntry({
             </PostTitleLink>
           </p>
         )}
+
         {fullContent && post.frontMatter.external_url && (
           <p className="mt-2">
             <a
@@ -186,6 +192,7 @@ export function DiscographyEntry({
             </a>
           </p>
         )}
+
       </section>
     </article>
   );

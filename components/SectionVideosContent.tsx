@@ -34,7 +34,7 @@ export async function SectionVideosContent({
             return (
               <article
                 key={`${video.category}-${video.slug}`}
-                className="videos min-w-4xl w-4xl max-w-full rounded-xl border-2 border-surface-border bg-surface-elevated shadow-sm transition-shadow hover:shadow-md sm:py-6 sm:px-6 md:py-6 md:px-16"
+                className="videos min-w-0 lg:min-w-5xl max-w-full rounded-xl border-2 border-surface-border bg-surface-elevated shadow-sm transition-shadow hover:shadow-md sm:py-6 sm:px-6 md:py-6 md:px-16"
               >
                 <header className="mb-6 border-b border-surface-border pb-2">
                   <h1 className="mb-1 font-display text-2xl font-bold tracking-tight text-text sm:text-3xl">

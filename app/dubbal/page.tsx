@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import "../dubbal-styles.css";
 import { getSectionConfig, getMetaData } from "@/lib/data";
-import { SectionHero } from "@/components/SectionHero";
-import { SectionContentStack } from "@/components/SectionContentStack";
+import { SectionAbout } from "@/components/SectionAbout";
+import { SectionPostFeedContent } from "@/components/SectionPostFeedContent";
+import { SectionGigsContent } from "@/components/SectionGigsContent";
+import { SectionVideosContent } from "@/components/SectionVideosContent";
 import { ScrollPinSections } from "@/components/ScrollPinSections";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -24,8 +26,8 @@ export default async function DubbalPage() {
   const config = getSectionConfig("dubbal");
   if (!config) return null;
 
-  const section1 = config.about ? (
-    <SectionHero
+  const about = config.about ? (
+    <SectionAbout
       about={config.about}
       title={config.title}
       subtitle={config.subtitle}
@@ -39,11 +41,38 @@ export default async function DubbalPage() {
     </header>
   );
 
+  const postfeed =
+    config.posts != null ? (
+      <div data-subsection="posts" className="subsection-panel">
+        <SectionPostFeedContent section="dubbal" config={config} contentOnly />
+      </div>
+    ) : null;
+
+  const gigs =
+    config.gigs != null ? (
+      <div data-subsection="gigs" className="subsection-panel">
+        <SectionGigsContent section="dubbal" config={config} />
+      </div>
+    ) : null;
+
+  const videos =
+    config.videos != null ? (
+      <div data-subsection="videos" className="subsection-panel">
+        <SectionVideosContent section="dubbal" config={config} />
+      </div>
+    ) : null;
+
   return (
     <div className="section-dubbal">
       <ScrollPinSections
-        section1={section1}
-        section2={<SectionContentStack section="dubbal" config={config} />}
+        section1={about}
+        section2={
+          <div className="flex flex-col gap-12">
+            {postfeed}
+            {gigs}
+            {videos}
+          </div>
+        }
       />
     </div>
   );

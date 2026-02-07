@@ -1,5 +1,73 @@
 /* Custom component styles – Tailwind is loaded via globals.css (v4) */
 @layer components {
+  .post h1 {
+    color: var(--color-text);
+    text-align: center;
+    font-size: var(--text-4xl);
+    line-height: var(--text-4xl--line-height);
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .post h2 {
+      color: var(--color-accent);
+      text-align: center;
+      font-size: var(--text-2xl);
+      line-height: var(--text-2xl--line-height);
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+  .post h3 {
+    color: var(--color-text);
+    font-size: var(--text-5xl);
+    line-height: var(--text-5xl--line-height);
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .post h4 {
+    color: yellow;
+    font-size: var(--text-3xl);
+    line-height: var(--text-3xl--line-height);
+    margin-top: 1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .post h5 {
+    color: var(--color-text);
+    font-size: var(--text-3xl);
+    line-height: var(--text-3xl--line-height);
+    margin-top: 1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .post p {
+    color: var(--color-text);
+    font-size: var(--text-3xl);
+    line-height: var(--text-3xl--line-height);
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .post a {
+    color: yellow;
+    font-size: var(--text-2xl);
+    line-height: var(--text-2xl--line-height);
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .post a ::before {
+    content: '\a';
+  }
+
+  .post .video-content {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
 
   .gigs h1 {
     color: var(--color-text);

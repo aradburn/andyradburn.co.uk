@@ -3,15 +3,13 @@ layout: post
 title: Dubbal - Dubbal on Bandcamp
 categories: [ dubbal ]
 ---
-First Studio album by Dubbal released January 6, 2015
-<br/>
-<br/>
-Credits:
-<br/>
-<br/>
+### First Studio album by Dubbal released January 6, 2015
+
+##### Credits:
 - Kev Ellis - Vocals
 - Andy Radburn - Synths And Programming
 - Nick May - Guitar
+<br/>
 <br/>
 <br/>
 

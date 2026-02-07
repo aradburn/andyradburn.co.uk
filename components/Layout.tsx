@@ -9,7 +9,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         id="main-content"
         className="relative z-0 flex min-h-0 flex-1 flex-col overflow-y-auto overflow-x-hidden scroll-mt-16"
       >
-        <div className="relative z-0 flex min-h-0 flex-1 flex-col px-0 py-8">
+        <div className="relative z-0 flex min-h-0 flex-1 flex-col px-0 py-0">
           {/*<div className="mx-auto min-w-0 max-w-full sm:max-w-max">*/}
             {children}
           {/*</div>*/}

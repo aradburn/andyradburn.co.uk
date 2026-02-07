@@ -1,7 +1,7 @@
 import { getPostsByCategory } from "@/lib/data";
 import { markdownToHtml } from "@/lib/markdown";
 import { PostFeedItem } from "@/components/PostFeed";
-import { SectionHero } from "@/components/SectionHero";
+import { SectionAbout } from "@/components/SectionAbout";
 import type { SectionConfig } from "@/lib/types";
 
 interface SectionPostFeedContentProps {
@@ -25,7 +25,7 @@ export async function SectionPostFeedContent({
   );
 
   const contentBlock = (
-    <div className="mx-auto min-w-0 max-w-full sm:max-w-max">
+    <div className="mx-auto min-w-0 lg:min-w-5xl max-w-full sm:max-w-max">
       <div className="flex flex-col gap-6">
         {postsWithHtml.map(({ post, contentHtml }) => (
           <div key={`${post.category}-${post.slug}`}>
@@ -53,7 +53,7 @@ export async function SectionPostFeedContent({
   return (
     <div className="max-w-full">
       {config.about ? (
-        <SectionHero
+        <SectionAbout
           about={config.about}
           title={config.title}
           subtitle={config.subtitle}
