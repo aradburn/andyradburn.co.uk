@@ -37,9 +37,9 @@ export async function SectionGigsContent({
             return (
               <article
                 key={`${gig.category}-${gig.slug}`}
-                className="gigs min-w-0 w-full max-w-full rounded-xl border-2 border-surface-border bg-surface-elevated py-4 px-4 shadow-sm transition-shadow hover:shadow-md sm:py-6 sm:px-6"
+                className="gigs min-w-4xl w-4xl max-w-full rounded-xl border-2 border-surface-border bg-surface-elevated shadow-sm transition-shadow hover:shadow-md px-4 py-4 sm:px-6 sm:py-6 md:px-16 md:py-6"
               >
-                <header className="mb-6 border-b border-surface-border pb-2">
+                <header className="mt-6 mb-6 border-b border-surface-border pb-2">
                   <h1 className="mb-1 font-display text-2xl font-bold tracking-tight text-text sm:text-3xl">
                     {gig_section_heading}
                   </h1>
