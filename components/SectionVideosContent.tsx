@@ -26,7 +26,7 @@ export async function SectionVideosContent({
   const contentBlock = (
     <div className="mx-auto min-w-0 max-w-full sm:max-w-max">
       {videosWithHtml.length === 0 ? (
-        <p className="text-text-muted">No videos yet. Check back later.</p>
+        <div></div>
       ) : (
         <div className="flex flex-col gap-8">
           {videosWithHtml.map(({ video, contentHtml }) => {

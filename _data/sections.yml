@@ -28,11 +28,11 @@ sonicarcana:
     # heading: Sonic Arcana
     # subheading: Electronic Space Ragas and Dubby Eastern Beats
   posts:
-    description: Dubbal News
+    description: Sonic Arcana News
   gigs:
-    description: Dubbal Gigs
+    description: Sonic Arcana Gigs
   videos:
-    description: Dubbal Videos
+    description: Sonic Arcana Videos
 
 bubbledubble:
   title: BubbleDubble
@@ -44,11 +44,11 @@ bubbledubble:
     # heading: BubbleDubble
     # subheading: Live Dubby Electronic Beats
   posts:
-    description: Dubbal News
+    description: BubbleDubble News
   gigs:
-    description: Dubbal Gigs
+    description: BubbleDubble Gigs
   videos:
-    description: Dubbal Videos
+    description: BubbleDubble Videos
 
 collaborations:
   title: Collaborations
