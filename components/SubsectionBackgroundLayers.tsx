@@ -174,19 +174,18 @@ export function SubsectionBackgroundLayers({
     { scope: containerRef, dependencies: [entries] }
   );
 
+  // When this component mounts or config changes, the new section content is in the DOM.
+  // Reset scroll and refresh so we reliably start at top (especially when moving to a shorter section).
   useEffect(() => {
-    const prev = window.history.scrollRestoration ?? "auto";
-    window.history.scrollRestoration = "manual";
     const scroller = document.getElementById("main-content");
-    if (scroller) scroller.scrollTo(0, 0);
-    const t = setTimeout(() => {
+    const run = () => {
       if (scroller) scroller.scrollTo(0, 0);
       ScrollTrigger.refresh();
-    }, 0);
-    return () => {
-      clearTimeout(t);
-      window.history.scrollRestoration = prev;
     };
+    const rafId = requestAnimationFrame(() => {
+      requestAnimationFrame(run);
+    });
+    return () => cancelAnimationFrame(rafId);
   }, [config?.title]);
 
   if (entries.length === 0) return null;

@@ -6,6 +6,7 @@ import { getMenu, getMetaData } from "@/lib/data";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Layout } from "@/components/Layout";
+import { ScrollResetOnRouteChange } from "@/components/ScrollResetOnRouteChange";
 
 const arvo = Arvo({
   weight: ["400", "700"],
@@ -87,6 +88,7 @@ export default function RootLayout({
       >
         <div className="h-16 shrink-0" aria-hidden />
         <Header menu={menu} meta={meta} />
+        <ScrollResetOnRouteChange />
         <Layout footer={<Footer menu={menu} meta={meta} />}>
           {children}
         </Layout>
