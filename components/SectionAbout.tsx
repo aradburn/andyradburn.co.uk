@@ -1,34 +1,49 @@
 import Image from "next/image";
-import type { SectionAboutConfig } from "@/lib/types";
+import type { SectionAboutConfig, SectionConfig } from "@/lib/types";
+import { SubsectionNavLinks } from "@/components/SubsectionNavLinks";
 
 interface SectionAboutProps {
   about: SectionAboutConfig;
   title: string;
   subtitle: string;
+  /** When provided, styled links to each non-null subsection (posts → News, gigs, videos) are shown. */
+  sectionConfig?: SectionConfig | null;
 }
 
-export function SectionAbout({ about, title, subtitle }: SectionAboutProps) {
+function subsectionLinks(config: SectionConfig): { id: string; label: string }[] {
+  const links: { id: string; label: string }[] = [];
+  if (config.posts != null) links.push({ id: "posts", label: "News" });
+  if (config.gigs != null) links.push({ id: "gigs", label: "Gigs" });
+  if (config.videos != null) links.push({ id: "videos", label: "Videos" });
+  return links;
+}
+
+export function SectionAbout({ about, title, subtitle, sectionConfig }: SectionAboutProps) {
   const heading = about.heading ?? title;
   const subheading = about.subheading ?? subtitle;
   const imgSrc = `/${about.image}`;
+  const links = sectionConfig ? subsectionLinks(sectionConfig) : [];
 
   return (
-    <header className="relative overflow-hidden bg-black min-h-[200px] sm:min-h-[280px] md:h-screen">
-      <Image
-        src={imgSrc}
-        alt={about.image_alt}
-        fill
-        className="object-contain"
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
-        priority
-      />
-      <div className="absolute inset-0 flex flex-col justify-end px-0 py-6 sm:py-8 md:py-10">
+    <header className="mx-auto flex w-7xl min-h-[50vh] flex-col items-center justify-center justify-self-center overflow-hidden bg-black/33 py-8 sm:py-10">
+      <div className="relative w-3xl max-w-3xl flex-1 min-h-[120px] sm:min-h-[160px]">
+        <Image
+          src={imgSrc}
+          alt={about.image_alt}
+          fill
+          className="object-contain"
+          sizes="(max-width: 768px) 100vw, (max-width: 800px) 60vw, 1200px"
+          priority
+        />
+      </div>
+      <div className="flex flex-col items-center text-center px-4 mt-4 sm:mt-6">
         <h1 className="font-display text-3xl font-bold tracking-tight text-text drop-shadow-md sm:text-4xl md:text-5xl">
           {heading}
         </h1>
         <p className="mt-2 max-w-2xl text-lg text-text-muted drop-shadow sm:text-xl">
           {subheading}
         </p>
+        <SubsectionNavLinks links={links} />
       </div>
     </header>
   );

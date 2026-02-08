@@ -16,6 +16,9 @@ export async function SectionPostFeedContent({
   config,
   contentOnly = false,
 }: SectionPostFeedContentProps) {
+  const postsConfig = config.posts;
+  if (!postsConfig) return null;
+
   const posts = getPostsByCategory(section);
   const postsWithHtml = await Promise.all(
     posts.map(async (post) => ({
@@ -39,11 +42,10 @@ export async function SectionPostFeedContent({
   if (contentOnly) {
     return (
       <div className="max-w-full">
-        <header className="mb-10 border-b border-surface-border pb-2">
-          <h2 className="mb-2 font-display text-4xl font-bold tracking-tight text-text sm:text-5xl">
-            {config.title}
+        <header className="mx-auto min-w-0 lg:min-w-5xl max-w-full sm:max-w-max mb-10 border-b border-surface-border pb-2">
+          <h2 className="text-center mb-2 font-display text-4xl font-bold tracking-tight text-text sm:text-5xl">
+            {postsConfig.description}
           </h2>
-          <p className="text-lg text-text-muted">{config.subtitle}</p>
         </header>
         {contentBlock}
       </div>

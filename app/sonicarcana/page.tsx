@@ -30,6 +30,7 @@ export default async function SonicArcanaPage() {
       about={config.about}
       title={config.title}
       subtitle={config.subtitle}
+      sectionConfig={config}
     />
   ) : (
     <header className="mb-10 border-b border-surface-border pb-2">
@@ -42,21 +43,21 @@ export default async function SonicArcanaPage() {
 
   const postfeed =
     config.posts != null ? (
-      <div data-subsection="posts" className="subsection-panel">
+      <div id="posts" data-subsection="posts" className="subsection-panel">
         <SectionPostFeedContent section="sonicarcana" config={config} contentOnly />
       </div>
     ) : null;
 
   const gigs =
     config.gigs != null ? (
-      <div data-subsection="gigs" className="subsection-panel">
+      <div id="gigs" data-subsection="gigs" className="subsection-panel">
         <SectionGigsContent section="sonicarcana" config={config} />
       </div>
     ) : null;
 
   const videos =
     config.videos != null ? (
-      <div data-subsection="videos" className="subsection-panel">
+      <div id="videos" data-subsection="videos" className="subsection-panel">
         <SectionVideosContent section="sonicarcana" config={config} />
       </div>
     ) : null;
