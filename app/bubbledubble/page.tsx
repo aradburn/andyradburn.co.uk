@@ -5,6 +5,7 @@ import { SectionAbout } from "@/components/SectionAbout";
 import { SectionPostFeedContent } from "@/components/SectionPostFeedContent";
 import { SectionGigsContent } from "@/components/SectionGigsContent";
 import { SectionVideosContent } from "@/components/SectionVideosContent";
+import { ScrollPinSections } from "@/components/ScrollPinSections";
 import { SectionWithBackgrounds } from "@/components/SectionWithBackgrounds";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -26,53 +27,51 @@ export default async function BubbleDubblePage() {
   const config = getSectionConfig("bubbledubble");
   if (!config) return null;
 
-  const about = config.about ? (
-    <section id="about" data-subsection="about">
-      <SectionAbout
-        about={config.about}
-        title={config.title}
-        subtitle={config.subtitle}
-        sectionConfig={config}
-      />
-    </section>
+  const section1 = config.about ? (
+    <SectionAbout
+      about={config.about}
+      title={config.title}
+      subtitle={config.subtitle}
+      sectionConfig={config}
+    />
   ) : (
-    <header className="mb-10 border-b border-surface-border pb-2">
-      <h1 className="mb-2 font-display text-4xl font-bold tracking-tight text-text sm:text-5xl">
+    <header className="border-b border-surface-border px-4 pb-2">
+      <h1 className="font-display text-4xl font-bold tracking-tight text-text">
         {config.title}
       </h1>
       <p className="text-lg text-text-muted">{config.subtitle}</p>
     </header>
   );
 
-  const postfeed =
+  const section2 =
     config.posts != null ? (
-      <div id="posts" data-subsection="posts" className="subsection-panel">
+      <div className="subsection-panel">
         <SectionPostFeedContent section="bubbledubble" config={config} contentOnly />
       </div>
     ) : null;
 
-  const gigs =
+  const section3 =
     config.gigs != null ? (
-      <div id="gigs" data-subsection="gigs" className="subsection-panel">
+      <div className="subsection-panel">
         <SectionGigsContent section="bubbledubble" config={config} />
       </div>
     ) : null;
 
-  const videos =
+  const section4 =
     config.videos != null ? (
-      <div id="videos" data-subsection="videos" className="subsection-panel">
+      <div className="subsection-panel">
         <SectionVideosContent section="bubbledubble" config={config} />
       </div>
     ) : null;
 
   return (
     <SectionWithBackgrounds config={config} className="section-bubbledubble max-w-full">
-      {about}
-      <div className="flex flex-col gap-12">
-        {postfeed}
-        {gigs}
-        {videos}
-      </div>
+      <ScrollPinSections
+        section1={section1}
+        section2={section2}
+        section3={section3}
+        section4={section4}
+      />
     </SectionWithBackgrounds>
   );
 }

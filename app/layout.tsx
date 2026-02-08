@@ -83,12 +83,13 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${arvo.variable} ${manrope.variable} flex min-h-screen flex-col`}
+        className={`${arvo.variable} ${manrope.variable} flex h-screen flex-col overflow-hidden`}
       >
         <div className="h-16 shrink-0" aria-hidden />
         <Header menu={menu} meta={meta} />
-        <Layout>{children}</Layout>
-        <Footer menu={menu} meta={meta} />
+        <Layout footer={<Footer menu={menu} meta={meta} />}>
+          {children}
+        </Layout>
       </body>
     </html>
   );

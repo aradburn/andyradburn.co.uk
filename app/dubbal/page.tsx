@@ -27,7 +27,7 @@ export default async function DubbalPage() {
   const config = getSectionConfig("dubbal");
   if (!config) return null;
 
-  const about = config.about ? (
+  const section1 = config.about ? (
     <SectionAbout
       about={config.about}
       title={config.title}
@@ -43,23 +43,23 @@ export default async function DubbalPage() {
     </header>
   );
 
-  const postfeed =
+  const section2 =
     config.posts != null ? (
-      <div id="posts" data-subsection="posts" className="subsection-panel">
+      <div className="subsection-panel">
         <SectionPostFeedContent section="dubbal" config={config} contentOnly />
       </div>
     ) : null;
 
-  const gigs =
+  const section3 =
     config.gigs != null ? (
-      <div id="gigs" data-subsection="gigs" className="subsection-panel">
+      <div className="subsection-panel">
         <SectionGigsContent section="dubbal" config={config} />
       </div>
     ) : null;
 
-  const videos =
+  const section4 =
     config.videos != null ? (
-      <div id="videos" data-subsection="videos" className="subsection-panel">
+      <div className="subsection-panel">
         <SectionVideosContent section="dubbal" config={config} />
       </div>
     ) : null;
@@ -67,14 +67,10 @@ export default async function DubbalPage() {
   return (
     <SectionWithBackgrounds config={config} className="section-dubbal">
       <ScrollPinSections
-        section1={about}
-        section2={
-          <div className="flex flex-col gap-12">
-            {postfeed}
-            {gigs}
-            {videos}
-          </div>
-        }
+        section1={section1}
+        section2={section2}
+        section3={section3}
+        section4={section4}
       />
     </SectionWithBackgrounds>
   );

@@ -63,3 +63,12 @@
     white-space: normal;
   }
 }
+
+/* SubsectionBackgroundLayers: initial position so section1 shows on first paint.
+   Still used; GSAP then overrides with inline transform (yPercent) on scroll. */
+.subsection-bg-layer--active {
+  transform: translateY(0%);
+}
+.subsection-bg-layer--below {
+  transform: translateY(100%);
+}
