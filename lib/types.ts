@@ -85,21 +85,25 @@ export interface SectionAboutConfig {
   image_alt: string;
   heading?: string;
   subheading?: string;
+  "background-image"?: string;
 }
 
 /** Subsection config for posts (optional description). */
 export interface SectionPostsConfig {
   description?: string;
+  "background-image"?: string;
 }
 
 /** Subsection config for gigs (optional description). */
 export interface SectionGigsConfig {
   description?: string;
+  "background-image"?: string;
 }
 
 /** Subsection config for videos (optional description). */
 export interface SectionVideosConfig {
   description?: string;
+  "background-image"?: string;
 }
 
 export interface SectionConfig {

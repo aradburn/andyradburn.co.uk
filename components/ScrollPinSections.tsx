@@ -88,6 +88,8 @@ export function ScrollPinSections({ section1, section2 }: ScrollPinSectionsProps
   return (
     <div ref={containerRef} className="scroll-pin-sections-wrapper">
       <div
+        id="about"
+        data-subsection="about"
         className={`${SECTION_CLASS} h-[calc(100vh-4rem)] w-full overflow-hidden`}
       >
         <div className="h-full overflow-hidden">

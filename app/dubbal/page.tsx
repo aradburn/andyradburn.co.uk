@@ -6,6 +6,7 @@ import { SectionPostFeedContent } from "@/components/SectionPostFeedContent";
 import { SectionGigsContent } from "@/components/SectionGigsContent";
 import { SectionVideosContent } from "@/components/SectionVideosContent";
 import { ScrollPinSections } from "@/components/ScrollPinSections";
+import { SectionWithBackgrounds } from "@/components/SectionWithBackgrounds";
 
 export async function generateMetadata(): Promise<Metadata> {
   const config = getSectionConfig("dubbal");
@@ -64,7 +65,7 @@ export default async function DubbalPage() {
     ) : null;
 
   return (
-    <div className="section-dubbal">
+    <SectionWithBackgrounds config={config} className="section-dubbal">
       <ScrollPinSections
         section1={about}
         section2={
@@ -75,6 +76,6 @@ export default async function DubbalPage() {
           </div>
         }
       />
-    </div>
+    </SectionWithBackgrounds>
   );
 }

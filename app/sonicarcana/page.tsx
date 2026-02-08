@@ -5,6 +5,7 @@ import { SectionAbout } from "@/components/SectionAbout";
 import { SectionPostFeedContent } from "@/components/SectionPostFeedContent";
 import { SectionGigsContent } from "@/components/SectionGigsContent";
 import { SectionVideosContent } from "@/components/SectionVideosContent";
+import { SectionWithBackgrounds } from "@/components/SectionWithBackgrounds";
 
 export async function generateMetadata(): Promise<Metadata> {
   const config = getSectionConfig("sonicarcana");
@@ -26,12 +27,14 @@ export default async function SonicArcanaPage() {
   if (!config) return null;
 
   const about = config.about ? (
-    <SectionAbout
-      about={config.about}
-      title={config.title}
-      subtitle={config.subtitle}
-      sectionConfig={config}
-    />
+    <section id="about" data-subsection="about">
+      <SectionAbout
+        about={config.about}
+        title={config.title}
+        subtitle={config.subtitle}
+        sectionConfig={config}
+      />
+    </section>
   ) : (
     <header className="mb-10 border-b border-surface-border pb-2">
       <h1 className="mb-2 font-display text-4xl font-bold tracking-tight text-text sm:text-5xl">
@@ -63,13 +66,13 @@ export default async function SonicArcanaPage() {
     ) : null;
 
   return (
-    <div className="section-sonicarcana max-w-full">
+    <SectionWithBackgrounds config={config} className="section-sonicarcana max-w-full">
       {about}
       <div className="flex flex-col gap-12">
         {postfeed}
         {gigs}
         {videos}
       </div>
-    </div>
+    </SectionWithBackgrounds>
   );
 }

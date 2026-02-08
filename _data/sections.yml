@@ -8,15 +8,19 @@ dubbal:
     description: Dubbal – psychedelic space rock and dubby reggae beats.
     image: assets/img/dubbal/logo-v7-white-transparent-2048x1152.png
     image_alt: Dubbal Logo
+    background-image: assets/img/dubbal/section1.jpeg
     # Optional overrides; when absent, title/subtitle above are used
     # heading: Dubbal
     # subheading: Psychedelic Space Rock and Dubby Reggae Beats
   posts:
     description: Dubbal News
+    background-image: assets/img/dubbal/section2.jpeg
   gigs:
     description: Dubbal Gigs
+    background-image: assets/img/dubbal/section3.jpeg
   videos:
     description: Dubbal Videos
+    background-image: assets/img/dubbal/section4.jpeg
 
 sonicarcana:
   title: Sonic Arcana
