@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "../dubbal-styles.css";
-import { getSectionConfig, getMetaData } from "@/lib/data";
+import { getSectionConfig } from "@/lib/data";
 import { SectionAbout } from "@/components/SectionAbout";
 import { SectionPostFeedContent } from "@/components/SectionPostFeedContent";
 import { SectionGigsContent } from "@/components/SectionGigsContent";
@@ -10,16 +10,18 @@ import { SectionWithBackgrounds } from "@/components/SectionWithBackgrounds";
 
 export async function generateMetadata(): Promise<Metadata> {
   const config = getSectionConfig("dubbal");
-  const meta = getMetaData();
-  const title = config ? `${config.title} | ${meta.author}` : meta.author;
-  const description = config?.description ?? undefined;
+  const title = "Dubbal";
+  const description = "Dubbal Band Website";
+  const openGraph = {
+    title: "Dubbal - Psychedelic Space Rock Band",
+    locale: "en_GB",
+    type: "website",
+    description: "News gigs and releases from Dubbal",
+  }
   return {
     title,
     description,
-    openGraph: {
-      title,
-      description: description ?? undefined,
-    },
+    openGraph,
   };
 }
 

@@ -16,8 +16,9 @@ interface SubsectionNavLinksProps {
 
 function scrollToSection(id: string) {
   const el = document.getElementById(id);
-  if (!el) return;
-  gsap.to(window, {
+  const scroller = document.getElementById("main-content");
+  if (!el || !scroller) return;
+  gsap.to(scroller, {
     duration: 1.2,
     scrollTo: { y: el, offsetY: 80 },
     ease: "power2.inOut",
