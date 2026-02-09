@@ -38,7 +38,7 @@ export function SubsectionNavLinks({ links }: SubsectionNavLinksProps) {
           key={id}
           type="button"
           onClick={() => scrollToSection(id)}
-          className="text-text-muted hover:text-text focus:text-text focus:outline-none focus:ring-2 focus:ring-text/50 rounded px-1 py-0.5 text-base font-medium underline-offset-4 transition-colors hover:underline sm:text-lg"
+          className="text-text-muted hover:text-text focus:text-text focus:outline-none focus:ring-2 focus:ring-text/50 rounded px-1 py-0.5 text-base font-medium underline-offset-4 transition-colors hover:underline sm:text-lg md:text-3xl"
         >
           {label}
         </button>

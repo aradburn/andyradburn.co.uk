@@ -40,7 +40,7 @@ export function SectionAbout({ about, title, subtitle, sectionConfig }: SectionA
         <h1 className="font-display text-3xl font-bold tracking-tight text-text drop-shadow-md sm:text-4xl md:text-5xl">
           {heading}
         </h1>
-        <p className="mt-2 max-w-2xl text-lg text-text-muted drop-shadow sm:text-xl">
+        <p className="mt-2 max-w-2xl text-lg text-text drop-shadow sm:text-3xl">
           {subheading}
         </p>
         <SubsectionNavLinks links={links} />

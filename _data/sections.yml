@@ -2,25 +2,25 @@
 # Used for page metadata and hero panel. Posts still come from each section's _posts folder.
 
 dubbal:
-  title: Dubbal
-  subtitle: Psychedelic Space Rock and Dubby Reggae Beats
+  title:
+  subtitle: Psychedelic Space Rock and Dubby Beats
   about:
-    description: Dubbal – psychedelic space rock and dubby reggae beats.
+    description: Dubbal – psychedelic space rock and dubby beats.
     image: assets/img/dubbal/logo-v7-white-transparent-2048x1152.png
     image_alt: Dubbal Logo
-    background-image: assets/img/dubbal/section1.jpeg
+    background-image: assets/img/dubbal/DubbalOnStage.jpg
     # Optional overrides; when absent, title/subtitle above are used
     # heading: Dubbal
     # subheading: Psychedelic Space Rock and Dubby Reggae Beats
   posts:
     description: Dubbal News
-    background-image: assets/img/dubbal/section2.jpeg
+    background-image: null
   gigs:
     description: Dubbal Gigs
-    background-image: assets/img/dubbal/section3.jpeg
+    background-image: assets/img/dubbal/AlanAndy.jpg
   videos:
     description: Dubbal Videos
-    background-image: assets/img/dubbal/section4.jpeg
+    background-image: assets/img/dubbal/logo-v7-white-transparent-2048x1152.png
 
 sonicarcana:
   title: Sonic Arcana

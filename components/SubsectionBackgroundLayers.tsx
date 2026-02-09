@@ -200,7 +200,7 @@ export function SubsectionBackgroundLayers({
         <div
           key={id}
           data-subsection-id={id}
-          className={`absolute inset-0 bg-cover bg-center bg-no-repeat subsection-bg-layer subsection-bg-layer--${id === "about" ? "active" : "below"}`}
+          className={`absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50 subsection-bg-layer subsection-bg-layer--${id === "about" ? "active" : "below"}`}
           style={{
             backgroundImage: `url(/${bg})`,
             willChange: "transform",
