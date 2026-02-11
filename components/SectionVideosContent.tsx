@@ -1,4 +1,4 @@
-import { getVideosByCategory } from "@/lib/data";
+import { getVideosByCategory, getVideosForHome } from "@/lib/data";
 import { markdownToHtml } from "@/lib/markdown";
 import type { SectionConfig } from "@/lib/types";
 
@@ -15,7 +15,8 @@ export async function SectionVideosContent({
   if (!videosConfig) return null;
 
   const heading = videosConfig.description ?? `${config.title} Videos`;
-  const videos = getVideosByCategory(section);
+  const videos =
+    section === "home" ? getVideosForHome() : getVideosByCategory(section);
   const videosWithHtml = await Promise.all(
     videos.map(async (video) => ({
       video,

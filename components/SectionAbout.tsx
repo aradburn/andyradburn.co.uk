@@ -25,7 +25,7 @@ export function SectionAbout({ about, title, subtitle, sectionConfig }: SectionA
   const links = sectionConfig ? subsectionLinks(sectionConfig) : [];
 
   return (
-    <header className="mx-auto flex w-7xl min-h-[50vh] min-h-full flex-col items-center justify-center justify-self-center overflow-hidden bg-black/33 py-8 sm:py-10">
+    <header className="mx-auto flex w-7xl min-h-[50vh] min-h-full flex-col items-center justify-center justify-self-center overflow-hidden bg-gradient-to-b from-black/20 to-black/66 py-8 sm:py-10">
       <div className="relative w-3xl max-w-3xl flex-1 min-h-[120px] sm:min-h-[160px]">
         <Image
           src={imgSrc}

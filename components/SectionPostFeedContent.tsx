@@ -19,7 +19,10 @@ export async function SectionPostFeedContent({
   const postsConfig = config.posts;
   if (!postsConfig) return null;
 
-  const posts = getPostsByCategory(section);
+  const posts =
+    section === "home"
+      ? getPostsByCategory("home", true)
+      : getPostsByCategory(section);
   const postsWithHtml = await Promise.all(
     posts.map(async (post) => ({
       post,

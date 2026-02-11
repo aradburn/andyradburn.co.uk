@@ -1,4 +1,4 @@
-import { getGigsByCategory } from "@/lib/data";
+import { getGigsByCategory, getGigsForHome } from "@/lib/data";
 import { markdownToHtml } from "@/lib/markdown";
 import type { SectionConfig } from "@/lib/types";
 
@@ -15,7 +15,8 @@ export async function SectionGigsContent({
   if (!gigsConfig) return null;
 
   const heading = gigsConfig.description ?? `${config.title} Gigs`;
-  const gigs = getGigsByCategory(section);
+  const gigs =
+    section === "home" ? getGigsForHome() : getGigsByCategory(section);
   const gigsWithHtml = await Promise.all(
     gigs.map(async (gig) => ({
       gig,
