@@ -9,24 +9,72 @@ export function generateStaticParams() {
   return [{ section: SECTION_SLUG }];
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ section: string }>;
-}): Promise<Metadata> {
-  const { section } = await params;
-  if (section !== SECTION_SLUG) return {};
-  const config = getSectionConfig(section);
-  const meta = getMetaData();
-  const title = config ? `${config.title} | ${meta.author}` : meta.author;
-  const description = config?.description ?? undefined;
+export async function generateMetadata(): Promise<Metadata> {
+  const title = "Andy Radburn";
+  const description = "Andy Radburn's Website";
+  const openGraph = {
+    title: "Andy Radburn",
+    description: "News gigs and releases from Andy Radburn",
+    locale: "en_GB",
+    type: "website",
+    url: "https://andyradburn.co.uk/",
+    siteName: "Andy Radburn",
+    images: [
+      {
+        url: "https://andyradburn.co.uk/assets/img/bubbledubble/logo-v8-black-750x750.png", // Must be an absolute URL
+        width: 750,
+        height: 750,
+      },
+    ],
+  }
+  const robots = {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+//       "max-video-preview": -1,
+//       "max-image-preview": "large",
+//       "max-snippet": -1,
+    },
+  }
+  const icons = {
+    icon: [
+      { url: "/assets/img/bubbledubble/BubbleDubble-Logo-6v2-64x64.png", sizes: '64x64', type: 'image/png' },
+      { url: "/assets/img/bubbledubble/BubbleDubble-Logo-6v2-32x32.png", sizes: '32x32', type: 'image/png' },
+    ],
+    //shortcut: "/shortcut-icon.png',
+    apple: [
+      { url: "/assets/img/bubbledubble/BubbleDubble-Logo-6v2-180x180.png", sizes: '180x180', type: 'image/png' },
+    ],
+  }
+  const twitter = {
+    card: "summary_large_image",
+    title: "Andy Radburn",
+    description: "News gigs and releases from Andy Radburn",
+//     siteId: '??????',
+//     creator: '@aradburn',
+//     creatorId: '???????',
+    images: ["https://andyradburn.co.uk/assets/img/bubbledubble/BubbleDubble-Logo-6v2-2048x946.png"], // Must be an absolute URL
+  }
+  const other = {
+    "dc.title": "Andy Radburn",
+    "dc.description": "News gigs and releases from Andy Radburn",
+    "dc.relation": "https://andyradburn.co.uk/",
+    "dc.source": "https://andyradburn.co.uk/",
+    "dc.language": "en_GB",
+  }
   return {
     title,
     description,
-    openGraph: {
-      title,
-      description: description ?? undefined,
-    },
+    openGraph,
+    robots,
+    icons,
+    twitter,
+    other,
+    category: 'music',
   };
 }
 

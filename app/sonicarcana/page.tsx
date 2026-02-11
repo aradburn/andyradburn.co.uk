@@ -9,17 +9,72 @@ import { ScrollPinSections } from "@/components/ScrollPinSections";
 import { SectionWithBackgrounds } from "@/components/SectionWithBackgrounds";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const config = getSectionConfig("sonicarcana");
-  const meta = getMetaData();
-  const title = config ? `${config.title} | ${meta.author}` : meta.author;
-  const description = config?.description ?? undefined;
+  const title = "Sonic Arcana Band";
+  const description = "Sonic Arcana Website";
+  const openGraph = {
+    title: "Sonic Arcana - Psychedelic Dubby Beats",
+    description: "News gigs and releases from Sonic Arcana",
+    locale: "en_GB",
+    type: "website",
+    url: "https://andyradburn.co.uk/sonicarcana/",
+    siteName: "Sonic Arcana",
+    images: [
+      {
+        url: "https://andyradburn.co.uk/assets/img/sonicarcana/Sonic-Arcana-v2-1080x1080.jpg", // Must be an absolute URL
+        width: 1080,
+        height: 1080,
+      },
+    ],
+  }
+  const robots = {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+//       "max-video-preview": -1,
+//       "max-image-preview": "large",
+//       "max-snippet": -1,
+    },
+  }
+  const icons = {
+    icon: [
+      { url: "/assets/img/sonicarcana/EarthPyramid-Purple-Icon-64x64.png", sizes: '64x64', type: 'image/png' },
+      { url: "/assets/img/sonicarcana/EarthPyramid-Purple-Icon-32x32.png", sizes: '32x32', type: 'image/png' },
+      { url: "/assets/img/sonicarcana/EarthPyramid-Purple-Icon-16x16.png", sizes: '16x16', type: 'image/png' },
+    ],
+    //shortcut: "/shortcut-icon.png',
+    apple: [
+      { url: "/assets/img/sonicarcana/EarthPyramid-Purple-Icon-180x180.png", sizes: '180x180', type: 'image/png' },
+    ],
+  }
+  const twitter = {
+    card: "summary_large_image",
+    title: "Sonic Arcana Band",
+    description: "News gigs and releases from Sonic Arcana",
+//     siteId: '??????',
+//     creator: '@aradburn',
+//     creatorId: '???????',
+    images: ["https://andyradburn.co.uk/assets/img/sonicarcana/Kepler-452B-Front-Cover-v10-2048x946.jpg"], // Must be an absolute URL
+  }
+  const other = {
+    "dc.title": "Sonic Arcana Band",
+    "dc.description": "News gigs and releases from Sonic Arcana",
+    "dc.relation": "https://andyradburn.co.uk/sonicarcana/",
+    "dc.source": "https://andyradburn.co.uk/sonicarcana/",
+    "dc.language": "en_GB",
+  }
   return {
     title,
     description,
-    openGraph: {
-      title,
-      description: description ?? undefined,
-    },
+    openGraph,
+    robots,
+    icons,
+    twitter,
+    other,
+    category: 'music',
   };
 }
 

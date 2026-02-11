@@ -9,19 +9,71 @@ import { ScrollPinSections } from "@/components/ScrollPinSections";
 import { SectionWithBackgrounds } from "@/components/SectionWithBackgrounds";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const config = getSectionConfig("dubbal");
   const title = "Dubbal";
   const description = "Dubbal Band Website";
   const openGraph = {
     title: "Dubbal - Psychedelic Space Rock Band",
+    description: "News gigs and releases from Dubbal",
     locale: "en_GB",
     type: "website",
+    url: "https://andyradburn.co.uk/dubbal/",
+    siteName: "Dubbal",
+    images: [
+      {
+        url: "https://andyradburn.co.uk/assets/img/dubbal/logo-v8-black-750x750.png", // Must be an absolute URL
+        width: 750,
+        height: 750,
+      },
+    ],
+  }
+  const robots = {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+//       "max-video-preview": -1,
+//       "max-image-preview": "large",
+//       "max-snippet": -1,
+    },
+  }
+  const icons = {
+    icon: [
+      { url: "/assets/img/dubbal/favicon-32x32.png", sizes: '32x32', type: 'image/png' },
+      { url: "/assets/img/dubbal/favicon-16x16.png", sizes: '16x16', type: 'image/png' },
+    ],
+    //shortcut: "/shortcut-icon.png',
+    apple: [
+      { url: "/assets/img/dubbal/apple-touch-icon.png", sizes: '180x180', type: 'image/png' },
+    ],
+  }
+  const twitter = {
+    card: "summary_large_image",
+    title: "Dubbal Band",
     description: "News gigs and releases from Dubbal",
+//     siteId: '??????',
+//     creator: '@aradburn',
+//     creatorId: '???????',
+    images: ["https://andyradburn.co.uk/assets/img/dubbal/logo-v8-black-750x750.png"], // Must be an absolute URL
+  }
+  const other = {
+    "dc.title": "Dubbal Band",
+    "dc.description": "News gigs and releases from Dubbal",
+    "dc.relation": "https://andyradburn.co.uk/dubbal/",
+    "dc.source": "https://andyradburn.co.uk/dubbal/",
+    "dc.language": "en_GB",
   }
   return {
     title,
     description,
     openGraph,
+    robots,
+    icons,
+    twitter,
+    other,
+    category: 'music',
   };
 }
 
