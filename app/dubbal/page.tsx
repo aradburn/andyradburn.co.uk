@@ -13,7 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const description = "Dubbal Band Website";
   const openGraph = {
     title: "Dubbal - Psychedelic Space Rock Band",
-    description: "News gigs and releases from Dubbal",
+    description: "News, upcoming gigs and album releases from Dubbal",
     locale: "en_GB",
     type: "website",
     url: "https://andyradburn.co.uk/dubbal/",
@@ -52,7 +52,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const twitter = {
     card: "summary_large_image",
     title: "Dubbal Band",
-    description: "News gigs and releases from Dubbal",
+    description: "News, upcoming gigs and album releases from Dubbal",
 //     siteId: '??????',
 //     creator: '@aradburn',
 //     creatorId: '???????',
