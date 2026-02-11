@@ -1,6 +1,7 @@
 import { getVideosByCategory, getVideosForHome } from "@/lib/data";
 import { markdownToHtml } from "@/lib/markdown";
 import type { SectionConfig } from "@/lib/types";
+import { YouTubeLazyHydrator } from "@/components/YouTubeLazyHydrator";
 
 interface SectionVideosContentProps {
   section: string;
@@ -25,7 +26,8 @@ export async function SectionVideosContent({
   );
 
   const contentBlock = (
-    <div className="mx-auto min-w-0 max-w-full sm:max-w-max">
+    <YouTubeLazyHydrator>
+      <div className="mx-auto min-w-0 max-w-full sm:max-w-max">
       {videosWithHtml.length === 0 ? (
         <div></div>
       ) : (
@@ -53,6 +55,7 @@ export async function SectionVideosContent({
         </div>
       )}
     </div>
+    </YouTubeLazyHydrator>
   );
 
   return (
