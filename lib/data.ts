@@ -215,3 +215,17 @@ export function getGigsByCategory(category: string): Post[] {
   const all = getAllGigs();
   return all.filter((p) => p.category === category);
 }
+
+export function getGigsForHome(): Post[] {
+  const all = getAllGigs();
+  return all.filter((p) =>
+    (p.frontMatter.categories || []).includes("home"),
+  );
+}
+
+export function getVideosForHome(): Post[] {
+  const all = getAllVideos();
+  return all.filter((p) =>
+    (p.frontMatter.categories || []).includes("home"),
+  );
+}

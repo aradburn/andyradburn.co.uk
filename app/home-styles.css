@@ -1,0 +1,22 @@
+/* Dubbal section: overrides global Tailwind theme (scoped to .section-dubbal) */
+.section-dubbal {
+  /* Colors – override with dubbal-specific palette */
+  --color-surface: #01261C;
+  --color-surface-elevated: rgba(0, 0, 0, 0.38);
+  --color-surface-border: #BF9F63;
+  --color-text: #F2DEA0;
+  --color-text-muted: #BF9F63;
+  --color-accent: #f8eecf;
+  --color-accent-dim: #3d8a6a;
+  --color-accent-warm: #BF9F63;
+  /* Fonts */
+  --font-sans: "Arvo", Georgia, serif;
+  --font-display: "Manrope", system-ui, sans-serif;
+  /* Background image (gradient-stage) */
+  --background-image-gradient-stage: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(1, 64, 52, 0.6) 50%,
+    rgba(1, 64, 52, 0.95) 100%
+  );
+}

@@ -1,5 +1,23 @@
 # Per-section config for dubbal, sonicarcana, bubbledubble (and collaborations).
 # Used for page metadata and hero panel. Posts still come from each section's _posts folder.
+home:
+  title:
+  subtitle: Music and Programming
+  description: Andy Radburn – music and programming.
+  about:
+    description: Andy Radburn – music and programming.
+    image: assets/img/home/AndyRadburn3.png
+    image_alt: Andy Radburn
+    background-image: assets/img/home/AndyMabfestv3.png
+  posts:
+    description: News
+    background-image: null
+  gigs:
+    description: Gigs
+    background-image: null
+  videos:
+    description: Videos
+    background-image: null
 
 dubbal:
   title:
