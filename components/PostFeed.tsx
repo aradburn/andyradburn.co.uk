@@ -56,7 +56,7 @@ export function PostFeedItem({
         )}
       </header>
       {showImage && imgSrc && (
-        <figure className="my-4 min-w-0 max-w-full overflow-hidden rounded-lg">
+        <figure className="my-4 flex justify-center overflow-hidden rounded-lg">
           <Image
             src={imgSrc}
             alt={post.frontMatter.image_alt || post.frontMatter.title}

@@ -61,8 +61,8 @@ export async function SectionPostFeedContent({
           subtitle={config.subtitle}
         />
       ) : (
-        <header className="mb-10 border-b border-surface-border pb-2">
-          <h1 className="mb-2 font-display text-4xl font-bold tracking-tight text-text sm:text-5xl">
+        <header className="mx-auto min-w-0 lg:min-w-5xl max-w-full sm:max-w-max mb-10 border-b border-surface-border pb-2">
+          <h1 className="text-center mb-2 font-display text-4xl font-bold tracking-tight text-text sm:text-5xl">
             {config.title}
           </h1>
           <p className="text-lg text-text-muted">{config.subtitle}</p>

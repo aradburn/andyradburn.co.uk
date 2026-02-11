@@ -49,6 +49,29 @@ function aboutProgressToYPercent(p: number, rect: DOMRect, vh: number): number {
   return 0;
 }
 
+const OPACITY_MAX = 0.5;
+/** Progress delta that corresponds to 0.5 * viewport height of scroll. */
+function progressDeltaForHalfVh(rect: DOMRect, vh: number): number {
+  const range = vh + rect.height;
+  if (range <= 0) return 0;
+  return (0.5 * vh) / range;
+}
+
+/** Opacity 0..OPACITY_MAX: fade in over last 0.5vh when entering, full when in view, fade out over first 0.5vh when leaving. */
+function sectionOpacity(p: number, rect: DOMRect, vh: number): number {
+  const halfVh = progressDeltaForHalfVh(rect, vh);
+  const enterFadeEnd = ENTER_END;
+  const enterFadeStart = Math.max(0, enterFadeEnd - halfVh);
+  const leaveFadeStart = LEAVE_START;
+  const leaveFadeEnd = Math.min(1, leaveFadeStart + halfVh);
+
+  if (p <= enterFadeStart) return 0;
+  if (p < enterFadeEnd) return OPACITY_MAX * (p - enterFadeStart) / (enterFadeEnd - enterFadeStart);
+  if (p <= leaveFadeStart) return OPACITY_MAX;
+  if (p < leaveFadeEnd) return OPACITY_MAX * (1 - (p - leaveFadeStart) / (leaveFadeEnd - leaveFadeStart));
+  return 0;
+}
+
 function getBackgroundImage(
   config: SectionConfig,
   id: SubsectionId
@@ -99,7 +122,8 @@ export function SubsectionBackgroundLayers({
 
       const updateLayers = (wrapper: Element) => {
         const vh = window.innerHeight;
-        entries.forEach(({ id }) => {
+        const atTop = scrollerEl.scrollTop <= 0;
+        entries.forEach(({ id }, i) => {
           const layerEl = getLayerBySubsectionId(id);
           const sectionEl =
             wrapper.querySelector(`section#${id}`) ??
@@ -112,9 +136,12 @@ export function SubsectionBackgroundLayers({
               ? aboutProgressToYPercent(p, rect, vh)
               : progressToYPercent(p, rect, vh);
           const isInView = y === 0;
+          let opacity = sectionOpacity(p, rect, vh);
+          if (atTop && i === 0) opacity = Math.max(opacity, OPACITY_MAX);
           gsap.set(layerEl, {
             y: 0,
             yPercent: y,
+            opacity,
             zIndex: isInView ? 2 : 1,
           });
         });
@@ -122,7 +149,7 @@ export function SubsectionBackgroundLayers({
 
       entries.forEach(({ id }, i) => {
         const layerEl = getLayerBySubsectionId(id);
-        if (layerEl) gsap.set(layerEl, { y: 0, yPercent: i === 0 ? 0 : 100 });
+        if (layerEl) gsap.set(layerEl, { y: 0, yPercent: i === 0 ? 0 : 100, opacity: i === 0 ? OPACITY_MAX : 0 });
       });
 
       let retries = 0;
@@ -196,14 +223,15 @@ export function SubsectionBackgroundLayers({
       className="pointer-events-none fixed left-0 right-0 top-16 bottom-0 z-0"
       aria-hidden
     >
-      {entries.map(({ id, bg }) => (
+      {entries.map(({ id, bg }, i) => (
         <div
           key={id}
           data-subsection-id={id}
-          className={`absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50 subsection-bg-layer subsection-bg-layer--${id === "about" ? "active" : "below"}`}
+          className={`absolute inset-0 bg-cover bg-center bg-no-repeat subsection-bg-layer subsection-bg-layer--${id === "about" ? "active" : "below"}`}
           style={{
             backgroundImage: `url(/${bg})`,
             willChange: "transform",
+            opacity: i === 0 ? OPACITY_MAX : 0,
           }}
         />
       ))}

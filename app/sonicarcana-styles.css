@@ -4,11 +4,11 @@
   --color-surface: #0d1b1a;
   --color-surface-elevated: #1a2d2a;
   --color-surface-border: #5c7c78;
-  --color-text: #e8f4f2;
-  --color-text-muted: #8fb8b2;
+  --color-text: #f49a4c;
+  --color-text-muted: #F2DEA0;
   --color-accent: #c5f0e8;
-  --color-accent-dim: #2d6b63;
-  --color-accent-warm: #8fb8b2;
+  --color-accent-dim: #232165;
+  --color-accent-warm: #f49a4c;
   /* Fonts */
   --font-sans: "Arvo", Georgia, serif;
   --font-display: "Manrope", system-ui, sans-serif;
