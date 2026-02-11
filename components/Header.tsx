@@ -78,7 +78,8 @@ export function Header({ menu, meta }: { menu: MenuData; meta: MetaData }) {
             width={160}
             height={64}
             className="h-10 w-auto object-contain md:h-12"
-            priority
+            loading="eager"
+            preload={false}
           />
         </Link>
 

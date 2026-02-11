@@ -33,7 +33,8 @@ export function SectionAbout({ about, title, subtitle, sectionConfig }: SectionA
           fill
           className="object-contain"
           sizes="(max-width: 768px) 100vw, (max-width: 800px) 60vw, 1200px"
-          priority
+          loading="eager"
+          preload={false}
         />
       </div>
       <div className="flex flex-col items-center text-center px-4 mt-4 sm:mt-6">
