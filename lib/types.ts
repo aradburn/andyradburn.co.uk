@@ -6,9 +6,10 @@ export interface MenuPage {
 }
 
 export interface MenuContact {
-  faicon: string;
   url: string;
-  target: string;
+  network?: string;
+  target?: string;
+  label?: string;
 }
 
 export interface MenuData {
