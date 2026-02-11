@@ -25,6 +25,13 @@ function copyRecursive(src, dest) {
 
 copyRecursive(assetsSrc, publicAssets);
 
+// Copy favicon.ico to public root so /favicon.ico is served as static file
+// (avoids routing to [section] dynamic route)
+const faviconSrc = path.join(assetsSrc, "img", "favicon.ico");
+if (fs.existsSync(faviconSrc)) {
+  fs.copyFileSync(faviconSrc, path.join(publicDir, "favicon.ico"));
+}
+
 // Copy CNAME and .nojekyll if not already in public
 ["CNAME", ".nojekyll"].forEach((file) => {
   const rootFile = path.join(root, file);
