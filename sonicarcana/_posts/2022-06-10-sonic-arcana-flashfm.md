@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Flash FM Fundraiser CD
-categories: [ sonicarcana, home ]
+categories: [ sonicarcana ]
 image: assets/img/misc/flashfm-album.jpg
 image_alt: Flash FM Fundraiser Album
 ---
