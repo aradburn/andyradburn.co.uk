@@ -8,12 +8,37 @@ image_alt: Dubbal Logo
 
 # 2026
 
+## 7th - 9th AUGUST
+
+### Kozfest 2026
+Builth Wells, Wales
+<a href="https://www.buytickets.at/electricsaladco"  target="_blank" rel="noopener noreferrer">
+Tickets: www.buytickets.at/electricsaladco
+</a>
+
+## 2nd - 3rd OCTOBER
+
+### Phoenix Alternative Winter Festival 2026
+
+Warsop, Nottinghamshire
+
+<br/>
+<br/>
 
 # 2025
 
+<br/>
+<br/>
+
 # 2024
 
+<br/>
+<br/>
+
 # 2023
+
+<br/>
+<br/>
 
 # 2022
 

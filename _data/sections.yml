@@ -23,36 +23,43 @@ dubbal:
     background-image: assets/img/dubbal/logo-v7-white-transparent-2048x1152.png
 
 sonicarcana:
-  title: Sonic Arcana
+  title:
   subtitle: Electronic Space Ragas and Dubby Eastern Beats
   about:
     description: Sonic Arcana – electronic space ragas and dubby eastern beats.
-    image: assets/img/misc/flashfm-album.jpg
-    image_alt: Sonic Arcana Flash FM
+    image: assets/img/sonicarcana/SonicArcana.png
+    image_alt: Sonic Arcana Logo
+    background-image: assets/img/sonicarcana/Kepler-452B-Front-Cover-v10-2048x946.jpg
     # heading: Sonic Arcana
     # subheading: Electronic Space Ragas and Dubby Eastern Beats
   posts:
     description: Sonic Arcana News
+    background-image: assets/img/sonicarcana/HiddenArtifactFrontCover2-2048x946.jpg
   gigs:
     description: Sonic Arcana Gigs
+    background-image: assets/img/sonicarcana/EarthPyramid-Purple-large-2048x946.png
   videos:
     description: Sonic Arcana Videos
+    background-image: assets/img/sonicarcana/EarthPyramid-Purple-large-2048x946.png
 
 bubbledubble:
-  title: BubbleDubble
+  title:
   subtitle: Live Dubby Electronic Beats
   description: BubbleDubble – live dubby electronic beats. Releases and news.
   about:
-    image: assets/img/bubbledubble/cosmic-puffin.jpg
-    image_alt: BubbleDubble Cosmic Puffin
+    image: assets/img/bubbledubble/BubbleDubble-TextOnly.png
+    image_alt: BubbleDubble Logo
+    background-image: assets/img/bubbledubble/EasternHaze2007.png
     # heading: BubbleDubble
     # subheading: Live Dubby Electronic Beats
   posts:
     description: BubbleDubble News
   gigs:
     description: BubbleDubble Gigs
+    background-image: assets/img/bubbledubble/SteveDrawing-2048x946.png
   videos:
     description: BubbleDubble Videos
+    background-image: assets/img/bubbledubble/SteveDrawing-2048x946.png
 
 collaborations:
   title: Collaborations
