@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SocialIcon } from "react-social-icons";
 
 export default function AboutPage() {
   return (
@@ -12,18 +13,41 @@ export default function AboutPage() {
       <p className="mb-4">Listen to Andy Radburn&apos;s music here:</p>
       <ul className="mb-6 list-disc pl-10">
         <li>
-          <a href="#" className="text-accent">
-            YouTube <i className="fab fa-youtube ml-1" />
+          <a href="#" className="inline-flex items-center gap-2 text-accent">
+            YouTube
+            <SocialIcon
+              url="https://youtube.com"
+              network="youtube"
+              as="span"
+              className="!h-10 !w-10 [&>svg]:!h-10 [&>svg]:!w-10"
+              bgColor="transparent"
+              fgColor="currentColor"
+            />
           </a>
         </li>
         <li>
-          <a href="#" className="text-accent">
-            SoundCloud <i className="fab fa-soundcloud ml-1" />
+          <a href="#" className="inline-flex items-center gap-2 text-accent">
+            SoundCloud
+            <SocialIcon
+              url="https://soundcloud.com"
+              network="soundcloud"
+              as="span"
+              className="!h-10 !w-10 [&>svg]:!h-10 [&>svg]:!w-10"
+              bgColor="transparent"
+              fgColor="currentColor"
+            />
           </a>
         </li>
         <li>
-          <a href="#" className="text-accent">
-            BandCamp <i className="fab fa-bandcamp ml-1" />
+          <a href="#" className="inline-flex items-center gap-2 text-accent">
+            BandCamp
+            <SocialIcon
+              url="https://bandcamp.com"
+              as="span"
+              className="!h-10 !w-10 [&>svg]:!h-10 [&>svg]:!w-10"
+              bgColor="transparent"
+              fgColor="currentColor"
+            />
           </a>
         </li>
       </ul>

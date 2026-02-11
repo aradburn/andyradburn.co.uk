@@ -1,12 +1,6 @@
 import Link from "next/link";
+import { SocialIcon } from "react-social-icons";
 import type { MenuData, MetaData } from "@/lib/types";
-
-const FOLLOW_LABELS: Record<string, string> = {
-  "fab fa-soundcloud": "SoundCloud",
-  "fab fa-twitter": "Twitter",
-  "fas fa-envelope": "Email",
-  "fas fa-rss": "RSS",
-};
 
 const CONTACT_LINKS = [
   { href: "/about", label: "About" },
@@ -51,13 +45,21 @@ function FollowColumn({ menu }: { menu: MenuData }) {
         {menu.menu_contacts?.map((c, i) => (
           <li key={i}>
             <a
-              href={c.url || "#"}
+              href={c.url}
               target={c.target}
-              rel="noopener noreferrer"
+              rel={c.target === "_blank" ? "noopener noreferrer" : undefined}
               className="inline-flex items-center gap-2 text-sm text-text/90 transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface"
+              aria-label={c.label}
             >
-              <i className={c.faicon} aria-hidden />
-              <span>{FOLLOW_LABELS[c.faicon] ?? "Link"}</span>
+              <SocialIcon
+                url={c.url}
+                network={c.network}
+                as="span"
+                className="!h-10 !w-10 [&>svg]:!h-10 [&>svg]:!w-10"
+                bgColor="transparent"
+                fgColor="currentColor"
+              />
+              <span>{c.label ?? "Link"}</span>
             </a>
           </li>
         ))}

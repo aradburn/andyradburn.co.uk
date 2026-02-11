@@ -34,15 +34,18 @@ menu_pages:
     tooltip: This is about
 
 menu_contacts:
-  - faicon: fab fa-soundcloud
-    url:
+  - url: https://soundcloud.com/
+    network: soundcloud
     target: _blank
-  - faicon: fab fa-twitter
-    url:
+    label: SoundCloud
+  - url: https://twitter.com/
+    network: twitter
     target: _blank
-  - faicon: fas fa-envelope
-    url:
-    target:
-  - faicon: fas fa-rss
-    url: /feed.xml
+    label: Twitter
+  - url: mailto:contact@andyradburn.co.uk
+    network: mailto
+    label: Email
+  - url: /feed.xml
+    network: rss
     target: _blank
+    label: RSS
