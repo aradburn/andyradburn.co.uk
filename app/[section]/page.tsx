@@ -5,6 +5,8 @@ import { SectionPostFeedContent } from "@/components/SectionPostFeedContent";
 
 const SECTION_SLUG = "collaborations";
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return [{ section: SECTION_SLUG }];
 }
