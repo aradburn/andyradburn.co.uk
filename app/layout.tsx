@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import dynamic from "next/dynamic";
 import { Arvo, Manrope } from "next/font/google";
 import "./globals.css";
 import "./styles.css";
@@ -7,7 +8,11 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Layout } from "@/components/Layout";
 import { ScrollResetOnRouteChange } from "@/components/ScrollResetOnRouteChange";
-import Analytics from "@/components/Analytics";
+
+const Analytics = dynamic(
+    () => import("@/components/Analytics").then((m) => m.default),
+    { ssr: false }
+);
 
 const arvo = Arvo({
     weight: ["400", "700"],

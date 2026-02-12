@@ -13,11 +13,9 @@ vi.mock("swetrix", () => ({
 }));
 
 const mockPathname = vi.fn(() => "/");
-const mockSearchParams = vi.fn(() => new URLSearchParams());
 
 vi.mock("next/navigation", () => ({
   usePathname: () => mockPathname(),
-  useSearchParams: () => mockSearchParams(),
 }));
 
 describe("Analytics", () => {

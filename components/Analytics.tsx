@@ -1,12 +1,11 @@
 "use client";
 
 import { useEffect } from "react";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import * as Swetrix from "swetrix";
 
 export default function Analytics() {
     const pathname = usePathname();
-    const searchParams = useSearchParams();
 
     useEffect(() => {
         const apiURL = process.env.NEXT_PUBLIC_SWETRIX_API_URL;
@@ -24,7 +23,7 @@ export default function Analytics() {
 
     useEffect(() => {
         Swetrix.trackViews();
-    }, [pathname, searchParams]);
+    }, [pathname]);
 
     return null;
 }
