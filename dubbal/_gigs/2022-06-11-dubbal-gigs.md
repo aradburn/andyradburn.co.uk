@@ -1,7 +1,7 @@
 ---
 layout: gigs
 title: Dubbal Gigs
-categories: [ dubbal, home ]
+categories: [ dubbal ]
 image: assets/img/dubbal/logo-v7-blue-640x360.png
 image_alt: Dubbal Logo
 ---
