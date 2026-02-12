@@ -33,7 +33,7 @@ describe("Footer", () => {
     expect(screen.getByText("Explore")).toBeInTheDocument();
     expect(screen.getByRole("link", { name: "Home" })).toHaveAttribute(
       "href",
-      "/"
+      "/home"
     );
     const aboutLinks = screen.getAllByRole("link", { name: "About" });
     expect(aboutLinks.some((a) => a.getAttribute("href") === "/about/")).toBe(true);

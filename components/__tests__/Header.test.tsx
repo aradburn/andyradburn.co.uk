@@ -3,7 +3,7 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import { Header } from "../Header";
 import { mockMenuData, mockMetaData } from "./test-utils";
 
-const mockPathname = vi.fn(() => "/");
+const mockPathname = vi.fn(() => "/home");
 vi.mock("next/navigation", () => ({
   usePathname: () => mockPathname(),
 }));
@@ -27,7 +27,7 @@ vi.mock("next/image", () => ({
 
 describe("Header", () => {
   beforeEach(() => {
-    mockPathname.mockReturnValue("/");
+    mockPathname.mockReturnValue("/home");
   });
 
   it("renders logo with correct src", () => {
@@ -46,7 +46,7 @@ describe("Header", () => {
   it("renders home link with aria-label", () => {
     render(<Header menu={mockMenuData} meta={mockMetaData} />);
     const homeLinks = screen.getAllByRole("link", { name: "Home" });
-    expect(homeLinks.some((a) => a.getAttribute("href") === "/")).toBe(true);
+    expect(homeLinks.some((a) => a.getAttribute("href") === "/home")).toBe(true);
   });
 
   it("renders nav links from menu", () => {
@@ -74,7 +74,7 @@ describe("Header", () => {
     const nav = screen.getByRole("navigation", { name: "Main" });
     const links = nav.querySelectorAll("a[href]");
     const hrefs = Array.from(links).map((a) => a.getAttribute("href"));
-    expect(hrefs).toContain("/");
+    expect(hrefs).toContain("/home");
     expect(hrefs).toContain("/about/");
   });
 

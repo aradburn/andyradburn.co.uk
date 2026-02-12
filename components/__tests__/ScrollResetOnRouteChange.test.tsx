@@ -2,7 +2,7 @@ import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { render } from "@testing-library/react";
 import { ScrollResetOnRouteChange } from "../ScrollResetOnRouteChange";
 
-const mockPathname = vi.fn(() => "/");
+const mockPathname = vi.fn(() => "/home");
 vi.mock("next/navigation", () => ({
   usePathname: () => mockPathname(),
 }));
@@ -34,7 +34,7 @@ describe("ScrollResetOnRouteChange", () => {
     const scrollToFn = vi.fn();
     (scroller as HTMLElement & { scrollTo: (x: number, y: number) => void }).scrollTo = scrollToFn;
 
-    mockPathname.mockReturnValue("/");
+    mockPathname.mockReturnValue("/home");
     const { rerender } = render(<ScrollResetOnRouteChange />);
 
     mockPathname.mockReturnValue("/about");
@@ -49,7 +49,7 @@ describe("ScrollResetOnRouteChange", () => {
   });
 
   it("does not reset on initial mount", () => {
-    mockPathname.mockReturnValue("/");
+    mockPathname.mockReturnValue("/home");
     const scroller = document.getElementById("main-content")!;
     scroller.scrollTop = 100;
     render(<ScrollResetOnRouteChange />);
@@ -61,7 +61,7 @@ describe("ScrollResetOnRouteChange", () => {
     const scrollToFn = vi.fn();
     (scroller as HTMLElement & { scrollTo: (x: number, y: number) => void }).scrollTo = scrollToFn;
 
-    mockPathname.mockReturnValue("/");
+    mockPathname.mockReturnValue("/home");
     const { rerender } = render(<ScrollResetOnRouteChange />);
     mockPathname.mockReturnValue("/cookies");
     rerender(<ScrollResetOnRouteChange />);
@@ -71,7 +71,7 @@ describe("ScrollResetOnRouteChange", () => {
   });
 
   it("cleans up timeout on unmount when pathname changed", async () => {
-    mockPathname.mockReturnValue("/");
+    mockPathname.mockReturnValue("/home");
     const { rerender, unmount } = render(<ScrollResetOnRouteChange />);
     mockPathname.mockReturnValue("/about");
     rerender(<ScrollResetOnRouteChange />);

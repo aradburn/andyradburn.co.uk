@@ -4,7 +4,7 @@ import type { MenuData, MetaData, Post, SectionConfig } from "@/lib/types";
 
 export const mockMenuData: MenuData = {
   menu_pages: [
-    { title: "Home", url: "/", category: "home", tooltip: "Home" },
+    { title: "Home", url: "/home", category: "home", tooltip: "Home" },
     { title: "About", url: "/about/", category: "about", tooltip: "About" },
   ],
   menu_contacts: [
