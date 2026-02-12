@@ -14,31 +14,14 @@ const arvo = Arvo({
     style: ["normal"],
     subsets: ["latin"],
     variable: "--font-sans",
-    preload: false,
+    preload: true,
 });
 const manrope = Manrope({
     weight: ["400", "500", "600", "700"],
     subsets: ["latin"],
     variable: "--font-display",
-    preload: false,
+    preload: true,
 });
-
-// export const metadata: Metadata = {
-//   title: "Andy Radburn",
-//   description: "Andy Radburn's website.",
-//   openGraph: {
-//       title: "Andy Radburn",
-// //       type: "website",
-//       description: "Andy Radburn's website."
-//       // TODO
-// //       "og_image": og_image,
-// //       "og:site_name" content="Musigree"/>
-// //       "og_url": og_url,
-//   },
-// //   other: {
-// //     http-equiv: ['meta1', 'meta2'],
-// //   },
-// };
 
 export default function RootLayout({
     children,
@@ -52,7 +35,23 @@ export default function RootLayout({
             <head>
                 <meta
                     httpEquiv="Content-Security-Policy"
-                    content="default-src 'self'; script-src 'self' data: 'unsafe-eval' https://swetrix.org/swetrix.js https://cdn.jsdelivr.net/gh/Swetrix/ ; script-src-elem 'self' data: 'unsafe-inline' https://swetrix.org/swetrix.js https://cdn.jsdelivr.net/gh/Swetrix/ ; style-src 'self'; style-src-elem 'self' 'unsafe-inline'; style-src-attr 'self' 'unsafe-inline' 'unsafe-hashes'; object-src 'none'; frame-src 'self' https://bandcamp.com https://www.youtube-nocookie.com ; child-src 'self'; img-src 'self' data: https://img.youtube.com https://swetrix-api.musigree.com/ ; font-src 'self' https://*.fontawesome.com; connect-src 'self' http://localhost ws://localhost https://*.fontawesome.com https://swetrix-api.musigree.com/ ; manifest-src 'self'; base-uri 'self'; form-action 'self'; media-src 'self' data:; worker-src 'self'"
+                    content={`default-src 'self' ;
+                            script-src 'self' data: 'unsafe-eval' https://swetrix.org/swetrix.js https://cdn.jsdelivr.net/gh/Swetrix/ ;
+                            script-src-elem 'self' data: 'unsafe-inline' https://swetrix.org/swetrix.js https://cdn.jsdelivr.net/gh/Swetrix/ ;
+                            style-src 'self' ;
+                            style-src-elem 'self' 'unsafe-inline' ;
+                            style-src-attr 'self' 'unsafe-inline' 'unsafe-hashes' ;
+                            object-src 'none' ;
+                            frame-src 'self' https://bandcamp.com https://www.youtube-nocookie.com ;
+                            child-src 'self' ;
+                            img-src 'self' data: https://img.youtube.com https://swetrix-api.musigree.com/ ;
+                            font-src 'self' https://*.fontawesome.com ;
+                            connect-src 'self' http://localhost ws://localhost https://*.fontawesome.com https://swetrix-api.musigree.com/ ;
+                            manifest-src 'self' ;
+                            base-uri 'self' ;
+                            form-action 'self' ;
+                            media-src 'self' data: ;
+                            worker-src 'self' ;`}
                 />
                 <meta name="referrer" content="origin-when-cross-origin" />
                 <meta
