@@ -17,7 +17,7 @@ function NavLinks({ menu }: { menu: MenuData }) {
         const isSelected =
           p === href ||
           p === href.replace(/\/$/, "") ||
-          (p.startsWith(href) && href !== "/");
+          (p.startsWith(href) && href !== "/home");
         return (
           <li key={item.url}>
             <Link
@@ -68,7 +68,7 @@ export function Header({ menu, meta }: { menu: MenuData; meta: MetaData }) {
       </a>
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6">
         <Link
-          href="/"
+          href="/home"
           className="flex shrink-0 items-center focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface focus-visible:outline-none"
           aria-label="Home"
         >

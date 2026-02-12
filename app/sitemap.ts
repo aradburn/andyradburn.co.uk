@@ -5,10 +5,10 @@ export const dynamic = 'force-static'
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: 'https://andyradburn.co.uk',
+      url: 'https://andyradburn.co.uk/home/',
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.5,
+      priority: 0.9,
     },
     {
       url: 'https://andyradburn.co.uk/dubbal/',

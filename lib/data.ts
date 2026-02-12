@@ -41,6 +41,7 @@ export function getSectionConfig(section: string): SectionConfig | null {
 }
 
 const POSTS_DIRS = [
+    { dir: path.join(ROOT, "home", "_posts"), category: "home" },
     { dir: path.join(ROOT, "dubbal", "_posts"), category: "dubbal" },
     { dir: path.join(ROOT, "sonicarcana", "_posts"), category: "sonicarcana" },
     {
@@ -50,6 +51,7 @@ const POSTS_DIRS = [
 ];
 
 const VIDEO_DIRS = [
+    { dir: path.join(ROOT, "home", "_videos"), category: "home" },
     { dir: path.join(ROOT, "dubbal", "_videos"), category: "dubbal" },
     { dir: path.join(ROOT, "sonicarcana", "_videos"), category: "sonicarcana" },
     {
@@ -59,6 +61,7 @@ const VIDEO_DIRS = [
 ];
 
 const GIG_DIRS = [
+    { dir: path.join(ROOT, "home", "_gigs"), category: "home" },
     { dir: path.join(ROOT, "dubbal", "_gigs"), category: "dubbal" },
     { dir: path.join(ROOT, "sonicarcana", "_gigs"), category: "sonicarcana" },
     { dir: path.join(ROOT, "bubbledubble", "_gigs"), category: "bubbledubble" },

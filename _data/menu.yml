@@ -1,6 +1,6 @@
 menu_pages:
   - title: Home
-    url: /
+    url: /home
     category: home
 
   - title: Dubbal
