@@ -1,11 +1,12 @@
 ---
 layout: post
-title: Return Of The Lonesome Traveller is on Bandcamp
+title: Return Of The Lonesome Traveller
 categories: [ dubbal ]
 ---
 
 <p>The second studio album by UK Spacerocker's Dubbal takes you on a strange
 journey, to the far reaches of space and beyond!</p>
+<p>Available now on: <a href="https://kevellis.bandcamp.com/album/the-return-of-the-lonesome-traveller">Bandcamp</a></p>
 <br/>
 <p>Credits:</p>
 

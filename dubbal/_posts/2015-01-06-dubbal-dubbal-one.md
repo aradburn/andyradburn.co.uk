@@ -1,9 +1,10 @@
 ---
 layout: post
-title: Dubbal is on Bandcamp
+title: Dubbal One
 categories: [ dubbal ]
 ---
 <p>First Studio album by Dubbal released January 6, 2015</p>
+<p>Available now on: <a href="https://kevellis.bandcamp.com/album/dubbal-1">Bandcamp</a></p>
 <br/>
 <p>Credits:</p>
 
