@@ -1,5 +1,4 @@
 import { Suspense } from "react";
-import dynamic from "next/dynamic";
 import { Arvo, Manrope } from "next/font/google";
 import "./globals.css";
 import "./styles.css";
@@ -8,11 +7,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Layout } from "@/components/Layout";
 import { ScrollResetOnRouteChange } from "@/components/ScrollResetOnRouteChange";
-
-const Analytics = dynamic(
-    () => import("@/components/Analytics").then((m) => m.default),
-    { ssr: false }
-);
+import { AnalyticsDynamic } from "@/components/AnalyticsDynamic";
 
 const arvo = Arvo({
     weight: ["400", "700"],
@@ -80,7 +75,7 @@ export default function RootLayout({
                     {children}
                 </Layout>
                 <Suspense fallback={null}>
-                    <Analytics />
+                    <AnalyticsDynamic />
                 </Suspense>
                 {process.env.NEXT_PUBLIC_SWETRIX_PID && (
                     <noscript>
