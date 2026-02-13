@@ -27,7 +27,7 @@ export async function SectionVideosContent({
 
   const contentBlock = (
     <YouTubeLazyHydrator>
-      <div className="mx-auto min-w-0 sm:min-w-sm md:min-w-md lg:min-w-lg xl:min-w-5xl max-w-full sm:max-w-max">
+      <div className="mx-auto min-w-0 sm:min-w-sm md:min-w-2xl lg:min-w-3xl xl:min-w-4xl max-w-full sm:max-w-max">
       {videosWithHtml.length === 0 ? (
         <div></div>
       ) : (
@@ -37,10 +37,10 @@ export async function SectionVideosContent({
             return (
               <article
                 key={`${video.category}-${video.slug}`}
-                className="videos min-w-0 sm:min-w-2xl md:min-w-3xl lg:min-w-4xl xl:min-w-5xl  max-w-full rounded-xl border-2 border-surface-border bg-surface-elevated shadow-sm transition-shadow hover:shadow-md sm:py-6 sm:px-6 md:py-6 md:px-16"
+                className="videos min-w-0 sm:min-w-sm md:min-w-2xl lg:min-w-3xl xl:min-w-4xl max-w-full rounded-xl border-2 border-surface-border bg-surface-elevated shadow-sm transition-shadow hover:shadow-md sm:py-6 sm:px-6 md:py-6 md:px-16"
               >
                 <header className="mb-6 border-b border-surface-border pb-2">
-                  <h1 className="mb-1 font-display text-2xl font-bold tracking-tight text-text sm:text-3xl">
+                  <h1 className="mb-1 text-4xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-display font-bold tracking-tight text-text sm:text-3xl">
                     {video_section_heading}
                   </h1>
                 </header>

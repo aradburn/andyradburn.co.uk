@@ -60,6 +60,10 @@
     margin-bottom: 1.2rem;
   }
 
+  .post p > a ::before {
+    content: normal;
+  }
+
   .post a ::before {
     content: '\a';
   }

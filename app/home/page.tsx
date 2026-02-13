@@ -1,4 +1,5 @@
 import { getSectionConfig } from "@/lib/data";
+import "../home-styles.css";
 import { SectionAbout } from "@/components/SectionAbout";
 import { SectionPostFeedContent } from "@/components/SectionPostFeedContent";
 import { SectionGigsContent } from "@/components/SectionGigsContent";

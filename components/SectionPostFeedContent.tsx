@@ -31,7 +31,7 @@ export async function SectionPostFeedContent({
   );
 
   const contentBlock = (
-    <div className="mx-auto min-w-0 sm:min-w-sm md:min-w-md lg:min-w-lg xl:min-w-5xl max-w-full sm:max-w-max">
+    <div className="mx-auto min-w-0 sm:min-w-sm md:min-w-2xl lg:min-w-3xl xl:min-w-4xl max-w-full sm:max-w-max">
       <div className="flex flex-col gap-6">
         {postsWithHtml.map(({ post, contentHtml }) => (
           <div key={`${post.category}-${post.slug}`}>
@@ -45,7 +45,7 @@ export async function SectionPostFeedContent({
   if (contentOnly) {
     return (
       <div className="max-w-full">
-        <header className="mx-auto min-w-0 sm:min-w-sm md:min-w-md lg:min-w-lg xl:min-w-5xl max-w-full sm:max-w-max mb-10 border-b border-surface-border pb-2">
+        <header className="mx-auto min-w-0 sm:min-w-sm md:min-2xl-md lg:min-w-3xl xl:min-w-4xl max-w-full sm:max-w-max mb-10 border-b border-surface-border pb-2">
           <h2 className="text-center mb-2 font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tight text-text">
             {postsConfig.description}
           </h2>
@@ -65,7 +65,7 @@ export async function SectionPostFeedContent({
         />
       ) : (
         <header className="mx-auto min-w-0 sm:min-w-sm md:min-w-md lg:min-w-lg xl:min-w-5xl max-w-full sm:max-w-max mb-10 border-b border-surface-border pb-2">
-          <h1 className="text-center mb-2 font-display text-4xl font-bold tracking-tight text-text sm:text-5xl">
+          <h1 className="text-center mb-2 font-display text-4xl sm:text-5xl font-bold tracking-tight text-text ">
             {config.title}
           </h1>
           <p className="text-lg text-text-muted">{config.subtitle}</p>

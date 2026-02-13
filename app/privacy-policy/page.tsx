@@ -1,3 +1,4 @@
+import "../base-styles.css";
 export default function PrivacyPolicyPage() {
   return (
     <div className="max-w-full">

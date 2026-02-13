@@ -1,4 +1,5 @@
 import { getDiscographyPosts } from "@/lib/data";
+import "../base-styles.css";
 import { markdownToHtml } from "@/lib/markdown";
 import { DiscographyEntry } from "@/components/PostFeed";
 
@@ -11,7 +12,7 @@ export default async function DiscographyPage() {
     })),
   );
   return (
-    <div className="max-w-full">
+    <div className="mx-auto w-sm sm:w-xl md:w-3xl lg:w-5xl xl:w-7xl max-w-full min-h-[60vh] min-h-full py-8 sm:py-20 flex flex-col items-center justify-center justify-self-center overflow-hidden bg-gradient-to-b from-black/20 to-black/66">
       <header className="mb-10 border-b border-surface-border pb-2">
         <h1 className="font-display text-4xl font-bold tracking-tight text-text sm:text-5xl">
           Discography

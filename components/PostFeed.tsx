@@ -44,13 +44,13 @@ export function PostFeedItem({
   return (
     <article className="post min-w-0 w-full max-w-full rounded-xl border-2 border-surface-border bg-surface-elevated py-4 px-4 shadow-sm transition-shadow hover:shadow-md sm:py-6 sm:px-6">
       <header className="mb-2 flex items-baseline justify-between gap-3">
-        <h2 className="min-w-0 font-display text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-semibold tracking-tight">
+        <h2 className="min-w-0 font-display text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl place-self-center sm:place-self-start font-semibold tracking-tight">
           <PostTitleLink post={post} inline={fullContent}>
             {post.frontMatter.title}
           </PostTitleLink>
         </h2>
         {post.frontMatter.date && (
-          <span className="shrink-0 text-sm text-text-muted">
+          <span className="align-baseline hidden sm:contents shrink sm:shrink-0 text-sm text-text-muted">
             {post.frontMatter.date}
           </span>
         )}

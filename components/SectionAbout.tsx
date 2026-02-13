@@ -26,13 +26,13 @@ export function SectionAbout({ about, title, subtitle, sectionConfig }: SectionA
 
   return (
     <header className="mx-auto w-sm sm:w-xl md:w-3xl lg:w-5xl xl:w-7xl min-h-[50vh] min-h-full py-8 sm:py-10 flex flex-col items-center justify-center justify-self-center overflow-hidden bg-gradient-to-b from-black/20 to-black/66">
-      <div className="relative w-3xl max-w-3xl flex-1 min-h-[120px] sm:min-h-[160px]">
+      <div className="relative w-sm sm:w-sm md:w-3xl max-w-md sm:max-w-md md:max-w-3xl flex-1 min-h-[120px] sm:min-h-[160px]">
         <Image
           src={imgSrc}
           alt={about.image_alt}
           fill
           className="object-contain"
-          sizes="(max-width: 768px) 100vw, (max-width: 800px) 60vw, 1200px"
+          sizes="(max-width: 640px) 80vw, (max-width: 800px) 60vw, 1200px"
           loading="eager"
           preload={false}
         />

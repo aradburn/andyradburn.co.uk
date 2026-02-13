@@ -1,5 +1,5 @@
-/* Dubbal section: overrides global Tailwind theme (scoped to .section-dubbal) */
-.section-dubbal {
+/* Home section: overrides global Tailwind theme (scoped to .section-home) */
+.section-home {
   /* Colors – override with dubbal-specific palette */
   --color-surface: #01261C;
   --color-surface-elevated: rgba(0, 0, 0, 0.38);
