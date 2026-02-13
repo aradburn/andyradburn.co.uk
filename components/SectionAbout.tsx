@@ -25,7 +25,7 @@ export function SectionAbout({ about, title, subtitle, sectionConfig }: SectionA
   const links = sectionConfig ? subsectionLinks(sectionConfig) : [];
 
   return (
-    <header className="mx-auto flex w-7xl min-h-[50vh] min-h-full flex-col items-center justify-center justify-self-center overflow-hidden bg-gradient-to-b from-black/20 to-black/66 py-8 sm:py-10">
+    <header className="mx-auto w-sm sm:w-xl md:w-3xl lg:w-5xl xl:w-7xl min-h-[50vh] min-h-full py-8 sm:py-10 flex flex-col items-center justify-center justify-self-center overflow-hidden bg-gradient-to-b from-black/20 to-black/66">
       <div className="relative w-3xl max-w-3xl flex-1 min-h-[120px] sm:min-h-[160px]">
         <Image
           src={imgSrc}
@@ -38,10 +38,10 @@ export function SectionAbout({ about, title, subtitle, sectionConfig }: SectionA
         />
       </div>
       <div className="flex flex-col items-center text-center px-4 mt-4 sm:mt-6">
-        <h1 className="font-display text-3xl font-bold tracking-tight text-text drop-shadow-md sm:text-4xl md:text-5xl">
+        <h1 className="font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tight text-text drop-shadow-md">
           {heading}
         </h1>
-        <p className="mt-2 max-w-3xl text-lg text-text drop-shadow sm:text-3xl">
+        <p className="mt-2 max-w-3xl text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl text-text drop-shadow ">
           {subheading}
         </p>
         <SubsectionNavLinks links={links} />
