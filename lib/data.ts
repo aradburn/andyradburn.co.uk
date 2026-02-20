@@ -48,6 +48,7 @@ const POSTS_DIRS = [
         dir: path.join(ROOT, "bubbledubble", "_posts"),
         category: "bubbledubble",
     },
+    { dir: path.join(ROOT, "spacecadets", "_posts"), category: "spacecadets" },
 ];
 
 const VIDEO_DIRS = [
@@ -58,6 +59,10 @@ const VIDEO_DIRS = [
         dir: path.join(ROOT, "bubbledubble", "_videos"),
         category: "bubbledubble",
     },
+    {
+        dir: path.join(ROOT, "spacecadets", "_videos"),
+        category: "spacecadets",
+    },
 ];
 
 const GIG_DIRS = [
@@ -65,6 +70,7 @@ const GIG_DIRS = [
     { dir: path.join(ROOT, "dubbal", "_gigs"), category: "dubbal" },
     { dir: path.join(ROOT, "sonicarcana", "_gigs"), category: "sonicarcana" },
     { dir: path.join(ROOT, "bubbledubble", "_gigs"), category: "bubbledubble" },
+    { dir: path.join(ROOT, "spacecadets", "_gigs"), category: "spacecadets" },
 ];
 
 function parseCategories(categories: string[] | string | undefined): string[] {

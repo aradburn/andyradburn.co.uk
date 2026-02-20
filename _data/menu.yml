@@ -18,6 +18,11 @@ menu_pages:
     category: bubbledubble
     tooltip: BubbleDubble tooltip
 
+  - title: Space Cadets
+    url: /spacecadets/
+    category: spacecadets
+    tooltip: Space Cadets tooltip
+
   - title: Collaborations
     url: /collaborations/
     category: collaborations

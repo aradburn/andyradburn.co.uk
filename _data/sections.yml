@@ -79,6 +79,26 @@ bubbledubble:
     description: BubbleDubble Videos
     background-image: assets/img/bubbledubble/SteveDrawing-2048x946.png
 
+spacecadets:
+  title:
+  subtitle: Psychedelic Folky Space Rock
+  description: Space Cadets – music and releases.
+  about:
+    image: assets/img/spacecadets/SpaceCadets-Logo-v9-White-Transparent-1024x560.png
+    image_alt: Space Cadets Logo
+    background-image: assets/img/spacecadets/SpaceCadets-2048x946.jpg
+    # heading: Space Cadets
+    # subheading: Space Cadets
+  posts:
+    description: Space Cadets News
+    background-image: null
+  gigs:
+    description: Space Cadets Gigs
+    background-image: assets/img/spacecadets/SpaceCadets-KingArthur-2048x946.jpg
+  videos:
+    description: Space Cadets Videos
+    background-image: assets/img/spacecadets/SpaceCadets-Logo-v9-White-Transparent-1024x560.png
+
 collaborations:
   title: Collaborations
   subtitle: Guest appearances with other bands

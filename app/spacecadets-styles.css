@@ -1,0 +1,22 @@
+/* Space Cadets section: overrides global Tailwind theme (scoped to .section-spacecadets) */
+.section-spacecadets {
+  /* Colors – cosmic, spacey palette */
+  --color-surface: #0a0e1a;
+  --color-surface-elevated: #141a2e;
+  --color-surface-border: #5a6a9a;
+  --color-text: #d8e0f0;
+  --color-text-muted: #8a96be;
+  --color-accent: #a8c8ff;
+  --color-accent-dim: #2a3a6a;
+  --color-accent-warm: #8a96be;
+  /* Fonts */
+  --font-sans: "Arvo", Georgia, serif;
+  --font-display: "Manrope", system-ui, sans-serif;
+  /* Background image */
+  --background-image-gradient-stage: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(20, 26, 46, 0.6) 50%,
+    rgba(20, 26, 46, 0.95) 100%
+  );
+}

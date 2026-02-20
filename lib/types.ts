@@ -76,6 +76,7 @@ export const SECTION_CATEGORIES = [
   "dubbal",
   "sonicarcana",
   "bubbledubble",
+  "spacecadets",
   "collaborations",
   "discography",
 ] as const;
