@@ -13,7 +13,13 @@ interface SectionAboutProps {
 function subsectionLinks(config: SectionConfig): { id: string; label: string }[] {
   const links: { id: string; label: string }[] = [];
   if (config.posts != null) links.push({ id: "posts", label: "News" });
-  if (config.gigs != null) links.push({ id: "gigs", label: "Gigs" });
+  if (config.gigs != null) {
+      if (config.gigs.label != null) {
+          links.push({ id: "gigs", label: config.gigs.label });
+      } else {
+          links.push({ id: "gigs", label: "Gigs" });
+      }
+  }
   if (config.videos != null) links.push({ id: "videos", label: "Videos" });
   return links;
 }
@@ -25,8 +31,8 @@ export function SectionAbout({ about, title, subtitle, sectionConfig }: SectionA
   const links = sectionConfig ? subsectionLinks(sectionConfig) : [];
 
   return (
-    <header className="mx-auto w-sm sm:w-xl md:w-3xl lg:w-5xl xl:w-7xl min-h-[50vh] min-h-full py-8 sm:py-10 flex flex-col items-center justify-center justify-self-center overflow-hidden bg-gradient-to-b from-black/20 to-black/66">
-      <div className="relative w-sm sm:w-sm md:w-3xl max-w-md sm:max-w-md md:max-w-3xl flex-1 min-h-[120px] sm:min-h-[160px]">
+    <header className="mx-auto w-sm sm:w-xl md:w-3xl lg:w-5xl xl:w-7xl min-h-[60vh] min-h-full py-8 sm:py-10 flex flex-col items-center justify-center justify-self-center overflow-hidden bg-gradient-to-b from-black/20 to-black/66">
+      <div className="relative w-sm sm:w-sm md:w-3xl max-w-md sm:max-w-md md:max-w-3xl flex-1 min-h-[120px] sm:min-h-[160px] md:min-h-[200px] lg:min-h-[240px]">
         <Image
           src={imgSrc}
           alt={about.image_alt}

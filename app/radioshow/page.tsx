@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "../spacecadets-styles.css";
+import "../radioshow-styles.css";
 import { getSectionConfig } from "@/lib/data";
 import { SectionAbout } from "@/components/SectionAbout";
 import { SectionPostFeedContent } from "@/components/SectionPostFeedContent";
@@ -9,18 +9,18 @@ import { ScrollPinSections } from "@/components/ScrollPinSections";
 import { SectionWithBackgrounds } from "@/components/SectionWithBackgrounds";
 
 export async function generateMetadata(): Promise<Metadata> {
-    const title = "Kev Ellis and The Space Cadets";
-    const description = "Kev Ellis and The Space Cadets Website";
+    const title = "Sonic Arcana Radio Show";
+    const description = "Sonic Arcana Radio Show Website";
     const openGraph = {
-        title: "Kev Ellis and The Space Cadets",
-        description: "News, gigs and releases from Kev Ellis and The Space Cadets",
+        title: "Sonic Arcana Radio Show - Psychedelic Radio Broadcasts",
+        description: "News, playlists and broadcasts from the Sonic Arcana Radio Show",
         locale: "en_GB",
         type: "website",
-        url: "https://andyradburn.co.uk/spacecadets/",
-        siteName: "Kev Ellis and The Space Cadets",
+        url: "https://andyradburn.co.uk/radioshow/",
+        siteName: "Sonic Arcana Radio Show",
         images: [
             {
-                url: "https://andyradburn.co.uk/assets/img/spacecadets/SpaceCadets-Logo-v9-Black-750x750.png",
+                url: "https://andyradburn.co.uk/assets/img/radioshow/SonicArcanaRadioShow-v2-750x750.png", // Must be an absolute URL
                 width: 750,
                 height: 750,
             },
@@ -38,17 +38,14 @@ export async function generateMetadata(): Promise<Metadata> {
     };
     const twitter = {
         card: "summary_large_image",
-        title: "Kev Ellis and The Space Cadets",
-        description: "News, gigs and releases from Kev Ellis and The Space Cadets",
-        images: [
-            "https://andyradburn.co.uk/assets/img/spacecadets/SpaceCadets-Logo-v9-Black-750x750.png",
-        ],
+        title: "Sonic Arcana Radio Show",
+        description: "News, playlists and broadcasts from the Sonic Arcana Radio Show",
     };
     const other = {
-        "dc.title": "Kev Ellis and The Space Cadets",
-        "dc.description": "News, gigs and releases from Kev Ellis and The Space Cadets",
-        "dc.relation": "https://andyradburn.co.uk/spacecadets/",
-        "dc.source": "https://andyradburn.co.uk/spacecadets/",
+        "dc.title": "Sonic Arcana Radio Show",
+        "dc.description": "News, playlists and broadcasts from the Sonic Arcana Radio Show",
+        "dc.relation": "https://andyradburn.co.uk/radioshow/",
+        "dc.source": "https://andyradburn.co.uk/radioshow/",
         "dc.language": "en_GB",
     };
     return {
@@ -62,8 +59,8 @@ export async function generateMetadata(): Promise<Metadata> {
     };
 }
 
-export default async function SpaceCadetsPage() {
-    const config = getSectionConfig("spacecadets");
+export default async function RadioShowPage() {
+    const config = getSectionConfig("radioshow");
     if (!config) return null;
 
     const section1 = config.about ? (
@@ -86,7 +83,7 @@ export default async function SpaceCadetsPage() {
         config.posts != null ? (
             <div className="subsection-panel">
                 <SectionPostFeedContent
-                    section="spacecadets"
+                    section="radioshow"
                     config={config}
                     contentOnly
                 />
@@ -96,21 +93,21 @@ export default async function SpaceCadetsPage() {
     const section3 =
         config.gigs != null ? (
             <div className="subsection-panel">
-                <SectionGigsContent section="spacecadets" config={config} />
+                <SectionGigsContent section="radioshow" config={config} />
             </div>
         ) : null;
 
     const section4 =
         config.videos != null ? (
             <div className="subsection-panel">
-                <SectionVideosContent section="spacecadets" config={config} />
+                <SectionVideosContent section="radioshow" config={config} />
             </div>
         ) : null;
 
     return (
         <SectionWithBackgrounds
             config={config}
-            className="section-spacecadets max-w-full"
+            className="section-radioshow max-w-full"
         >
             <ScrollPinSections
                 section1={section1}

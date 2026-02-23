@@ -156,7 +156,7 @@ export function SubsectionBackgroundLayers({
   return (
     <div
       ref={containerRef}
-      className="pointer-events-none fixed left-0 right-0 top-16 bottom-0 z-0"
+      className="pointer-events-none fixed left-0 right-0 top-16 bottom-0 z-0 md:top-24"
       aria-hidden
     >
       {entries.map(({ id, bg }, i) => (

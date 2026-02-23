@@ -12,7 +12,7 @@ export function Layout({ children, footer }: LayoutProps) {
       />
       <main
         id="main-content"
-        className="relative z-0 flex min-h-0 flex-1 flex-col overflow-y-auto overflow-x-hidden scroll-mt-16"
+        className="relative z-0 flex min-h-0 flex-1 flex-col overflow-y-auto overflow-x-hidden scroll-mt-16 md:scroll-mt-24"
       >
         <div className="min-h-0 min-w-0 shrink-0">{children}</div>
         {footer != null ? (

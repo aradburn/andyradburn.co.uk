@@ -5,6 +5,9 @@ import type { MenuData, MetaData, Post, SectionConfig } from "@/lib/types";
 export const mockMenuData: MenuData = {
   menu_pages: [
     { title: "Home", url: "/home", category: "home", tooltip: "Home" },
+    { title: "Dubbal", url: "/dubbal/", category: "dubbal", tooltip: "Dubbal tooltip" },
+    { title: "Collaborations", url: "/collaborations/", category: "collaborations", tooltip: "Collaborations tooltip" },
+    { title: "Discography", url: "/discography/", category: "discography", tooltip: "Discography tooltip" },
     { title: "About", url: "/about/", category: "about", tooltip: "About" },
   ],
   menu_contacts: [

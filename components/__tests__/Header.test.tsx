@@ -78,6 +78,30 @@ describe("Header", () => {
     expect(hrefs).toContain("/about/");
   });
 
+  it("splits desktop nav into two rows", () => {
+    render(<Header menu={mockMenuData} meta={mockMetaData} />);
+    const nav = screen.getByRole("navigation", { name: "Main" });
+    const lists = nav.querySelectorAll("ul");
+    expect(lists).toHaveLength(2);
+
+    const primaryLinks = Array.from(lists[0].querySelectorAll("a")).map(
+      (a) => a.textContent
+    );
+    const secondaryLinks = Array.from(lists[1].querySelectorAll("a")).map(
+      (a) => a.textContent
+    );
+
+    expect(primaryLinks).toContain("Dubbal");
+    expect(primaryLinks).not.toContain("Home");
+    expect(primaryLinks).not.toContain("About");
+
+    expect(secondaryLinks).toContain("Home");
+    expect(secondaryLinks).toContain("Collaborations");
+    expect(secondaryLinks).toContain("Discography");
+    expect(secondaryLinks).toContain("About");
+    expect(secondaryLinks).not.toContain("Dubbal");
+  });
+
   it("closes menu on Escape key", () => {
     render(<Header menu={mockMenuData} meta={mockMetaData} />);
     fireEvent.click(screen.getByRole("button", { name: "Open menu" }));

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "../spacecadets-styles.css";
+import "../theecrow-styles.css";
 import { getSectionConfig } from "@/lib/data";
 import { SectionAbout } from "@/components/SectionAbout";
 import { SectionPostFeedContent } from "@/components/SectionPostFeedContent";
@@ -9,20 +9,20 @@ import { ScrollPinSections } from "@/components/ScrollPinSections";
 import { SectionWithBackgrounds } from "@/components/SectionWithBackgrounds";
 
 export async function generateMetadata(): Promise<Metadata> {
-    const title = "Kev Ellis and The Space Cadets";
-    const description = "Kev Ellis and The Space Cadets Website";
+    const title = "Thee CROW";
+    const description = "Thee CROW Website";
     const openGraph = {
-        title: "Kev Ellis and The Space Cadets",
-        description: "News, gigs and releases from Kev Ellis and The Space Cadets",
+        title: "Thee CROW - Dark Psychedelic Sounds",
+        description: "News, gigs and releases from Thee CROW",
         locale: "en_GB",
         type: "website",
-        url: "https://andyradburn.co.uk/spacecadets/",
-        siteName: "Kev Ellis and The Space Cadets",
+        url: "https://andyradburn.co.uk/theecrow/",
+        siteName: "Thee CROW",
         images: [
             {
-                url: "https://andyradburn.co.uk/assets/img/spacecadets/SpaceCadets-Logo-v9-Black-750x750.png",
-                width: 750,
-                height: 750,
+                url: "https://andyradburn.co.uk/assets/img/theecrow/TheeCrowLogo-Black-512x512.png",
+                width: 512,
+                height: 512,
             },
         ],
     };
@@ -38,17 +38,14 @@ export async function generateMetadata(): Promise<Metadata> {
     };
     const twitter = {
         card: "summary_large_image",
-        title: "Kev Ellis and The Space Cadets",
-        description: "News, gigs and releases from Kev Ellis and The Space Cadets",
-        images: [
-            "https://andyradburn.co.uk/assets/img/spacecadets/SpaceCadets-Logo-v9-Black-750x750.png",
-        ],
+        title: "Thee CROW",
+        description: "News, gigs and releases from Thee CROW",
     };
     const other = {
-        "dc.title": "Kev Ellis and The Space Cadets",
-        "dc.description": "News, gigs and releases from Kev Ellis and The Space Cadets",
-        "dc.relation": "https://andyradburn.co.uk/spacecadets/",
-        "dc.source": "https://andyradburn.co.uk/spacecadets/",
+        "dc.title": "Thee CROW",
+        "dc.description": "News, gigs and releases from Thee CROW",
+        "dc.relation": "https://andyradburn.co.uk/theecrow/",
+        "dc.source": "https://andyradburn.co.uk/theecrow/",
         "dc.language": "en_GB",
     };
     return {
@@ -62,8 +59,8 @@ export async function generateMetadata(): Promise<Metadata> {
     };
 }
 
-export default async function SpaceCadetsPage() {
-    const config = getSectionConfig("spacecadets");
+export default async function TheeCrowPage() {
+    const config = getSectionConfig("theecrow");
     if (!config) return null;
 
     const section1 = config.about ? (
@@ -86,7 +83,7 @@ export default async function SpaceCadetsPage() {
         config.posts != null ? (
             <div className="subsection-panel">
                 <SectionPostFeedContent
-                    section="spacecadets"
+                    section="theecrow"
                     config={config}
                     contentOnly
                 />
@@ -96,21 +93,21 @@ export default async function SpaceCadetsPage() {
     const section3 =
         config.gigs != null ? (
             <div className="subsection-panel">
-                <SectionGigsContent section="spacecadets" config={config} />
+                <SectionGigsContent section="theecrow" config={config} />
             </div>
         ) : null;
 
     const section4 =
         config.videos != null ? (
             <div className="subsection-panel">
-                <SectionVideosContent section="spacecadets" config={config} />
+                <SectionVideosContent section="theecrow" config={config} />
             </div>
         ) : null;
 
     return (
         <SectionWithBackgrounds
             config={config}
-            className="section-spacecadets max-w-full"
+            className="section-theecrow max-w-full"
         >
             <ScrollPinSections
                 section1={section1}

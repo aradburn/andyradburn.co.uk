@@ -23,6 +23,16 @@ menu_pages:
     category: spacecadets
     tooltip: Space Cadets tooltip
 
+  - title: Thee CROW
+    url: /theecrow/
+    category: theecrow
+    tooltip: Thee CROW tooltip
+
+  - title: Radio Show
+    url: /radioshow/
+    category: radioshow
+    tooltip: Radio Show tooltip
+
   - title: Collaborations
     url: /collaborations/
     category: collaborations

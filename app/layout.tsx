@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { Arvo, Manrope } from "next/font/google";
+import { Arvo, Manrope, Audiowide } from "next/font/google";
 import "./globals.css";
 import "./styles.css";
 import { getMenu, getMetaData } from "@/lib/data";
@@ -13,13 +13,20 @@ const arvo = Arvo({
     weight: ["400", "700"],
     style: ["normal"],
     subsets: ["latin"],
-    variable: "--font-sans",
+    variable: "--font-arvo",
     preload: true,
 });
 const manrope = Manrope({
     weight: ["400", "500", "600", "700"],
     subsets: ["latin"],
-    variable: "--font-display",
+    variable: "--font-manrope",
+    preload: true,
+});
+const audiowide = Audiowide({
+    weight: ["400"],
+    style: ["normal"],
+    subsets: ["latin"],
+    variable: "--font-audiowide",
     preload: true,
 });
 
@@ -66,9 +73,9 @@ export default function RootLayout({
                 */}
             </head>
             <body
-                className={`${arvo.variable} ${manrope.variable} font-sans flex h-screen flex-col overflow-hidden`}
+                className={`${arvo.variable} ${manrope.variable} ${audiowide.variable} font-sans flex h-screen flex-col overflow-hidden`}
             >
-                <div className="h-16 shrink-0" aria-hidden />
+                <div className="h-16 shrink-0 md:h-24" aria-hidden />
                 <Header menu={menu} meta={meta} />
                 <ScrollResetOnRouteChange />
                 <Layout footer={<Footer menu={menu} meta={meta} />}>

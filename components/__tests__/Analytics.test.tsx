@@ -43,7 +43,7 @@ describe("Analytics", () => {
     expect(mockInit).toHaveBeenCalledWith(
       "test-pid",
       expect.objectContaining({
-        devMode: true,
+        devMode: false,
       })
     );
     expect(mockTrackViews).toHaveBeenCalled();

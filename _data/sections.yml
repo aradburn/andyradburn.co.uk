@@ -99,6 +99,43 @@ spacecadets:
     description: Space Cadets Videos
     background-image: assets/img/spacecadets/SpaceCadets-Logo-v9-White-Transparent-1024x560.png
 
+theecrow:
+  title:
+  subtitle: Dark Psychedelic Sounds
+  description: Thee CROW – dark psychedelic sounds.
+  about:
+    image: assets/img/theecrow/TheeCrowLogo-Black-640x250-Transparent.png
+    image_alt: Thee CROW Logo
+    background-image: assets/img/theecrow/Thee-CROW-Band-Photo-2048x946.jpg
+  posts:
+    description: Thee CROW News
+    background-image: null
+  gigs:
+    description: Thee CROW Gigs
+    background-image: assets/img/theecrow/TheeCrowLogo-Black-1080x512.png
+  videos:
+    description: Thee CROW Videos
+    background-image: assets/img/theecrow/TheeCrowLogo-Black-1080x512.png
+
+radioshow:
+  title: Sonic Arcana Radio Show
+  subtitle: Psychedelic Radio Broadcasts
+  description: Radio Show – psychedelic radio broadcasts.
+  about:
+    image: assets/img/radioshow/SonicArcanaRadioShow-v2.png
+    image_alt: Radio Show Logo
+    background-image: assets/img/radioshow/SonicArcanaRadioShow-Background-v1.png
+  posts:
+    description: Radio Show News
+    background-image: null
+  gigs:
+    label: Shows
+    description: Radio Shows
+    background-image: assets/img/radioshow/SonicArcanaRadioShow-v2-2048x946.png
+  videos:
+    description: Radio Show Videos
+    background-image: null
+
 collaborations:
   title: Collaborations
   subtitle: Guest appearances with other bands

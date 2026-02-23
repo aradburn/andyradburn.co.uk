@@ -77,6 +77,8 @@ export const SECTION_CATEGORIES = [
   "sonicarcana",
   "bubbledubble",
   "spacecadets",
+  "theecrow",
+  "radioshow",
   "collaborations",
   "discography",
 ] as const;
@@ -98,6 +100,7 @@ export interface SectionPostsConfig {
 
 /** Subsection config for gigs (optional description). */
 export interface SectionGigsConfig {
+  label?: string;
   description?: string;
   "background-image"?: string;
 }

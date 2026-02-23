@@ -14,7 +14,7 @@ export default function Analytics() {
 
         Swetrix.init(pid, {
             apiURL: apiURL,
-            devMode: true,
+            devMode: false,
             // disabled: process.env.NODE_ENV === "development",
         });
         Swetrix.trackViews();

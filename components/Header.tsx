@@ -4,43 +4,43 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useCallback } from "react";
-import type { MenuData, MetaData } from "@/lib/types";
+import type { MenuData, MenuPage, MetaData } from "@/lib/types";
 
-function NavLinks({ menu }: { menu: MenuData }) {
+const SECONDARY_ROW_CATEGORIES = new Set([
+  "home",
+  "collaborations",
+  "discography",
+  "about",
+]);
+
+function NavLink({ item }: { item: MenuPage }) {
   const pathname = usePathname();
+  let href = item.url.startsWith("/") ? item.url : `/${item.url}`;
+  href = href.replace(/\.html$/, "/") || "/";
+  const p = pathname ?? "";
+  const isSelected =
+    p === href ||
+    p === href.replace(/\/$/, "") ||
+    (p.startsWith(href) && href !== "/home");
+  return (
+    <li key={item.url}>
+      <Link
+        href={href}
+        title={item.tooltip}
+        className={`rounded-lg px-3 py-2 text-sm font-medium tracking-wide transition-[color,background-color] hover:bg-accent/10 hover:text-text focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface ${isSelected ? "border-1 border-surface-border bg-accent/15 text-accent" : "text-text/90"}`}
+      >
+        {item.title}
+      </Link>
+    </li>
+  );
+}
+
+function NavLinks({ items }: { items: MenuPage[] }) {
   return (
     <>
-      {menu.menu_pages.map((item) => {
-        let href = item.url.startsWith("/") ? item.url : `/${item.url}`;
-        href = href.replace(/\.html$/, "/") || "/";
-        const p = pathname ?? "";
-        const isSelected =
-          p === href ||
-          p === href.replace(/\/$/, "") ||
-          (p.startsWith(href) && href !== "/home");
-        return (
-          <li key={item.url}>
-            <Link
-              href={href}
-              title={item.tooltip}
-              className={`rounded-lg px-3 py-2 text-sm font-medium tracking-wide transition-[color,background-color] hover:bg-accent/10 hover:text-text focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface ${isSelected ? "border-1 border-surface-border bg-accent/15 text-accent" : "text-text/90"}`}
-            >
-              {item.title}
-            </Link>
-          </li>
-        );
-      })}
-      {/*
-      <li>
-        <Link
-          href="/mandala/"
-          className="rounded-lg px-3 py-2 text-sm font-medium tracking-wide text-text/90 transition-[color,background-color] hover:bg-accent/10 hover:text-text focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface"
-          title="Mandala Art"
-        >
-          Mandala
-        </Link>
-      </li>
-  */}
+      {items.map((item) => (
+        <NavLink key={item.url} item={item} />
+      ))}
     </>
   );
 }
@@ -54,6 +54,14 @@ export function Header({ menu, meta }: { menu: MenuData; meta: MetaData }) {
     if (e.key === "Escape") setOpen(false);
   }, []);
 
+  const primaryItems = menu.menu_pages.filter(
+    (p) => !SECONDARY_ROW_CATEGORIES.has(p.category),
+  );
+  const secondaryItems = menu.menu_pages.filter((p) =>
+    SECONDARY_ROW_CATEGORIES.has(p.category),
+  );
+  const allItems = menu.menu_pages;
+
   return (
     <header className="fixed left-0 right-0 top-0 z-50 border-b border-surface-border bg-surface/95 backdrop-blur supports-[backdrop-filter]:bg-surface/90">
       <div
@@ -66,7 +74,7 @@ export function Header({ menu, meta }: { menu: MenuData; meta: MetaData }) {
       >
         Skip to main content
       </a>
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 md:h-24 sm:px-6">
         <Link
           href="/home"
           className="flex shrink-0 items-center focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface focus-visible:outline-none"
@@ -84,11 +92,14 @@ export function Header({ menu, meta }: { menu: MenuData; meta: MetaData }) {
         </Link>
 
         <nav
-          className="hidden flex-1 items-center justify-center gap-1 md:flex"
+          className="hidden flex-1 flex-col items-center justify-center gap-3 md:flex"
           aria-label="Main"
         >
           <ul className="flex flex-wrap items-center justify-center gap-1">
-            <NavLinks menu={menu} />
+            <NavLinks items={primaryItems} />
+          </ul>
+          <ul className="flex flex-wrap items-center justify-center gap-1">
+            <NavLinks items={secondaryItems} />
           </ul>
         </nav>
 
@@ -141,7 +152,7 @@ export function Header({ menu, meta }: { menu: MenuData; meta: MetaData }) {
           onClick={closeMenu}
         >
           <ul className="flex flex-col gap-1 px-4">
-            <NavLinks menu={menu} />
+            <NavLinks items={allItems} />
           </ul>
         </nav>
       </div>
