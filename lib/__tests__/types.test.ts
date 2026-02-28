@@ -112,6 +112,7 @@ describe("MetaData structure", () => {
       logo: "logo.png",
       clickToEnlargeImages: false,
       lang: "en",
+      sections: {},
       cookies: {
         enabled: true,
         message: "We use cookies",

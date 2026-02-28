@@ -17,6 +17,71 @@ export interface MenuData {
   menu_contacts: MenuContact[];
 }
 
+export interface SectionMetaIcon {
+  url: string;
+  sizes: string;
+  type: string;
+}
+
+export interface SectionMetaOpenGraphImage {
+  url: string;
+  width: number;
+  height: number;
+}
+
+export interface SectionMetaOpenGraph {
+  title: string;
+  description: string;
+  locale: string;
+  type: string;
+  url: string;
+  siteName: string;
+  images: SectionMetaOpenGraphImage[];
+}
+
+export interface SectionMetaRobots {
+  index: boolean;
+  follow: boolean;
+  nocache: boolean;
+  googleBot: {
+    index: boolean;
+    follow: boolean;
+    noimageindex: boolean;
+  };
+}
+
+export interface SectionMetaTwitter {
+  card: string;
+  title: string;
+  description: string;
+  images?: string[];
+}
+
+export interface SectionMetaIcons {
+  icon: SectionMetaIcon[];
+  apple: SectionMetaIcon[];
+}
+
+export interface SectionMetaOther {
+  [key: string]: string;
+  "dc.title": string;
+  "dc.description": string;
+  "dc.relation": string;
+  "dc.source": string;
+  "dc.language": string;
+}
+
+export interface SectionMeta {
+  title: string;
+  description: string;
+  category: string;
+  openGraph: SectionMetaOpenGraph;
+  robots: SectionMetaRobots;
+  icons?: SectionMetaIcons;
+  twitter: SectionMetaTwitter;
+  other: SectionMetaOther;
+}
+
 export interface MetaData {
   author: string;
   logo: string;
@@ -31,6 +96,7 @@ export interface MetaData {
     disagreeButtonFnName: string;
     header: string;
   };
+  sections: Record<string, SectionMeta>;
 }
 
 export interface LinkItem {

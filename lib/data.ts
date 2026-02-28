@@ -3,12 +3,14 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import yaml from "js-yaml";
+import type { Metadata } from "next";
 import type {
     MenuData,
     MetaData,
     Post,
     PostFrontMatter,
     SectionConfig,
+    SectionMeta,
     SectionsConfig,
 } from "./types";
 
@@ -28,6 +30,29 @@ export const getMenu = cache(function getMenu(): MenuData {
 export const getMetaData = cache(function getMetaData(): MetaData {
     return loadYaml<MetaData>("metaData.yml");
 });
+
+export function getSectionMeta(section: string): SectionMeta | null {
+    const meta = getMetaData();
+    return meta.sections[section] ?? null;
+}
+
+export function buildMetadataForSection(section: string): Metadata {
+    const sectionMeta = getSectionMeta(section);
+    if (!sectionMeta) {
+        return { title: section };
+    }
+    const { title, description, category, openGraph, robots, icons, twitter, other } = sectionMeta;
+    return {
+        title,
+        description,
+        openGraph,
+        robots,
+        icons,
+        twitter,
+        other,
+        category,
+    };
+}
 
 export const getSectionsConfig = cache(
     function getSectionsConfig(): SectionsConfig {

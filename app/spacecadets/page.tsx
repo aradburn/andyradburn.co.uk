@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "../spacecadets-styles.css";
-import { getSectionConfig } from "@/lib/data";
+import { buildMetadataForSection, getSectionConfig } from "@/lib/data";
 import { SectionAbout } from "@/components/SectionAbout";
 import { SectionPostFeedContent } from "@/components/SectionPostFeedContent";
 import { SectionGigsContent } from "@/components/SectionGigsContent";
@@ -9,57 +9,7 @@ import { ScrollPinSections } from "@/components/ScrollPinSections";
 import { SectionWithBackgrounds } from "@/components/SectionWithBackgrounds";
 
 export async function generateMetadata(): Promise<Metadata> {
-    const title = "Kev Ellis and The Space Cadets";
-    const description = "Kev Ellis and The Space Cadets Website";
-    const openGraph = {
-        title: "Kev Ellis and The Space Cadets",
-        description: "News, gigs and releases from Kev Ellis and The Space Cadets",
-        locale: "en_GB",
-        type: "website",
-        url: "https://andyradburn.co.uk/spacecadets/",
-        siteName: "Kev Ellis and The Space Cadets",
-        images: [
-            {
-                url: "https://andyradburn.co.uk/assets/img/spacecadets/SpaceCadets-Logo-v9-Black-750x750.png",
-                width: 750,
-                height: 750,
-            },
-        ],
-    };
-    const robots = {
-        index: true,
-        follow: true,
-        nocache: false,
-        googleBot: {
-            index: true,
-            follow: true,
-            noimageindex: false,
-        },
-    };
-    const twitter = {
-        card: "summary_large_image",
-        title: "Kev Ellis and The Space Cadets",
-        description: "News, gigs and releases from Kev Ellis and The Space Cadets",
-        images: [
-            "https://andyradburn.co.uk/assets/img/spacecadets/SpaceCadets-Logo-v9-Black-750x750.png",
-        ],
-    };
-    const other = {
-        "dc.title": "Kev Ellis and The Space Cadets",
-        "dc.description": "News, gigs and releases from Kev Ellis and The Space Cadets",
-        "dc.relation": "https://andyradburn.co.uk/spacecadets/",
-        "dc.source": "https://andyradburn.co.uk/spacecadets/",
-        "dc.language": "en_GB",
-    };
-    return {
-        title,
-        description,
-        openGraph,
-        robots,
-        twitter,
-        other,
-        category: "music",
-    };
+    return buildMetadataForSection("spacecadets");
 }
 
 export default async function SpaceCadetsPage() {
