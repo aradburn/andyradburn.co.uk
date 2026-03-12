@@ -8,8 +8,8 @@ export default function Analytics() {
     const pathname = usePathname();
 
     useEffect(() => {
-        const apiURL = process.env.NEXT_PUBLIC_SWETRIX_API_URL;
-        const pid = process.env.NEXT_PUBLIC_SWETRIX_PID;
+        const apiURL = "https://swetrix-api.musigree.com/log";
+        const pid = "GjQYW2KvWZTZ";
         if (!pid) return;
 
         Swetrix.init(pid, {
