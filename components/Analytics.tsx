@@ -9,7 +9,7 @@ export default function Analytics() {
 
     useEffect(() => {
         const apiURL = "https://swetrix-api.musigree.com/log";
-        const pid = "GjQYW2KvWZTZ";
+        const pid = "tk8UH0E6rrE1";
         if (!pid) return;
 
         Swetrix.init(pid, {
