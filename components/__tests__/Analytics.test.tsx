@@ -19,11 +19,8 @@ vi.mock("next/navigation", () => ({
 }));
 
 describe("Analytics", () => {
-  const originalEnv = process.env;
-
   beforeEach(() => {
     vi.clearAllMocks();
-    process.env = { ...originalEnv };
   });
 
   it("renders nothing", () => {
@@ -31,34 +28,16 @@ describe("Analytics", () => {
     expect(container.firstChild).toBeNull();
   });
 
-  it("does not init Swetrix when pid is missing", () => {
-    delete process.env.NEXT_PUBLIC_SWETRIX_PID;
-    render(<Analytics />);
-    expect(mockInit).not.toHaveBeenCalled();
-  });
-
-  it("inits Swetrix and tracks when pid is set", () => {
-    process.env.NEXT_PUBLIC_SWETRIX_PID = "test-pid";
+  it("inits Swetrix and tracks", () => {
     render(<Analytics />);
     expect(mockInit).toHaveBeenCalledWith(
-      "test-pid",
+      "tk8UH0E6rrE1",
       expect.objectContaining({
+        apiURL: "https://swetrix-api.musigree.com/log",
         devMode: false,
       })
     );
     expect(mockTrackViews).toHaveBeenCalled();
     expect(mockTrackErrors).toHaveBeenCalled();
-  });
-
-  it("inits with apiURL when env var set", () => {
-    process.env.NEXT_PUBLIC_SWETRIX_PID = "test-pid";
-    process.env.NEXT_PUBLIC_SWETRIX_API_URL = "https://api.example.com";
-    render(<Analytics />);
-    expect(mockInit).toHaveBeenCalledWith(
-      "test-pid",
-      expect.objectContaining({
-        apiURL: "https://api.example.com",
-      })
-    );
   });
 });
