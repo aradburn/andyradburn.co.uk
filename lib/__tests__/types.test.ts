@@ -21,12 +21,11 @@ describe("SECTION_CATEGORIES", () => {
     expect(SECTION_CATEGORIES).toContain("spacecadets");
     expect(SECTION_CATEGORIES).toContain("theecrow");
     expect(SECTION_CATEGORIES).toContain("radioshow");
-    expect(SECTION_CATEGORIES).toContain("collaborations");
     expect(SECTION_CATEGORIES).toContain("discography");
   });
 
-  it("has exactly 9 categories", () => {
-    expect(SECTION_CATEGORIES).toHaveLength(9);
+  it("has exactly 8 categories", () => {
+    expect(SECTION_CATEGORIES).toHaveLength(8);
   });
 
   it("each category is a non-empty string", () => {
@@ -47,7 +46,6 @@ describe("SectionCategory type", () => {
       "spacecadets",
       "theecrow",
       "radioshow",
-      "collaborations",
       "discography",
     ];
     expect(valid).toEqual([...SECTION_CATEGORIES]);

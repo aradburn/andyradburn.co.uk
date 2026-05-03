@@ -75,14 +75,14 @@
 
   .gigs h1 {
     color: var(--color-text);
-    text-align: center;
+    text-align: start;
     font-size: var(--text-4xl);
     line-height: var(--text-4xl--line-height);
   }
 
   .gigs h2 {
       color: var(--color-accent);
-      text-align: center;
+      text-align: start;
       font-size: var(--text-2xl);
       line-height: var(--text-2xl--line-height);
       margin-top: 3rem;
@@ -90,14 +90,14 @@
 
   .gigs h3 {
     color: yellow;
-    text-align: center;
+    text-align: start;
     font-size: var(--text-5xl);
     line-height: var(--text-5xl--line-height);
   }
 
   .gigs p {
     color: var(--color-text-muted);
-    text-align: center;
+    text-align: start;
     font-size: var(--text-3xl);
     line-height: var(--text-3xl--line-height);
     display: block;
@@ -105,7 +105,7 @@
 
   .gigs a {
     color: yellow;
-    text-align: center;
+    text-align: start;
     font-size: var(--text-2xl);
     line-height: var(--text-2xl--line-height);
     display: block;

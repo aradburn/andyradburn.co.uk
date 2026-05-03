@@ -145,7 +145,6 @@ export const SECTION_CATEGORIES = [
   "spacecadets",
   "theecrow",
   "radioshow",
-  "collaborations",
   "discography",
 ] as const;
 export type SectionCategory = (typeof SECTION_CATEGORIES)[number];

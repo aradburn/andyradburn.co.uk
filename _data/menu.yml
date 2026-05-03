@@ -33,11 +33,6 @@ menu_pages:
     category: radioshow
     tooltip: Radio Show tooltip
 
-  - title: Collaborations
-    url: /collaborations/
-    category: collaborations
-    tooltip: Collaborations tooltip
-
   - title: Discography
     url: /discography/
     category: discography

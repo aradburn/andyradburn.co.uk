@@ -4,11 +4,14 @@ import { SocialIcon } from "react-social-icons";
 
 export default function AboutPage() {
   return (
-    <div className="mx-auto w-sm sm:w-xl md:w-3xl lg:w-5xl xl:w-7xl max-w-full min-h-[60vh] min-h-full py-8 sm:py-20 flex flex-col items-center justify-center justify-self-center overflow-hidden bg-gradient-to-b from-black/20 to-black/66">
+    <div className="mx-auto w-sm sm:w-xl md:w-3xl lg:w-5xl xl:w-7xl max-w-full min-h-[60vh] min-h-full px-8 py-8 sm:py-20 flex flex-col overflow-hidden bg-gradient-to-b from-black/20 to-black/66">
       <h1 className="mb-6 text-3xl font-bold">About</h1>
       <p className="mb-4">
         Andy Radburn is a synthesizer player and composer living in Portsmouth,
         UK.
+      </p>
+      <p className="mb-4">
+          Currently playing in Dubbal, Sonic Arcana, Kev Ellis and the Space Cadets, Shankara, and Thee CROW.
       </p>
       <hr className="my-6 border-text/30" />
       <p className="mb-4">Listen to Andy Radburn&apos;s music here:</p>
@@ -27,6 +30,20 @@ export default function AboutPage() {
           </a>
         </li>
         <li>
+            <a href="https://www.youtube.com/@SonicArcanaMusic"
+               className="inline-flex items-center gap-2 text-accent">
+                Sonic Arcana on YouTube
+                <SocialIcon
+                    url="https://www.youtube.com/@SonicArcanaMusic"
+                    network="youtube"
+                    as="span"
+                    className="!h-10 !w-10 [&>svg]:!h-10 [&>svg]:!w-10"
+                    bgColor="transparent"
+                    fgColor="currentColor"
+                />
+            </a>
+        </li>
+        <li>
           <a href="https://www.youtube.com/@Dubbal" className="inline-flex items-center gap-2 text-accent">
             Dubbal on YouTube
             <SocialIcon
@@ -39,6 +56,19 @@ export default function AboutPage() {
             />
           </a>
         </li>
+        <li>
+          <a href="https://www.mixcloud.com/SonicArcana/"
+             className="inline-flex items-center gap-2 text-accent">
+              Sonic Arcana Radio Show on Mixcloud
+              <SocialIcon
+                  url="https://www.mixcloud.com/SonicArcana/"
+                  as="span"
+                  className="!h-10 !w-10 [&>svg]:!h-10 [&>svg]:!w-10"
+                  bgColor="transparent"
+                  fgColor="currentColor"
+              />
+          </a>
+      </li>
         {/*}
         <li>
           <a href="#" className="inline-flex items-center gap-2 text-accent">

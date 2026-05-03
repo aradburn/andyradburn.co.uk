@@ -1,4 +1,4 @@
-# Per-section config for dubbal, sonicarcana, bubbledubble (and collaborations).
+# Per-section config for dubbal, sonicarcana, bubbledubble.
 # Used for page metadata and hero panel. Posts still come from each section's _posts folder.
 home:
   title:
@@ -135,12 +135,3 @@ radioshow:
   videos:
     description: Radio Show Videos
     background-image: null
-
-collaborations:
-  title: Collaborations
-  subtitle: Guest appearances with other bands
-  description: Collaborations and guest appearances with other bands.
-  about: null
-  posts: null
-  gigs: null
-  videos: null
