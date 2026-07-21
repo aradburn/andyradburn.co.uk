@@ -1,61 +1,61 @@
 menu_pages:
-  - title: Home
-    url: /home
-    category: home
+    - title: Home
+      url: /home
+      category: home
 
-  - title: Dubbal
-    url: /dubbal/
-    category: dubbal
-    tooltip: Dubbal tooltip
+    - title: Dubbal
+      url: /dubbal/
+      category: dubbal
+      tooltip: Dubbal tooltip
 
-  - title: Sonic Arcana
-    url: /sonicarcana/
-    category: sonicarcana
-    tooltip: Sonic Arcana tooltip
+    - title: Sonic Arcana
+      url: /sonicarcana/
+      category: sonicarcana
+      tooltip: Sonic Arcana tooltip
 
-  - title: BubbleDubble
-    url: /bubbledubble/
-    category: bubbledubble
-    tooltip: BubbleDubble tooltip
+    - title: BubbleDubble
+      url: /bubbledubble/
+      category: bubbledubble
+      tooltip: BubbleDubble tooltip
 
-  - title: Space Cadets
-    url: /spacecadets/
-    category: spacecadets
-    tooltip: Space Cadets tooltip
+    - title: Space Cadets
+      url: /spacecadets/
+      category: spacecadets
+      tooltip: Space Cadets tooltip
 
-  - title: Thee CROW
-    url: /theecrow/
-    category: theecrow
-    tooltip: Thee CROW tooltip
+    - title: Thee CROW
+      url: /theecrow/
+      category: theecrow
+      tooltip: Thee CROW tooltip
 
-  - title: Radio Show
-    url: /radioshow/
-    category: radioshow
-    tooltip: Radio Show tooltip
+    - title: Radio Show
+      url: /radioshow/
+      category: radioshow
+      tooltip: Radio Show tooltip
 
-  - title: Discography
-    url: /discography/
-    category: discography
-    tooltip: Discography tooltip
+    - title: Discography
+      url: /discography/
+      category: discography
+      tooltip: Discography tooltip
 
-  - title: About
-    url: about.html
-    category: about
-    tooltip: This is about
+    - title: About
+      url: about.html
+      category: about
+      tooltip: This is about
 
 menu_contacts:
-  - url: https://soundcloud.com/
-    network: soundcloud
-    target: _blank
-    label: SoundCloud
-  - url: https://twitter.com/
-    network: twitter
-    target: _blank
-    label: Twitter
-  - url: mailto:contact@andyradburn.co.uk
-    network: mailto
-    label: Email
-  - url: /feed.xml
-    network: rss
-    target: _blank
-    label: RSS
+    - url: https://soundcloud.com/
+      network: soundcloud
+      target: _blank
+      label: SoundCloud
+    - url: https://twitter.com/
+      network: twitter
+      target: _blank
+      label: Twitter
+    - url: mailto:contact@andyradburn.co.uk
+      network: mailto
+      label: Email
+    - url: /feed.xml
+      network: rss
+      target: _blank
+      label: RSS

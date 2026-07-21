@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 
 const Analytics = dynamic(
     () => import("@/components/Analytics").then((m) => m.default),
-    { ssr: false }
+    { ssr: false },
 );
 
 export function AnalyticsDynamic() {

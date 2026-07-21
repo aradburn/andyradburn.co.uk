@@ -1,22 +1,22 @@
 /* Radio Show section: overrides global Tailwind theme (scoped to .section-radioshow) */
 .section-radioshow {
-  /* Colors – warm, vintage radio palette */
-  --color-surface: #1a1008;
-  --color-surface-elevated: #4a2f3e;
-  --color-surface-border: #a08050;
-  --color-text: #f0e0c0;
-  --color-text-muted: #c0a070;
-  --color-accent: #ffe8c0;
-  --color-accent-dim: #4a3420;
-  --color-accent-warm: #c0a070;
-  /* Fonts */
-  --font-sans: var(--font-audiowide);
-  --font-display: var(--font-audiowide);
-  /* Background image */
-  --background-image-gradient-stage: linear-gradient(
-    180deg,
-    transparent 0%,
-    rgba(42, 28, 16, 0.6) 50%,
-    rgba(42, 28, 16, 0.95) 100%
-  );
+    /* Colors – warm, vintage radio palette */
+    --color-surface: #1a1008;
+    --color-surface-elevated: #4a2f3e;
+    --color-surface-border: #a08050;
+    --color-text: #f0e0c0;
+    --color-text-muted: #c0a070;
+    --color-accent: #ffe8c0;
+    --color-accent-dim: #4a3420;
+    --color-accent-warm: #c0a070;
+    /* Fonts */
+    --font-sans: var(--font-audiowide);
+    --font-display: var(--font-audiowide);
+    /* Background image */
+    --background-image-gradient-stage: linear-gradient(
+        180deg,
+        transparent 0%,
+        rgba(42, 28, 16, 0.6) 50%,
+        rgba(42, 28, 16, 0.95) 100%
+    );
 }

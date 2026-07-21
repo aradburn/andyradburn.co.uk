@@ -2,7 +2,7 @@ import { cache } from "react";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import yaml from "js-yaml";
+import { load as parseYaml } from "js-yaml";
 import type { Metadata } from "next";
 import type {
     MenuData,
@@ -20,7 +20,7 @@ const ROOT = process.cwd();
 function loadYaml<T>(filename: string): T {
     const filePath = path.join(DATA_DIR, filename);
     const raw = fs.readFileSync(filePath, "utf8");
-    return yaml.load(raw) as T;
+    return parseYaml(raw) as T;
 }
 
 export const getMenu = cache(function getMenu(): MenuData {
@@ -41,7 +41,16 @@ export function buildMetadataForSection(section: string): Metadata {
     if (!sectionMeta) {
         return { title: section };
     }
-    const { title, description, category, openGraph, robots, icons, twitter, other } = sectionMeta;
+    const {
+        title,
+        description,
+        category,
+        openGraph,
+        robots,
+        icons,
+        twitter,
+        other,
+    } = sectionMeta;
     return {
         title,
         description,

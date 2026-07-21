@@ -2,73 +2,73 @@
 @config "../tailwind.config.ts";
 
 @layer base {
-  /* Default theme values – overridden by section-specific CSS (e.g. .section-dubbal) */
-  :root {
-    --color-surface: #01261C;
-    --color-surface-elevated: #014034;
-    --color-surface-border: #BF9F63;
-    --color-text: #F2DEA0;
-    --color-text-muted: #BF9F63;
-    --color-accent: #f8eecf;
-    --color-accent-dim: #3d8a6a;
-    --color-accent-warm: #BF9F63;
-    --font-sans: "Arvo", Georgia, serif;
-    --font-display: "Manrope", system-ui, sans-serif;
-    --background-image-gradient-stage: linear-gradient(
-      180deg,
-      transparent 0%,
-      rgba(1, 64, 52, 0.6) 50%,
-      rgba(1, 64, 52, 0.95) 100%
-    );
-  }
-  html {
-    color-scheme: dark;
-  }
-  body {
-    @apply bg-surface text-text antialiased;
-    -webkit-tap-highlight-color: color-mix(
-      in srgb,
-      var(--color-accent) 25%,
-      transparent
-    );
-  }
-  a {
-    @apply underline decoration-transparent transition-[text-decoration-color] duration-300 hover:decoration-accent;
-  }
-  h1 {
-    @apply font-display font-bold tracking-tight;
-  }
-  .prose-invert {
-    --tw-prose-body: var(--color-text);
-    --tw-prose-headings: var(--color-text);
-    --tw-prose-links: var(--color-accent);
-    --tw-prose-bold: var(--color-text);
-    --tw-prose-counters: var(--color-accent);
-    --tw-prose-quotes: var(--color-text-muted);
-    --tw-prose-quote-borders: var(--color-accent);
-    --tw-prose-hr: var(--color-surface-border);
-  }
+    /* Default theme values – overridden by section-specific CSS (e.g. .section-dubbal) */
+    :root {
+        --color-surface: #01261c;
+        --color-surface-elevated: #014034;
+        --color-surface-border: #bf9f63;
+        --color-text: #f2dea0;
+        --color-text-muted: #bf9f63;
+        --color-accent: #f8eecf;
+        --color-accent-dim: #3d8a6a;
+        --color-accent-warm: #bf9f63;
+        --font-sans: "Arvo", Georgia, serif;
+        --font-display: "Manrope", system-ui, sans-serif;
+        --background-image-gradient-stage: linear-gradient(
+            180deg,
+            transparent 0%,
+            rgba(1, 64, 52, 0.6) 50%,
+            rgba(1, 64, 52, 0.95) 100%
+        );
+    }
+    html {
+        color-scheme: dark;
+    }
+    body {
+        @apply bg-surface text-text antialiased;
+        -webkit-tap-highlight-color: color-mix(
+            in srgb,
+            var(--color-accent) 25%,
+            transparent
+        );
+    }
+    a {
+        @apply underline decoration-transparent transition-[text-decoration-color] duration-300 hover:decoration-accent;
+    }
+    h1 {
+        @apply font-display font-bold tracking-tight;
+    }
+    .prose-invert {
+        --tw-prose-body: var(--color-text);
+        --tw-prose-headings: var(--color-text);
+        --tw-prose-links: var(--color-accent);
+        --tw-prose-bold: var(--color-text);
+        --tw-prose-counters: var(--color-accent);
+        --tw-prose-quotes: var(--color-text-muted);
+        --tw-prose-quote-borders: var(--color-accent);
+        --tw-prose-hr: var(--color-surface-border);
+    }
 }
 
 @layer utilities {
-  .focus\:not-sr-only:focus,
-  .focus-visible\:not-sr-only:focus-visible {
-    position: static;
-    width: auto;
-    height: auto;
-    padding: 0.5rem 1rem;
-    margin: 0;
-    overflow: visible;
-    clip: auto;
-    white-space: normal;
-  }
+    .focus\:not-sr-only:focus,
+    .focus-visible\:not-sr-only:focus-visible {
+        position: static;
+        width: auto;
+        height: auto;
+        padding: 0.5rem 1rem;
+        margin: 0;
+        overflow: visible;
+        clip: auto;
+        white-space: normal;
+    }
 }
 
 /* SubsectionBackgroundLayers: initial position so section1 shows on first paint.
    Still used; GSAP then overrides with inline transform (yPercent) on scroll. */
 .subsection-bg-layer--active {
-  transform: translateY(0%);
+    transform: translateY(0%);
 }
 .subsection-bg-layer--below {
-  transform: translateY(100%);
+    transform: translateY(100%);
 }

@@ -1,22 +1,22 @@
 /* Thee CROW section: overrides global Tailwind theme (scoped to .section-theecrow) */
 .section-theecrow {
-  /* Colors – dark, corvid-inspired palette */
-  --color-surface: #0e0e12;
-  --color-surface-elevated: #1a1a22;
-  --color-surface-border: #6a5a7a;
-  --color-text: #d8d0e0;
-  --color-text-muted: #9488a8;
-  --color-accent: #c8b8e0;
-  --color-accent-dim: #2e2840;
-  --color-accent-warm: #9488a8;
-  /* Fonts */
-  --font-sans: "Arvo", Georgia, serif;
-  --font-display: "Manrope", system-ui, sans-serif;
-  /* Background image */
-  --background-image-gradient-stage: linear-gradient(
-    180deg,
-    transparent 0%,
-    rgba(26, 26, 34, 0.6) 50%,
-    rgba(26, 26, 34, 0.95) 100%
-  );
+    /* Colors – dark, corvid-inspired palette */
+    --color-surface: #0e0e12;
+    --color-surface-elevated: #1a1a22;
+    --color-surface-border: #6a5a7a;
+    --color-text: #d8d0e0;
+    --color-text-muted: #9488a8;
+    --color-accent: #c8b8e0;
+    --color-accent-dim: #2e2840;
+    --color-accent-warm: #9488a8;
+    /* Fonts */
+    --font-sans: "Arvo", Georgia, serif;
+    --font-display: "Manrope", system-ui, sans-serif;
+    /* Background image */
+    --background-image-gradient-stage: linear-gradient(
+        180deg,
+        transparent 0%,
+        rgba(26, 26, 34, 0.6) 50%,
+        rgba(26, 26, 34, 0.95) 100%
+    );
 }

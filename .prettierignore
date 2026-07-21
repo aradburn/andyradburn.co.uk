@@ -1,0 +1,29 @@
+# Build / deps
+.next
+out
+build
+coverage
+node_modules
+public/assets
+package-lock.json
+tsconfig.tsbuildinfo
+
+# Vendored / generated
+mandala
+*.min.css
+*.min.js
+*.cache.js
+*.map
+
+# Content and agent docs (not app source)
+.agents
+.cursor
+**/_posts
+**/_gigs
+**/_videos
+docs
+
+# Verification / static HTML
+404.html
+googlec155f574991bb7d4.html
+public/googlec155f574991bb7d4.html

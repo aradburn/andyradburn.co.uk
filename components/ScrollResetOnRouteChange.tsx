@@ -10,11 +10,11 @@ gsap.registerPlugin(ScrollTrigger);
 const MAIN_CONTENT_ID = "main-content";
 
 function resetScrollAndRefresh() {
-  const scroller = document.getElementById(MAIN_CONTENT_ID);
-  if (scroller) {
-    scroller.scrollTo(0, 0);
-    ScrollTrigger.refresh();
-  }
+    const scroller = document.getElementById(MAIN_CONTENT_ID);
+    if (scroller) {
+        scroller.scrollTo(0, 0);
+        ScrollTrigger.refresh();
+    }
 }
 
 /**
@@ -24,35 +24,36 @@ function resetScrollAndRefresh() {
  * after pathname updates; then refreshes ScrollTrigger.
  */
 export function ScrollResetOnRouteChange() {
-  const pathname = usePathname();
-  const prevPathnameRef = useRef<string | null>(null);
-  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+    const pathname = usePathname();
+    const prevPathnameRef = useRef<string | null>(null);
+    const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  useEffect(() => {
-    const prev = prevPathnameRef.current;
-    prevPathnameRef.current = pathname;
+    useEffect(() => {
+        const prev = prevPathnameRef.current;
+        prevPathnameRef.current = pathname;
 
-    if (prev !== null && prev !== pathname) {
-      resetScrollAndRefresh();
-      const rafId = requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          resetScrollAndRefresh();
-          if (timeoutRef.current != null) clearTimeout(timeoutRef.current);
-          timeoutRef.current = setTimeout(() => {
+        if (prev !== null && prev !== pathname) {
             resetScrollAndRefresh();
-            timeoutRef.current = null;
-          }, 50);
-        });
-      });
-      return () => {
-        cancelAnimationFrame(rafId);
-        if (timeoutRef.current != null) {
-          clearTimeout(timeoutRef.current);
-          timeoutRef.current = null;
+            const rafId = requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    resetScrollAndRefresh();
+                    if (timeoutRef.current != null)
+                        clearTimeout(timeoutRef.current);
+                    timeoutRef.current = setTimeout(() => {
+                        resetScrollAndRefresh();
+                        timeoutRef.current = null;
+                    }, 50);
+                });
+            });
+            return () => {
+                cancelAnimationFrame(rafId);
+                if (timeoutRef.current != null) {
+                    clearTimeout(timeoutRef.current);
+                    timeoutRef.current = null;
+                }
+            };
         }
-      };
-    }
-  }, [pathname]);
+    }, [pathname]);
 
-  return null;
+    return null;
 }

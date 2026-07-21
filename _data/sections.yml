@@ -1,137 +1,137 @@
 # Per-section config for dubbal, sonicarcana, bubbledubble.
 # Used for page metadata and hero panel. Posts still come from each section's _posts folder.
 home:
-  title:
-  subtitle: Music and Programming
-  description: Andy Radburn – music and programming.
-  about:
+    title:
+    subtitle: Music and Programming
     description: Andy Radburn – music and programming.
-    image: assets/img/home/AndyRadburn3.png
-    image_alt: Andy Radburn
-    background-image: assets/img/home/AndyMabfestv3.png
-  posts:
-    description: News
-    background-image: null
-  gigs:
-    description: Gigs
-    background-image: null
-  videos:
-    description: Videos
-    background-image: null
+    about:
+        description: Andy Radburn – music and programming.
+        image: assets/img/home/AndyRadburn3.png
+        image_alt: Andy Radburn
+        background-image: assets/img/home/AndyMabfestv3.png
+    posts:
+        description: News
+        background-image: null
+    gigs:
+        description: Gigs
+        background-image: null
+    videos:
+        description: Videos
+        background-image: null
 
 dubbal:
-  title:
-  subtitle: Psychedelic Space Rock and Dubby Beats
-  about:
-    description: Dubbal – psychedelic space rock and dubby beats.
-    image: assets/img/dubbal/logo-v7-white-transparent-2048x1152.png
-    image_alt: Dubbal Logo
-    background-image: assets/img/dubbal/DubbalOnStage.jpg
-    # Optional overrides; when absent, title/subtitle above are used
-    # heading: Dubbal
-    # subheading: Psychedelic Space Rock and Dubby Reggae Beats
-  posts:
-    description: Dubbal News
-    background-image: null
-  gigs:
-    description: Dubbal Gigs
-    background-image: assets/img/dubbal/AlanAndy.jpg
-  videos:
-    description: Dubbal Videos
-    background-image: assets/img/dubbal/logo-v7-white-transparent-2048x1152.png
+    title:
+    subtitle: Psychedelic Space Rock and Dubby Beats
+    about:
+        description: Dubbal – psychedelic space rock and dubby beats.
+        image: assets/img/dubbal/logo-v7-white-transparent-2048x1152.png
+        image_alt: Dubbal Logo
+        background-image: assets/img/dubbal/DubbalOnStage.jpg
+        # Optional overrides; when absent, title/subtitle above are used
+        # heading: Dubbal
+        # subheading: Psychedelic Space Rock and Dubby Reggae Beats
+    posts:
+        description: Dubbal News
+        background-image: null
+    gigs:
+        description: Dubbal Gigs
+        background-image: assets/img/dubbal/AlanAndy.jpg
+    videos:
+        description: Dubbal Videos
+        background-image: assets/img/dubbal/logo-v7-white-transparent-2048x1152.png
 
 sonicarcana:
-  title:
-  subtitle: Electronic Space Ragas and Dubby Eastern Beats
-  about:
-    description: Sonic Arcana – electronic space ragas and dubby eastern beats.
-    image: assets/img/sonicarcana/SonicArcana.png
-    image_alt: Sonic Arcana Logo
-    background-image: assets/img/sonicarcana/Kepler-452B-Front-Cover-v10-2048x946.jpg
-    # heading: Sonic Arcana
-    # subheading: Electronic Space Ragas and Dubby Eastern Beats
-  posts:
-    description: Sonic Arcana News
-    background-image: assets/img/sonicarcana/HiddenArtifactFrontCover2-2048x946.jpg
-  gigs:
-    description: Sonic Arcana Gigs
-    background-image: assets/img/sonicarcana/EarthPyramid-Purple-large-2048x946.png
-  videos:
-    description: Sonic Arcana Videos
-    background-image: assets/img/sonicarcana/EarthPyramid-Purple-large-2048x946.png
+    title:
+    subtitle: Electronic Space Ragas and Dubby Eastern Beats
+    about:
+        description: Sonic Arcana – electronic space ragas and dubby eastern beats.
+        image: assets/img/sonicarcana/SonicArcana.png
+        image_alt: Sonic Arcana Logo
+        background-image: assets/img/sonicarcana/Kepler-452B-Front-Cover-v10-2048x946.jpg
+        # heading: Sonic Arcana
+        # subheading: Electronic Space Ragas and Dubby Eastern Beats
+    posts:
+        description: Sonic Arcana News
+        background-image: assets/img/sonicarcana/HiddenArtifactFrontCover2-2048x946.jpg
+    gigs:
+        description: Sonic Arcana Gigs
+        background-image: assets/img/sonicarcana/EarthPyramid-Purple-large-2048x946.png
+    videos:
+        description: Sonic Arcana Videos
+        background-image: assets/img/sonicarcana/EarthPyramid-Purple-large-2048x946.png
 
 bubbledubble:
-  title:
-  subtitle: Live Dubby Electronic Beats
-  description: BubbleDubble – live dubby electronic beats. Releases and news.
-  about:
-    image: assets/img/bubbledubble/BubbleDubble-TextOnly-1024x131.png
-    image_alt: BubbleDubble Logo
-    background-image: assets/img/bubbledubble/EasternHaze2007.png
-    # heading: BubbleDubble
-    # subheading: Live Dubby Electronic Beats
-  posts:
-    description: BubbleDubble News
-  gigs:
-    description: BubbleDubble Gigs
-    background-image: assets/img/bubbledubble/SteveDrawing-2048x946.png
-  videos:
-    description: BubbleDubble Videos
-    background-image: assets/img/bubbledubble/SteveDrawing-2048x946.png
+    title:
+    subtitle: Live Dubby Electronic Beats
+    description: BubbleDubble – live dubby electronic beats. Releases and news.
+    about:
+        image: assets/img/bubbledubble/BubbleDubble-TextOnly-1024x131.png
+        image_alt: BubbleDubble Logo
+        background-image: assets/img/bubbledubble/EasternHaze2007.png
+        # heading: BubbleDubble
+        # subheading: Live Dubby Electronic Beats
+    posts:
+        description: BubbleDubble News
+    gigs:
+        description: BubbleDubble Gigs
+        background-image: assets/img/bubbledubble/SteveDrawing-2048x946.png
+    videos:
+        description: BubbleDubble Videos
+        background-image: assets/img/bubbledubble/SteveDrawing-2048x946.png
 
 spacecadets:
-  title:
-  subtitle: Psychedelic Folky Space Rock
-  description: Space Cadets – music and releases.
-  about:
-    image: assets/img/spacecadets/SpaceCadets-Logo-v9-White-Transparent-1024x560.png
-    image_alt: Space Cadets Logo
-    background-image: assets/img/spacecadets/SpaceCadets-2048x946.jpg
-    # heading: Space Cadets
-    # subheading: Space Cadets
-  posts:
-    description: Space Cadets News
-    background-image: null
-  gigs:
-    description: Space Cadets Gigs
-    background-image: assets/img/spacecadets/SpaceCadets-KingArthur-2048x946.jpg
-  videos:
-    description: Space Cadets Videos
-    background-image: assets/img/spacecadets/SpaceCadets-Logo-v9-White-Transparent-1024x560.png
+    title:
+    subtitle: Psychedelic Folky Space Rock
+    description: Space Cadets – music and releases.
+    about:
+        image: assets/img/spacecadets/SpaceCadets-Logo-v9-White-Transparent-1024x560.png
+        image_alt: Space Cadets Logo
+        background-image: assets/img/spacecadets/SpaceCadets-2048x946.jpg
+        # heading: Space Cadets
+        # subheading: Space Cadets
+    posts:
+        description: Space Cadets News
+        background-image: null
+    gigs:
+        description: Space Cadets Gigs
+        background-image: assets/img/spacecadets/SpaceCadets-KingArthur-2048x946.jpg
+    videos:
+        description: Space Cadets Videos
+        background-image: assets/img/spacecadets/SpaceCadets-Logo-v9-White-Transparent-1024x560.png
 
 theecrow:
-  title:
-  subtitle: Dark Psychedelic Sounds
-  description: Thee CROW – dark psychedelic sounds.
-  about:
-    image: assets/img/theecrow/TheeCrowLogo-Black-640x250-Transparent.png
-    image_alt: Thee CROW Logo
-    background-image: assets/img/theecrow/Thee-CROW-Band-Photo-2048x946.jpg
-  posts:
-    description: Thee CROW News
-    background-image: null
-  gigs:
-    description: Thee CROW Gigs
-    background-image: assets/img/theecrow/TheeCrowLogo-Black-1080x512.png
-  videos:
-    description: Thee CROW Videos
-    background-image: assets/img/theecrow/TheeCrowLogo-Black-1080x512.png
+    title:
+    subtitle: Dark Psychedelic Sounds
+    description: Thee CROW – dark psychedelic sounds.
+    about:
+        image: assets/img/theecrow/TheeCrowLogo-Black-640x250-Transparent.png
+        image_alt: Thee CROW Logo
+        background-image: assets/img/theecrow/Thee-CROW-Band-Photo-2048x946.jpg
+    posts:
+        description: Thee CROW News
+        background-image: null
+    gigs:
+        description: Thee CROW Gigs
+        background-image: assets/img/theecrow/TheeCrowLogo-Black-1080x512.png
+    videos:
+        description: Thee CROW Videos
+        background-image: assets/img/theecrow/TheeCrowLogo-Black-1080x512.png
 
 radioshow:
-  title: Sonic Arcana Radio Show
-  subtitle: Psychedelic Radio Broadcasts
-  description: Radio Show – psychedelic radio broadcasts.
-  about:
-    image: assets/img/radioshow/SonicArcanaRadioShow-v2.png
-    image_alt: Radio Show Logo
-    background-image: assets/img/radioshow/SonicArcanaRadioShow-Background-v1.png
-  posts:
-    description: Radio Show News
-    background-image: null
-  gigs:
-    label: Shows
-    description: Radio Shows
-    background-image: assets/img/radioshow/SonicArcanaRadioShow-v2-2048x946.png
-  videos:
-    description: Radio Show Videos
-    background-image: null
+    title: Sonic Arcana Radio Show
+    subtitle: Psychedelic Radio Broadcasts
+    description: Radio Show – psychedelic radio broadcasts.
+    about:
+        image: assets/img/radioshow/SonicArcanaRadioShow-v2.png
+        image_alt: Radio Show Logo
+        background-image: assets/img/radioshow/SonicArcanaRadioShow-Background-v1.png
+    posts:
+        description: Radio Show News
+        background-image: null
+    gigs:
+        label: Shows
+        description: Radio Shows
+        background-image: assets/img/radioshow/SonicArcanaRadioShow-v2-2048x946.png
+    videos:
+        description: Radio Show Videos
+        background-image: null

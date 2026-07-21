@@ -6,14 +6,14 @@ const EMBED_URL = "https://www.youtube-nocookie.com/embed";
 const THUMBNAIL_URL = "https://img.youtube.com/vi";
 
 function hydratePlaceholder(placeholder: HTMLElement) {
-  if (placeholder.querySelector(".youtube-lazy__trigger")) return;
-  const videoId = placeholder.getAttribute("data-video-id");
-  if (!videoId) return;
+    if (placeholder.querySelector(".youtube-lazy__trigger")) return;
+    const videoId = placeholder.getAttribute("data-video-id");
+    if (!videoId) return;
 
-  const embedUrl = `${EMBED_URL}/${videoId}?autoplay=1`;
-  const thumbUrl = `${THUMBNAIL_URL}/${videoId}/hqdefault.jpg`;
+    const embedUrl = `${EMBED_URL}/${videoId}?autoplay=1`;
+    const thumbUrl = `${THUMBNAIL_URL}/${videoId}/hqdefault.jpg`;
 
-  placeholder.innerHTML = `
+    placeholder.innerHTML = `
     <button
       type="button"
       class="youtube-lazy__trigger group relative block w-full cursor-pointer border-0 bg-transparent p-0"
@@ -37,23 +37,31 @@ function hydratePlaceholder(placeholder: HTMLElement) {
     </button>
   `;
 
-  const trigger = placeholder.querySelector(".youtube-lazy__trigger");
-  trigger?.addEventListener("click", () => {
-    const iframe = document.createElement("iframe");
-    iframe.className = "aspect-video w-full max-w-4xl";
-    iframe.src = embedUrl;
-    iframe.title = "YouTube video player";
-    iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
-    iframe.allowFullscreen = true;
-    placeholder.replaceChildren(iframe);
-  });
+    const trigger = placeholder.querySelector(".youtube-lazy__trigger");
+    trigger?.addEventListener("click", () => {
+        const iframe = document.createElement("iframe");
+        iframe.className = "aspect-video w-full max-w-4xl";
+        iframe.src = embedUrl;
+        iframe.title = "YouTube video player";
+        iframe.setAttribute(
+            "allow",
+            "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+        );
+        iframe.allowFullscreen = true;
+        placeholder.replaceChildren(iframe);
+    });
 }
 
-export function YouTubeLazyHydrator({ children }: { children: React.ReactNode }) {
-  useEffect(() => {
-    const placeholders = document.querySelectorAll<HTMLElement>(".youtube-lazy");
-    placeholders.forEach(hydratePlaceholder);
-  }, []);
+export function YouTubeLazyHydrator({
+    children,
+}: {
+    children: React.ReactNode;
+}) {
+    useEffect(() => {
+        const placeholders =
+            document.querySelectorAll<HTMLElement>(".youtube-lazy");
+        placeholders.forEach(hydratePlaceholder);
+    }, []);
 
-  return <>{children}</>;
+    return <>{children}</>;
 }
