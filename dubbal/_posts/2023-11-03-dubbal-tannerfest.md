@@ -2,6 +2,8 @@
 layout: post
 title: Tannerfest is on Bandcamp
 categories: [ dubbal ]
+image: assets/img/dubbal/dubbal-tannerfest-2023-500x500.jpg
+image_alt: Tannerfest album art
 ---
 <p>Dubbal recorded live at Tannerfest 2023</p>
 <br/>

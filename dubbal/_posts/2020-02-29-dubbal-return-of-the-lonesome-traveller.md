@@ -2,6 +2,8 @@
 layout: post
 title: Return Of The Lonesome Traveller
 categories: [ dubbal ]
+image: assets/img/dubbal/dubbal-return-of-the-lonesome-traveller-500x500.jpg
+image_alt: Return Of The Lonesome Traveller album art
 ---
 
 <p>The second studio album by UK Spacerocker's Dubbal takes you on a strange
