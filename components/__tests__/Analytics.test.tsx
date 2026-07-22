@@ -1,21 +1,18 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { render } from "@testing-library/react";
+import type { ComponentProps } from "react";
+import { OpenPanelComponent } from "@openpanel/nextjs";
 import Analytics from "../Analytics";
 
-const mockInit = vi.hoisted(() => vi.fn());
-const mockTrackViews = vi.hoisted(() => vi.fn());
-const mockTrackErrors = vi.hoisted(() => vi.fn());
+type OpenPanelComponentProps = ComponentProps<typeof OpenPanelComponent>;
 
-vi.mock("swetrix", () => ({
-    init: mockInit,
-    trackViews: mockTrackViews,
-    trackErrors: mockTrackErrors,
-}));
+const mockOpenPanelComponent = vi.hoisted(() =>
+    vi.fn<(props: OpenPanelComponentProps) => null>(() => null),
+);
 
-const mockPathname = vi.fn(() => "/");
-
-vi.mock("next/navigation", () => ({
-    usePathname: () => mockPathname(),
+vi.mock("@openpanel/nextjs", () => ({
+    OpenPanelComponent: (props: OpenPanelComponentProps) =>
+        mockOpenPanelComponent(props),
 }));
 
 describe("Analytics", () => {
@@ -23,21 +20,16 @@ describe("Analytics", () => {
         vi.clearAllMocks();
     });
 
-    it("renders nothing", () => {
+    it("renders OpenPanel with screen view tracking", () => {
         const { container } = render(<Analytics />);
-        expect(container.firstChild).toBeNull();
-    });
 
-    it("inits Swetrix and tracks", () => {
-        render(<Analytics />);
-        expect(mockInit).toHaveBeenCalledWith(
-            "tk8UH0E6rrE1",
+        expect(container.firstChild).toBeNull();
+        expect(mockOpenPanelComponent).toHaveBeenCalledWith(
             expect.objectContaining({
-                apiURL: "https://swetrix-api.musigree.com/log",
-                devMode: false,
+                clientId: "e981de6c-6332-47eb-938f-0dd32b6c1915",
+                apiUrl: "https://opapi.musigree.com",
+                trackScreenViews: true,
             }),
         );
-        expect(mockTrackViews).toHaveBeenCalled();
-        expect(mockTrackErrors).toHaveBeenCalled();
     });
 });

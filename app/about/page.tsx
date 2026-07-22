@@ -126,16 +126,6 @@ export default function AboutPage() {
                     </a>
                 </li>
             </ul>
-            <hr className="my-6 border-text/30" />
-            <p>
-                <Link href="/privacy-policy/" className="text-accent">
-                    Privacy Policy
-                </Link>
-                {" / "}
-                <Link href="/cookies/" className="text-accent">
-                    Cookies
-                </Link>
-            </p>
         </div>
     );
 }

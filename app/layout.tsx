@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
 import { Arvo, Manrope, Audiowide } from "next/font/google";
 import "./globals.css";
 import "./styles.css";
@@ -8,7 +7,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Layout } from "@/components/Layout";
 import { ScrollResetOnRouteChange } from "@/components/ScrollResetOnRouteChange";
-import { AnalyticsDynamic } from "@/components/AnalyticsDynamic";
+import Analytics from "@/components/Analytics";
 
 const arvo = Arvo({
     weight: ["400", "700"],
@@ -131,17 +130,17 @@ export default function RootLayout({
                 <meta
                     httpEquiv="Content-Security-Policy"
                     content={`default-src 'self' ;
-                            script-src 'self' data: 'unsafe-eval' https://swetrix.org/swetrix.js https://cdn.jsdelivr.net/gh/Swetrix/ ;
-                            script-src-elem 'self' data: 'unsafe-inline' https://swetrix.org/swetrix.js https://cdn.jsdelivr.net/gh/Swetrix/ ;
+                            script-src 'self' data: 'unsafe-eval' https://openpanel.dev ;
+                            script-src-elem 'self' data: 'unsafe-inline' https://openpanel.dev ;
                             style-src 'self' ;
                             style-src-elem 'self' 'unsafe-inline' ;
                             style-src-attr 'self' 'unsafe-inline' 'unsafe-hashes' ;
                             object-src 'none' ;
                             frame-src 'self' https://bandcamp.com https://www.youtube-nocookie.com ;
                             child-src 'self' ;
-                            img-src 'self' data: https://img.youtube.com https://swetrix-api.musigree.com/ ;
+                            img-src 'self' data: https://img.youtube.com ;
                             font-src 'self' https://*.fontawesome.com ;
-                            connect-src 'self' http://localhost ws://localhost https://*.fontawesome.com https://swetrix-api.musigree.com/ ;
+                            connect-src 'self' http://localhost ws://localhost https://*.fontawesome.com https://opapi.musigree.com ;
                             manifest-src 'self' ;
                             base-uri 'self' ;
                             form-action 'self' ;
@@ -169,19 +168,7 @@ export default function RootLayout({
                 <Layout footer={<Footer menu={menu} meta={meta} />}>
                     {children}
                 </Layout>
-                <Suspense fallback={null}>
-                    <AnalyticsDynamic />
-                </Suspense>
-                {process.env.NEXT_PUBLIC_SWETRIX_PID && (
-                    <noscript>
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                            src={`https://swetrix-api.musigree.com/log/noscript?pid=${process.env.NEXT_PUBLIC_SWETRIX_PID}`}
-                            alt=""
-                            referrerPolicy="no-referrer-when-downgrade"
-                        />
-                    </noscript>
-                )}
+                <Analytics />
             </body>
         </html>
     );

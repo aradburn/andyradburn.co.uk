@@ -1,28 +1,14 @@
-"use client";
+import { OpenPanelComponent } from "@openpanel/nextjs";
 
-import { useEffect } from "react";
-import { usePathname } from "next/navigation";
-import * as Swetrix from "swetrix";
+const OPENPANEL_CLIENT_ID = "e981de6c-6332-47eb-938f-0dd32b6c1915";
+const OPENPANEL_API_URL = "https://opapi.musigree.com";
 
 export default function Analytics() {
-    const pathname = usePathname();
-
-    useEffect(() => {
-        const apiURL = "https://swetrix-api.musigree.com/log";
-        const pid = "tk8UH0E6rrE1";
-        if (!pid) return;
-
-        Swetrix.init(pid, {
-            apiURL,
-            devMode: false,
-        });
-        Swetrix.trackViews();
-        Swetrix.trackErrors();
-    }, []);
-
-    useEffect(() => {
-        Swetrix.trackViews();
-    }, [pathname]);
-
-    return null;
+    return (
+        <OpenPanelComponent
+            clientId={OPENPANEL_CLIENT_ID}
+            apiUrl={OPENPANEL_API_URL}
+            trackScreenViews={true}
+        />
+    );
 }
