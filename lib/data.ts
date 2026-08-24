@@ -85,6 +85,7 @@ const POSTS_DIRS = [
     { dir: path.join(ROOT, "spacecadets", "_posts"), category: "spacecadets" },
     { dir: path.join(ROOT, "theecrow", "_posts"), category: "theecrow" },
     { dir: path.join(ROOT, "radioshow", "_posts"), category: "radioshow" },
+    { dir: path.join(ROOT, "discography", "_posts"), category: "discography" },
 ];
 
 const VIDEO_DIRS = [

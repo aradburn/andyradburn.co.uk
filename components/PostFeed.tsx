@@ -133,7 +133,7 @@ export function DiscographyEntry({
                 </figure>
             )}
             <section className="min-w-0 flex-1">
-                <h2 className="mb-2 font-display text-2xl font-semibold tracking-tight">
+                <h2 className="mb-2 font-display text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-semibold tracking-tight">
                     <PostTitleLink post={post} inline={fullContent}>
                         {post.frontMatter.title}
                     </PostTitleLink>
@@ -182,29 +182,6 @@ export function DiscographyEntry({
                     </p>
                 )}
 
-                {!fullContent && (
-                    <p className="mt-2">
-                        <PostTitleLink post={post} inline={false}>
-                            {post.frontMatter.external_name
-                                ? `Read more on ${post.frontMatter.external_name} →`
-                                : "More info →"}
-                        </PostTitleLink>
-                    </p>
-                )}
-
-                {fullContent && post.frontMatter.external_url && (
-                    <p className="mt-2">
-                        <a
-                            href={post.frontMatter.external_url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            {post.frontMatter.external_name
-                                ? `Read more on ${post.frontMatter.external_name} →`
-                                : "More info →"}
-                        </a>
-                    </p>
-                )}
             </section>
         </article>
     );
