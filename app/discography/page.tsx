@@ -1,5 +1,5 @@
 import { getDiscographyPosts } from "@/lib/data";
-import "../base-styles.css";
+import "../discography-styles.css";
 import { markdownToHtml } from "@/lib/markdown";
 import { DiscographyEntry } from "@/components/PostFeed";
 
@@ -12,14 +12,17 @@ export default async function DiscographyPage() {
         })),
     );
     return (
-        <div className="mx-auto w-sm sm:w-xl md:w-3xl lg:w-5xl xl:w-7xl max-w-full min-h-[60vh] min-h-full py-8 sm:py-20 flex flex-col items-center justify-center justify-self-center overflow-hidden bg-gradient-to-b from-black/20 to-black/66">
+        <div className="section-discography mx-auto w-sm sm:w-xl md:w-3xl lg:w-5xl xl:w-7xl max-w-full min-h-[60vh] min-h-full py-8 sm:py-20 flex flex-col items-center justify-center justify-self-center overflow-hidden bg-gradient-to-b from-black/20 to-black/66">
             <header className="mb-10 border-b border-surface-border pb-2">
-                <h1 className="font-display text-4xl font-bold tracking-tight text-text sm:text-5xl">
+                <h1 className="font-display text-center text-4xl font-bold tracking-tight text-text sm:text-5xl">
                     Discography
                 </h1>
-                <p className="mt-2 text-lg text-text-muted">
+                <h2 className="mx-auto text-center mt-4 text-2xl text-text-muted">
+                    Andy Radburn's
+                </h2>
+                <h2 className="mx-auto text-center mt-1 text-2xl text-text-muted">
                     Releases and recordings
-                </p>
+                </h2>
             </header>
             <div className="flex flex-col gap-6">
                 {postsWithHtml.map(({ post, contentHtml }) => (

@@ -120,7 +120,12 @@ export function DiscographyEntry({
     return (
         <article className="discography mb-10 flex min-w-0 lg:min-w-5xl max-w-full flex-col gap-4 rounded-xl border border-surface-border bg-surface-elevated/80 p-4 shadow-sm transition-shadow hover:shadow-md hover:border-accent/30 sm:p-6 md:flex-row">
             {imgSrc && (
-                <figure className="h-[20vw] w-[20vw] max-h-[320px] max-w-[320px] shrink-0 overflow-hidden rounded-lg md:mr-4">
+                <figure className="h-[80vw] w-[80vw] max-h-[280px] max-w-[280px]
+                                   sm:h-[80vw] sm:w-[80vw] sm:max-h-[280px] sm:max-w-[280px]
+                                   md:h-[20vw] md:w-[20vw] md:max-h-[320px] md:max-w-[320px]
+                                   lg:h-[20vw] lg:w-[20vw] lg:max-h-[320px] lg:max-w-[320px]
+                                   xl:h-[20vw] xl:w-[20vw] xl:max-h-[320px] xl:max-w-[320px]
+                                   shrink-0 overflow-hidden rounded-lg md:mr-4">
                     <Image
                         src={imgSrc}
                         alt={
@@ -133,7 +138,7 @@ export function DiscographyEntry({
                 </figure>
             )}
             <section className="min-w-0 flex-1">
-                <h2 className="mb-2 font-display text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-semibold tracking-tight">
+                <h2 className="mb-2 font-display text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl font-bold tracking-tight">
                     <PostTitleLink post={post} inline={fullContent}>
                         {post.frontMatter.title}
                     </PostTitleLink>

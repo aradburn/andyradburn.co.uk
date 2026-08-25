@@ -3,8 +3,8 @@
     .post h1 {
         color: var(--color-text);
         text-align: center;
-        font-size: var(--text-4xl);
-        line-height: var(--text-4xl--line-height);
+        font-size: var(--text-3xl);
+        line-height: var(--text-3xl--line-height);
         margin-top: 3rem;
         margin-bottom: 1rem;
     }
@@ -12,47 +12,47 @@
     .post h2 {
         color: var(--color-text);
         text-align: center;
-        font-size: var(--text-2xl);
-        line-height: var(--text-2xl--line-height);
+        font-size: var(--text-3xl);
+        line-height: var(--text-3xl--line-height);
         margin-top: 1rem;
         margin-bottom: 1rem;
     }
 
     .post h3 {
         color: var(--color-text);
-        font-size: var(--text-5xl);
-        line-height: var(--text-5xl--line-height);
+        font-size: var(--text-2xl);
+        line-height: var(--text-2xl--line-height);
         margin-top: 2rem;
         margin-bottom: 0.8rem;
     }
 
     .post h4 {
-        color: yellow;
-        font-size: var(--text-3xl);
-        line-height: var(--text-3xl--line-height);
+        color: #ffde40;
+        font-size: var(--text-2xl);
+        line-height: var(--text-2xl--line-height);
         margin-top: 0.66rem;
         margin-bottom: 0.66rem;
     }
 
     .post h5 {
         color: var(--color-text);
-        font-size: var(--text-3xl);
-        line-height: var(--text-3xl--line-height);
+        font-size: var(--text-xl);
+        line-height: var(--text-xl--line-height);
         margin-top: 0.66rem;
         margin-bottom: 0.66rem;
     }
 
     .post p {
         color: var(--color-text);
-        font-size: var(--text-2xl);
-        line-height: var(--text-2xl--line-height);
+        font-size: var(--text-lg);
+        line-height: var(--text-lg--line-height);
         display: block;
         margin-top: 0.66rem;
         margin-bottom: 0.66rem;
     }
 
     .post a {
-        color: yellow;
+        color: #ffde40;
         font-size: var(--text-2xl);
         line-height: var(--text-2xl--line-height);
         display: block;
@@ -76,35 +76,42 @@
     .gigs h1 {
         color: var(--color-text);
         text-align: start;
-        font-size: var(--text-4xl);
-        line-height: var(--text-4xl--line-height);
+        font-size: var(--text-3xl);
+        line-height: var(--text-3xl--line-height);
     }
 
     .gigs h2 {
-        color: var(--color-accent);
+        color: var(--color-text);
         text-align: start;
         font-size: var(--text-2xl);
-        line-height: var(--text-2xl--line-height);
+        line-height: var(--text-3xl--line-height);
         margin-top: 3rem;
     }
 
     .gigs h3 {
-        color: yellow;
+        color: #ffde40;
         text-align: start;
-        font-size: var(--text-5xl);
-        line-height: var(--text-5xl--line-height);
+        font-size: var(--text-3xl);
+        line-height: var(--text-2xl--line-height);
+    }
+
+    .gigs h4 {
+        color: var(--color-accent);
+        text-align: start;
+        font-size: var(--text-2xl);
+        line-height: var(--text-2xl--line-height);
     }
 
     .gigs p {
         color: var(--color-text-muted);
         text-align: start;
-        font-size: var(--text-3xl);
-        line-height: var(--text-3xl--line-height);
+        font-size: var(--text-xl);
+        line-height: var(--text-xl--line-height);
         display: block;
     }
 
     .gigs a {
-        color: yellow;
+        color: #ffde40;
         text-align: start;
         font-size: var(--text-2xl);
         line-height: var(--text-2xl--line-height);
@@ -134,7 +141,7 @@
     }
 
     .videos h3 {
-        color: yellow;
+        color: #ffde40;
         text-align: center;
         font-size: var(--text-5xl);
         line-height: var(--text-5xl--line-height);
@@ -149,7 +156,7 @@
     }
 
     .videos a {
-        color: yellow;
+        color: #ffde40;
         text-align: center;
         font-size: var(--text-2xl);
         line-height: var(--text-2xl--line-height);

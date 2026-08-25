@@ -1,13 +1,13 @@
 ---
 layout: post
-title: New Album - The Moon Shines Through
+title: The Moon Shines Through
 categories: [ theecrow ]
 image: assets/img/theecrow/the-moon-shines-through-500x500.png
-image_alt: Ecliptal Drift album art
+image_alt: The Moon Shines Through album art
 ---
 
 <p>
-<b><i>The Moon Shines Through</i></b> was improvised and recorded live at Kozmas 2025 on 6th December 2025 at The King Arthur, Glastonbury.
+<b><i>The Moon Shines Through</i></b> by Thee CROW was improvised and recorded live at Kozmas 2025 on 6th December 2025 at The King Arthur, Glastonbury.
 </p>
 <p>
 Credits
