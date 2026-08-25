@@ -160,13 +160,16 @@ describe("getPostsByCategory", () => {
     });
 
     it("excludes discography subcategory when excludeDiscographySub is true", () => {
-        const all = getPostsByCategory("bubbledubble", false);
-        const excluding = getPostsByCategory("bubbledubble", true);
+        const all = getPostsByCategory("discography", false);
+        const excluding = getPostsByCategory("discography", true);
         const discographyPosts = all.filter(
             (p) => p.frontMatter.subcategory === "discography",
         );
         expect(discographyPosts.length).toBeGreaterThan(0);
         expect(excluding.length).toBe(all.length - discographyPosts.length);
+        expect(
+            excluding.every((p) => p.frontMatter.subcategory !== "discography"),
+        ).toBe(true);
     });
 });
 

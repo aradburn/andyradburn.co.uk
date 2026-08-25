@@ -145,10 +145,24 @@ describe("DiscographyEntry", () => {
         expect(screen.getByText("Album content")).toBeInTheDocument();
     });
 
-    it("renders More info link when not full content", () => {
+    it("links the title to the post when not full content", () => {
         render(<DiscographyEntry post={mockPost} />);
+        const link = screen.getByRole("link", { name: "Test Post" });
+        expect(link).toHaveAttribute("href", "/news/test-post/");
+    });
+
+    it("does not link the title when full content is shown", () => {
+        render(
+            <DiscographyEntry
+                post={mockPost}
+                contentHtml="<p>Album content</p>"
+            />,
+        );
         expect(
-            screen.getByRole("link", { name: /More info/ }),
-        ).toBeInTheDocument();
+            screen.queryByRole("link", { name: "Test Post" }),
+        ).not.toBeInTheDocument();
+        expect(screen.getByRole("heading", { level: 2 })).toHaveTextContent(
+            "Test Post",
+        );
     });
 });
