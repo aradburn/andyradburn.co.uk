@@ -18,7 +18,7 @@ export default async function DiscographyPage() {
                     Discography
                 </h1>
                 <h2 className="mx-auto text-center mt-4 text-2xl text-text-muted">
-                    Andy Radburn's
+                    Andy Radburn&apos;s
                 </h2>
                 <h2 className="mx-auto text-center mt-1 text-2xl text-text-muted">
                     Releases and recordings
