@@ -13,7 +13,8 @@ image_alt: As The Crow Flies
 
 ### Thee CROW
 <br/>
-Recorded live at The Hot Box, Chelmsford, on Saturday 29th June 2024.
+Recorded live at The Hot Box, Chelmsford,<br/>
+on Saturday 29th June 2024.
 <br/>
 <br/>
 

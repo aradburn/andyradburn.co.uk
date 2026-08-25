@@ -13,7 +13,8 @@ image_alt: Hands Up... Who's Got Betamax?
 
 ### Thee CROW
 <br/>
-Recorded live at The King Arthur, Glastonbury, on Saturday May 13th 2023.
+Recorded live at The King Arthur, Glastonbury,<br/>
+on Saturday May 13th 2023.
 <br/>
 <br/>
 

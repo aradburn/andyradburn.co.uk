@@ -13,7 +13,8 @@ image_alt: Cosmic Caw
 
 ### Thee CROW
 <br/>
-Recorded live at The King Arthur, Glastonbury, October 2023.
+Recorded live at The King Arthur, Glastonbury,<br/>
+October 2023.
 <br/>
 <br/>
 
