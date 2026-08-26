@@ -37,7 +37,7 @@ export async function SectionGigsContent({
                                 className="gigs min-w-0 sm:min-w-sm md:min-w-2xl lg:min-w-3xl xl:min-w-4xl max-w-full rounded-xl border-2 border-surface-border bg-surface-elevated shadow-sm transition-shadow hover:shadow-md px-4 py-4 sm:px-6 sm:py-6 md:px-16 md:py-6"
                             >
                                 <header className="mt-6 mb-6 border-b border-surface-border pb-2">
-                                    <h1 className="mb-1 text-4xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-display font-bold tracking-tight text-text">
+                                    <h1 className="mb-1 text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-display font-bold tracking-tight text-text">
                                         {gig_section_heading}
                                     </h1>
                                 </header>
