@@ -9,7 +9,7 @@ image_alt: Past Echoes album art
 <p>
 Past Echoes was recorded live at The Milton Barn, Portsmouth, UK on 8th January 2010.
 </p>
-
+<br/>
 <p>
 Andy Radburn - Synths and Programming
 </p>
