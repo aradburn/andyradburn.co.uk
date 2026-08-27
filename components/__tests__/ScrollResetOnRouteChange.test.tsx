@@ -7,9 +7,23 @@ vi.mock("next/navigation", () => ({
     usePathname: () => mockPathname(),
 }));
 
+vi.mock("gsap", () => ({
+    default: {
+        registerPlugin: vi.fn(),
+    },
+}));
+
 vi.mock("gsap/ScrollTrigger", () => ({
     ScrollTrigger: { refresh: vi.fn() },
 }));
+
+const ROUTE_CHANGE_RESET_DELAY_MS = 50;
+
+const flushRouteChangeScrollReset = async (): Promise<void> => {
+    await vi.advanceTimersByTimeAsync(0);
+    await vi.advanceTimersByTimeAsync(0);
+    await vi.advanceTimersByTimeAsync(ROUTE_CHANGE_RESET_DELAY_MS);
+};
 
 describe("ScrollResetOnRouteChange", () => {
     beforeEach(() => {
@@ -48,7 +62,7 @@ describe("ScrollResetOnRouteChange", () => {
         mockPathname.mockReturnValue("/about");
         rerender(<ScrollResetOnRouteChange />);
 
-        await vi.runAllTimersAsync();
+        await flushRouteChangeScrollReset();
         expect(scrollToFn).toHaveBeenCalledWith(0, 0);
     });
 
@@ -78,7 +92,7 @@ describe("ScrollResetOnRouteChange", () => {
         mockPathname.mockReturnValue("/cookies");
         rerender(<ScrollResetOnRouteChange />);
 
-        await vi.advanceTimersByTimeAsync(100);
+        await flushRouteChangeScrollReset();
         expect(scrollToFn).toHaveBeenCalledWith(0, 0);
     });
 
