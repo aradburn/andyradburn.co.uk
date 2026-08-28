@@ -83,6 +83,7 @@ const POSTS_DIRS = [
         category: "bubbledubble",
     },
     { dir: path.join(ROOT, "spacecadets", "_posts"), category: "spacecadets" },
+    { dir: path.join(ROOT, "shankara", "_posts"), category: "shankara" },
     { dir: path.join(ROOT, "theecrow", "_posts"), category: "theecrow" },
     { dir: path.join(ROOT, "radioshow", "_posts"), category: "radioshow" },
     { dir: path.join(ROOT, "discography", "_posts"), category: "discography" },
@@ -100,6 +101,7 @@ const VIDEO_DIRS = [
         dir: path.join(ROOT, "spacecadets", "_videos"),
         category: "spacecadets",
     },
+    { dir: path.join(ROOT, "shankara", "_videos"), category: "shankara" },
     { dir: path.join(ROOT, "theecrow", "_videos"), category: "theecrow" },
     { dir: path.join(ROOT, "radioshow", "_videos"), category: "radioshow" },
 ];
@@ -110,6 +112,7 @@ const GIG_DIRS = [
     { dir: path.join(ROOT, "sonicarcana", "_gigs"), category: "sonicarcana" },
     { dir: path.join(ROOT, "bubbledubble", "_gigs"), category: "bubbledubble" },
     { dir: path.join(ROOT, "spacecadets", "_gigs"), category: "spacecadets" },
+    { dir: path.join(ROOT, "shankara", "_gigs"), category: "shankara" },
     { dir: path.join(ROOT, "theecrow", "_gigs"), category: "theecrow" },
     { dir: path.join(ROOT, "radioshow", "_gigs"), category: "radioshow" },
 ];

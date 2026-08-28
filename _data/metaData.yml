@@ -243,6 +243,42 @@ sections:
             dc.source: https://andyradburn.co.uk/spacecadets/
             dc.language: en_GB
 
+    shankara:
+        title: Shankara
+        description: Shankara Website
+        category: music
+        openGraph:
+            title: Shankara
+            description: "News, gigs and releases from Shankara"
+            locale: en_GB
+            type: website
+            url: https://andyradburn.co.uk/shankara/
+            siteName: Shankara
+            images:
+                -   url: https://andyradburn.co.uk/assets/img/shankara/shankara-logo-1024x560.png
+                    width: 1024
+                    height: 560
+        robots:
+            index: true
+            follow: true
+            nocache: false
+            googleBot:
+                index: true
+                follow: true
+                noimageindex: false
+        twitter:
+            card: summary_large_image
+            title: Shankara
+            description: "News, gigs and releases from Shankara"
+            images:
+                - https://andyradburn.co.uk/assets/img/shankara/shankara-logo-1024x560.png
+        other:
+            dc.title: Shankara
+            dc.description: "News, gigs and releases from Shankara"
+            dc.relation: https://andyradburn.co.uk/shankara/
+            dc.source: https://andyradburn.co.uk/shankara/
+            dc.language: en_GB
+
     theecrow:
         title: Thee CROW
         description: Thee CROW Website

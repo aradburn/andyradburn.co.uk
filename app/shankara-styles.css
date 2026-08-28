@@ -1,0 +1,22 @@
+/* Shankara section: overrides global Tailwind theme (scoped to .section-shankara) */
+.section-shankara {
+    /* Colors – cosmic, spacey palette */
+    --color-surface: #0a0e1a;
+    --color-surface-elevated: #4a0a06;
+    --color-surface-border: #7D5E42;
+    --color-text: #ffaa55;
+    --color-text-muted: #f2dea0;
+    --color-accent: #f8eecf;
+    --color-accent-dim: #8f1c19;
+    --color-accent-warm: #7D5E42;
+    /* Fonts */
+    --font-sans: "Arvo", Georgia, serif;
+    --font-display: "Manrope", system-ui, sans-serif;
+    /* Background image */
+    --background-image-gradient-stage: linear-gradient(
+        180deg,
+        transparent 0%,
+        rgba(20, 26, 46, 0.6) 50%,
+        rgba(20, 26, 46, 0.95) 100%
+    );
+}

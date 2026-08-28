@@ -99,6 +99,26 @@ spacecadets:
         description: Space Cadets Videos
         background-image: assets/img/spacecadets/SpaceCadets-Logo-v9-White-Transparent-1024x560.png
 
+shankara:
+    title:
+    subtitle: Psychedelic Anatolian Grooves
+    description: Shankara – music and releases.
+    about:
+        image: assets/img/shankara/shankara-logo-1024x560.png
+        image_alt: Shankara Logo
+        background-image: assets/img/shankara/shankara-2048x946.jpg
+        # heading: Shankara
+        # subheading: Shankara
+    posts:
+        description: Shankara News
+        background-image: assets/img/shankara/shankara-bw-2048x946.jpg
+    gigs:
+        description: Shankara Gigs
+        background-image: assets/img/shankara/dance-of-the-fire-spirits-background-640x360.jpg
+    videos:
+        description: Shankara Videos
+        background-image: assets/img/shankara/dance-of-the-fire-spirits-background-640x360.jpg
+
 theecrow:
     title:
     subtitle: Dark Psychedelic Sounds

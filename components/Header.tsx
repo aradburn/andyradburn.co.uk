@@ -8,8 +8,8 @@ import type { MenuData, MenuPage, MetaData } from "@/lib/types";
 
 const SECONDARY_ROW_CATEGORIES = new Set([
     "home",
-    "collaborations",
     "discography",
+    "radioshow",
     "about",
 ]);
 
