@@ -12,10 +12,10 @@ export const mockMenuData: MenuData = {
             tooltip: "Dubbal tooltip",
         },
         {
-            title: "Collaborations",
-            url: "/collaborations/",
-            category: "collaborations",
-            tooltip: "Collaborations tooltip",
+            title: "Radio Show",
+            url: "/radioshow/",
+            category: "radioshow",
+            tooltip: "Radio Show tooltip",
         },
         {
             title: "Discography",

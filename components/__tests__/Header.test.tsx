@@ -107,7 +107,7 @@ describe("Header", () => {
         expect(primaryLinks).not.toContain("About");
 
         expect(secondaryLinks).toContain("Home");
-        expect(secondaryLinks).toContain("Collaborations");
+        expect(secondaryLinks).toContain("Radio Show");
         expect(secondaryLinks).toContain("Discography");
         expect(secondaryLinks).toContain("About");
         expect(secondaryLinks).not.toContain("Dubbal");
