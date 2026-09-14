@@ -30,7 +30,7 @@ export default async function DiscographyPage() {
                     Andy Radburn&apos;s
                 </h2>
                 <h2 className="mx-auto text-center mt-1 text-2xl text-text-muted">
-                    Releases and recordings
+                    Releases and Recordings
                 </h2>
             </header>
             <div className="flex flex-col gap-6 bg-gradient-to-b from-black/30 to-black/30">
