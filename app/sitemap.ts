@@ -29,6 +29,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.5,
         },
         {
+            url: "https://andyradburn.co.uk/shankara/",
+            lastModified: new Date(),
+            changeFrequency: "monthly",
+            priority: 0.8,
+        },
+        {
             url: "https://andyradburn.co.uk/spacecadets/",
             lastModified: new Date(),
             changeFrequency: "monthly",
@@ -45,6 +51,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
             lastModified: new Date(),
             changeFrequency: "monthly",
             priority: 0.8,
+        },
+        {
+            url: "https://andyradburn.co.uk/discography/",
+            lastModified: new Date(),
+            changeFrequency: "monthly",
+            priority: 0.5,
+        },
+        {
+            url: "https://andyradburn.co.uk/about/",
+            lastModified: new Date(),
+            changeFrequency: "monthly",
+            priority: 0.3,
         },
     ];
 }
