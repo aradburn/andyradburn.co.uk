@@ -21,7 +21,7 @@ sections:
             description: "News, live dates, and fresh releases from the bands I'm part of - all in one place."
             locale: en_GB
             type: website
-            url: https://andyradburn.co.uk/home
+            url: https://andyradburn.co.uk/home/
             siteName: Andy Radburn
             images:
                 - url: https://andyradburn.co.uk/assets/img/home/AndyKeyboardv3-750x750.png

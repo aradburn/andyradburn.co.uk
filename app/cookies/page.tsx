@@ -1,4 +1,12 @@
 import "../base-styles.css";
+import { buildMetadataForPath } from "@/lib/site";
+
+export const metadata = buildMetadataForPath(
+    "/cookies/",
+    "Cookies",
+    "This website does not use cookies.",
+);
+
 export default function CookiesPage() {
     return (
         <div

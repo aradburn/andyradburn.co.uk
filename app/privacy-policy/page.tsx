@@ -1,4 +1,12 @@
 import "../base-styles.css";
+import { buildMetadataForPath } from "@/lib/site";
+
+export const metadata = buildMetadataForPath(
+    "/privacy-policy/",
+    "Privacy Policy",
+    "Privacy-first, cookieless analytics via a self-hosted OpenPanel instance. This site does not use advertising frameworks or sell your data.",
+);
+
 export default function PrivacyPolicyPage() {
     return (
         <div

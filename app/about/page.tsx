@@ -1,5 +1,12 @@
 import "../base-styles.css";
 import { SocialIcon } from "react-social-icons";
+import { buildMetadataForPath } from "@/lib/site";
+
+export const metadata = buildMetadataForPath(
+    "/about/",
+    "About Andy Radburn",
+    "Andy Radburn is a synthesizer player and composer living in Portsmouth, UK.",
+);
 
 export default function AboutPage() {
     return (

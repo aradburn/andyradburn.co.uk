@@ -1,5 +1,8 @@
-import { redirect } from "next/navigation";
+import { permanentRedirect } from "next/navigation";
+import { HOME_PATH, rootRedirectMetadata } from "@/lib/site";
+
+export const metadata = rootRedirectMetadata;
 
 export default function RootPage() {
-    redirect("/home");
+    permanentRedirect(HOME_PATH);
 }

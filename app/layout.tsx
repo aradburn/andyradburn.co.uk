@@ -8,6 +8,7 @@ import { Footer } from "@/components/Footer";
 import { Layout } from "@/components/Layout";
 import { ScrollResetOnRouteChange } from "@/components/ScrollResetOnRouteChange";
 import Analytics from "@/components/Analytics";
+import { HOME_CANONICAL_URL, SITE_ORIGIN } from "@/lib/site";
 
 const arvo = Arvo({
     weight: ["400", "700"],
@@ -40,7 +41,7 @@ export async function generateMetadata(): Promise<Metadata> {
             "News, live dates, and fresh releases from the bands I'm part of - all in one place.",
         locale: "en_GB",
         type: "website",
-        url: "https://andyradburn.co.uk/home",
+        url: HOME_CANONICAL_URL,
         siteName: "Andy Radburn",
         images: [
             {
@@ -106,6 +107,7 @@ export async function generateMetadata(): Promise<Metadata> {
         "dc.language": "en_GB",
     };
     return {
+        metadataBase: new URL(SITE_ORIGIN),
         title,
         description,
         openGraph,

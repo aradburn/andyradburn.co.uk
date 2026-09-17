@@ -4,6 +4,7 @@ import path from "path";
 import matter from "gray-matter";
 import { load as parseYaml } from "js-yaml";
 import type { Metadata } from "next";
+import { canonicalUrlForSection } from "./site";
 import type {
     MenuData,
     MetaData,
@@ -60,6 +61,9 @@ export function buildMetadataForSection(section: string): Metadata {
         twitter,
         other,
         category,
+        alternates: {
+            canonical: canonicalUrlForSection(section),
+        },
     };
 }
 

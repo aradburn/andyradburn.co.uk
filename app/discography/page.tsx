@@ -2,6 +2,13 @@ import { getDiscographyPosts } from "@/lib/data";
 import "../discography-styles.css";
 import { markdownToHtml } from "@/lib/markdown";
 import { DiscographyEntry } from "@/components/PostFeed";
+import { buildMetadataForPath } from "@/lib/site";
+
+export const metadata = buildMetadataForPath(
+    "/discography/",
+    "Discography",
+    "Andy Radburn's recorded releases across Dubbal, Sonic Arcana, and more.",
+);
 
 export default async function DiscographyPage() {
     const posts = getDiscographyPosts();

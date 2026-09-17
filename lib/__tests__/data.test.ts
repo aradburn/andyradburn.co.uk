@@ -1,6 +1,7 @@
 import path from "path";
 import { describe, expect, it } from "vitest";
 import {
+    buildMetadataForSection,
     getMenu,
     getMetaData,
     getSectionsConfig,
@@ -19,6 +20,7 @@ import {
     getPostsFromDirs,
     getContentFromDirs,
 } from "../data";
+import { canonicalUrlForSection } from "../site";
 
 const TEST_DIR = path.join(process.cwd(), "test");
 const TEST_POSTS_DIRS = [
@@ -93,6 +95,29 @@ describe("getSectionsConfig", () => {
             expect(section).toHaveProperty("subtitle");
             expect(section).toHaveProperty("about");
         }
+    });
+});
+
+describe("buildMetadataForSection", () => {
+    it("adds a self-referencing trailing-slash canonical", () => {
+        const metadata = buildMetadataForSection("home");
+        expect(metadata.alternates?.canonical).toBe(
+            canonicalUrlForSection("home"),
+        );
+        expect(metadata.title).toBe("Andy Radburn");
+    });
+
+    it("keeps unique titles while canonicalizing each section to itself", () => {
+        const metadata = buildMetadataForSection("dubbal");
+        expect(metadata.alternates?.canonical).toBe(
+            "https://andyradburn.co.uk/dubbal/",
+        );
+        expect(metadata.title).toBe("Dubbal");
+    });
+
+    it("returns a title-only fallback for unknown sections", () => {
+        const metadata = buildMetadataForSection("nonexistent-section-xyz");
+        expect(metadata).toEqual({ title: "nonexistent-section-xyz" });
     });
 });
 
