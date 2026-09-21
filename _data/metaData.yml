@@ -171,9 +171,9 @@ sections:
             url: https://andyradburn.co.uk/bubbledubble/
             siteName: BubbleDubble
             images:
-                - url: https://andyradburn.co.uk/assets/img/bubbledubble/logo-v8-black-750x750.png
-                  width: 750
-                  height: 750
+                - url: https://andyradburn.co.uk/assets/img/bubbledubble/BubbleDubble-TextOnly-1024x131.png
+                  width: 1024
+                  height: 131
         robots:
             index: true
             follow: true
@@ -291,8 +291,8 @@ sections:
             url: https://andyradburn.co.uk/theecrow/
             siteName: Thee CROW
             images:
-                - url: https://andyradburn.co.uk/assets/img/theecrow/TheeCrowLogo-Black-512x512.png
-                  width: 512
+                - url: https://andyradburn.co.uk/assets/img/theecrow/TheeCrowLogo-Black-1080x512.png
+                  width: 1080
                   height: 512
         robots:
             index: true
@@ -325,9 +325,9 @@ sections:
             url: https://andyradburn.co.uk/radioshow/
             siteName: Sonic Arcana Radio Show
             images:
-                - url: https://andyradburn.co.uk/assets/img/radioshow/SonicArcanaRadioShow-v2-750x750.png
-                  width: 750
-                  height: 750
+                - url: https://andyradburn.co.uk/assets/img/radioshow/SonicArcanaRadioShow-v2-2048x946.png
+                  width: 2048
+                  height: 946
         robots:
             index: true
             follow: true
