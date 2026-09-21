@@ -125,6 +125,28 @@ describe("buildMetadataForSection", () => {
         expect(metadata.title).toBe("Dubbal");
     });
 
+    it("loads discography metadata from metaData.yml", () => {
+        const metadata = buildMetadataForSection("discography");
+        expect(metadata.title).toBe("Andy Radburn Discography");
+        expect(metadata.description).toBe(
+            "Official discography of Andy Radburn",
+        );
+        expect(metadata.alternates?.canonical).toBe(
+            "https://andyradburn.co.uk/discography/",
+        );
+        expect(metadata.category).toBe("music");
+        expect(metadata.openGraph).toMatchObject({
+            title: "Andy Radburn's Discography",
+            description: "Official discography of Andy Radburn",
+            url: "https://andyradburn.co.uk/discography/",
+            siteName: "Andy Radburn Discography",
+        });
+        expect(metadata.twitter).toMatchObject({
+            title: "Andy Radburn Discography",
+            description: "Official discography of Andy Radburn",
+        });
+    });
+
     it("returns a title-only fallback for unknown sections", () => {
         const metadata = buildMetadataForSection("nonexistent-section-xyz");
         expect(metadata).toEqual({ title: "nonexistent-section-xyz" });
