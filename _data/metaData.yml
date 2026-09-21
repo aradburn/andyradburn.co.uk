@@ -120,9 +120,9 @@ sections:
             url: https://andyradburn.co.uk/sonicarcana/
             siteName: Sonic Arcana
             images:
-                - url: https://andyradburn.co.uk/assets/img/sonicarcana/Sonic-Arcana-v2-1080x1080.jpg
-                  width: 1080
-                  height: 1080
+                - url: https://andyradburn.co.uk/assets/img/sonicarcana/SonicArcana.png
+                  width: 1024
+                  height: 284
         robots:
             index: true
             follow: true
@@ -171,9 +171,9 @@ sections:
             url: https://andyradburn.co.uk/bubbledubble/
             siteName: BubbleDubble
             images:
-                - url: https://andyradburn.co.uk/assets/img/bubbledubble/BubbleDubble-TextOnly-1024x131.png
-                  width: 1024
-                  height: 131
+                - url: https://andyradburn.co.uk/assets/img/bubbledubble/BubbleDubble-Logo-6v2-2048x946.png
+                  width: 2048
+                  height: 946
         robots:
             index: true
             follow: true
