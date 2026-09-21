@@ -65,11 +65,11 @@ describe("MenuData structure", () => {
     it("MenuPage requires title, url, category", () => {
         const page: MenuPage = {
             title: "Home",
-            url: "/home",
+            url: "/",
             category: "home",
         };
         expect(page.title).toBe("Home");
-        expect(page.url).toBe("/home");
+        expect(page.url).toBe("/");
         expect(page.category).toBe("home");
     });
 

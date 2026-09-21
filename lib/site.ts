@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 
 export const SITE_ORIGIN = "https://andyradburn.co.uk";
-export const HOME_PATH = "/home/";
-export const HOME_CANONICAL_URL = `${SITE_ORIGIN}${HOME_PATH}`;
+export const HOME_PATH = "/";
+export const HOME_CANONICAL_URL = `${SITE_ORIGIN}/`;
+export const RETIRED_HOME_PATH = "/home/";
+export const HOME_SECTION = "home";
 
 function normalizePath(path: string): string {
     const trimmed = path.trim();
@@ -16,16 +18,20 @@ function normalizePath(path: string): string {
 export function canonicalUrlForPath(path: string): string {
     const normalized = normalizePath(path);
     if (normalized === "/") {
-        return `${SITE_ORIGIN}/`;
+        return HOME_CANONICAL_URL;
     }
     return `${SITE_ORIGIN}${normalized}`;
 }
 
 export function canonicalUrlForSection(section: string): string {
-    return canonicalUrlForPath(section);
+    const slug = section.replace(/^\/+|\/+$/g, "");
+    if (slug === "" || slug === HOME_SECTION) {
+        return HOME_CANONICAL_URL;
+    }
+    return canonicalUrlForPath(slug);
 }
 
-export const rootRedirectMetadata: Metadata = {
+export const retiredHomeRedirectMetadata: Metadata = {
     robots: {
         index: false,
         follow: true,

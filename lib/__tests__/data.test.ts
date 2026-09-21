@@ -52,6 +52,13 @@ describe("getMenu", () => {
         }
     });
 
+    it("points the Home menu item at the site root", () => {
+        const home = getMenu().menu_pages.find(
+            (page) => page.category === "home",
+        );
+        expect(home?.url).toBe("/");
+    });
+
     it("menu_contacts have url", () => {
         const menu = getMenu();
         for (const contact of menu.menu_contacts) {
@@ -101,6 +108,9 @@ describe("getSectionsConfig", () => {
 describe("buildMetadataForSection", () => {
     it("adds a self-referencing trailing-slash canonical", () => {
         const metadata = buildMetadataForSection("home");
+        expect(metadata.alternates?.canonical).toBe(
+            "https://andyradburn.co.uk/",
+        );
         expect(metadata.alternates?.canonical).toBe(
             canonicalUrlForSection("home"),
         );

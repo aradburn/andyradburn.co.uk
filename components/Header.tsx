@@ -5,6 +5,8 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useCallback } from "react";
 import type { MenuData, MenuPage, MetaData } from "@/lib/types";
+import { HOME_PATH } from "@/lib/site";
+import { isNavLinkSelected } from "@/lib/nav";
 
 const SECONDARY_ROW_CATEGORIES = new Set([
     "home",
@@ -17,11 +19,7 @@ function NavLink({ item }: { item: MenuPage }) {
     const pathname = usePathname();
     let href = item.url.startsWith("/") ? item.url : `/${item.url}`;
     href = href.replace(/\.html$/, "/") || "/";
-    const p = pathname ?? "";
-    const isSelected =
-        p === href ||
-        p === href.replace(/\/$/, "") ||
-        (p.startsWith(href) && href !== "/home");
+    const isSelected = isNavLinkSelected(pathname ?? "", href);
     return (
         <li key={item.url}>
             <Link
@@ -76,7 +74,7 @@ export function Header({ menu, meta }: { menu: MenuData; meta: MetaData }) {
             </a>
             <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 md:h-24 sm:px-6">
                 <Link
-                    href="/home"
+                    href={HOME_PATH}
                     className="flex shrink-0 items-center focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface focus-visible:outline-none"
                     aria-label="Home"
                 >

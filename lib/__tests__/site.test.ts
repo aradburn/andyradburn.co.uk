@@ -2,23 +2,25 @@ import { describe, expect, it } from "vitest";
 import {
     HOME_CANONICAL_URL,
     HOME_PATH,
+    RETIRED_HOME_PATH,
     SITE_ORIGIN,
     buildMetadataForPath,
     canonicalUrlForPath,
     canonicalUrlForSection,
-    rootRedirectMetadata,
+    retiredHomeRedirectMetadata,
 } from "../site";
 
 describe("canonical URLs", () => {
-    it("uses the production origin and trailing-slash home path", () => {
+    it("uses the production origin as the homepage", () => {
         expect(SITE_ORIGIN).toBe("https://andyradburn.co.uk");
-        expect(HOME_PATH).toBe("/home/");
-        expect(HOME_CANONICAL_URL).toBe("https://andyradburn.co.uk/home/");
+        expect(HOME_PATH).toBe("/");
+        expect(HOME_CANONICAL_URL).toBe("https://andyradburn.co.uk/");
+        expect(RETIRED_HOME_PATH).toBe("/home/");
     });
 
-    it("builds a self-referencing canonical for a section slug", () => {
+    it("maps the home section to the site root", () => {
         expect(canonicalUrlForSection("home")).toBe(
-            "https://andyradburn.co.uk/home/",
+            "https://andyradburn.co.uk/",
         );
         expect(canonicalUrlForSection("dubbal")).toBe(
             "https://andyradburn.co.uk/dubbal/",
@@ -39,9 +41,9 @@ describe("canonical URLs", () => {
     });
 });
 
-describe("rootRedirectMetadata", () => {
-    it("tells crawlers not to index / and to treat /home/ as canonical", () => {
-        expect(rootRedirectMetadata.robots).toEqual({
+describe("retiredHomeRedirectMetadata", () => {
+    it("tells crawlers not to index /home/ and to treat / as canonical", () => {
+        expect(retiredHomeRedirectMetadata.robots).toEqual({
             index: false,
             follow: true,
             googleBot: {
@@ -49,7 +51,7 @@ describe("rootRedirectMetadata", () => {
                 follow: true,
             },
         });
-        expect(rootRedirectMetadata.alternates).toEqual({
+        expect(retiredHomeRedirectMetadata.alternates).toEqual({
             canonical: HOME_CANONICAL_URL,
         });
     });

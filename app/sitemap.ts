@@ -1,11 +1,12 @@
 import type { MetadataRoute } from "next";
+import { HOME_CANONICAL_URL } from "@/lib/site";
 
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
     return [
         {
-            url: "https://andyradburn.co.uk/home/",
+            url: HOME_CANONICAL_URL,
             lastModified: new Date(),
             changeFrequency: "monthly",
             priority: 0.9,
