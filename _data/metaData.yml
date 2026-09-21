@@ -120,9 +120,9 @@ sections:
             url: https://andyradburn.co.uk/sonicarcana/
             siteName: Sonic Arcana
             images:
-                - url: https://andyradburn.co.uk/assets/img/sonicarcana/SonicArcana.png
+                - url: https://andyradburn.co.uk/assets/img/sonicarcana/SonicArcana-1024x560.png
                   width: 1024
-                  height: 284
+                  height: 560
         robots:
             index: true
             follow: true
