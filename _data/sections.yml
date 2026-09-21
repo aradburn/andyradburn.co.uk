@@ -44,7 +44,7 @@ sonicarcana:
     title:
     subtitle: Electronic Space Ragas and Dubby Eastern Beats
     about:
-        description: Sonic Arcana – electronic space ragas and dubby eastern beats.
+        description: Sonic Arcana – electronic space ragas and dubby cosmic beats.
         image: assets/img/sonicarcana/SonicArcana.png
         image_alt: Sonic Arcana Logo
         background-image: assets/img/sonicarcana/Kepler-452B-Front-Cover-v10-2048x946.jpg
@@ -55,10 +55,10 @@ sonicarcana:
         background-image: assets/img/sonicarcana/HiddenArtifactFrontCover2-2048x946.jpg
     gigs:
         description: Sonic Arcana Gigs
-        background-image: assets/img/sonicarcana/EarthPyramid-Purple-large-2048x946.png
+        background-image: assets/img/sonicarcana/ecliptal-drift-500x500.png
     videos:
         description: Sonic Arcana Videos
-        background-image: assets/img/sonicarcana/EarthPyramid-Purple-large-2048x946.png
+        background-image: assets/img/sonicarcana/ecliptal-drift-500x500.png
 
 bubbledubble:
     title:
