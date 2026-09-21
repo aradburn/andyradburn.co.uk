@@ -37,6 +37,9 @@ sections:
                 noimageindex: false
         icons:
             icon:
+                - url: /assets/favicon.ico
+                  sizes: 48x48
+                  type: image/png
                 - url: /assets/img/dubbal/favicon-32x32.png
                   sizes: 32x32
                   type: image/png
@@ -85,6 +88,9 @@ sections:
                 noimageindex: false
         icons:
             icon:
+                - url: /assets/favicon.ico
+                  sizes: 48x48
+                  type: image/png
                 - url: /assets/img/dubbal/favicon-32x32.png
                   sizes: 32x32
                   type: image/png
@@ -230,6 +236,15 @@ sections:
                 index: true
                 follow: true
                 noimageindex: false
+        icons:
+            icon:
+                -   url: /assets/img/spacecadets/SpaceCadets-Logo-v9-Black-48x48.png
+                    sizes: 48x48
+                    type: image/png
+            apple:
+                -   url: /assets/img/spacecadets/SpaceCadets-Logo-v9-Black-180x180.png
+                    sizes: 180x180
+                    type: image/png
         twitter:
             card: summary_large_image
             title: Kev Ellis and The Space Cadets
@@ -266,6 +281,21 @@ sections:
                 index: true
                 follow: true
                 noimageindex: false
+        icons:
+            icon:
+                -   url: /assets/favicon.ico
+                    sizes: 48x48
+                    type: image/png
+                -   url: /assets/img/dubbal/favicon-32x32.png
+                    sizes: 32x32
+                    type: image/png
+                -   url: /assets/img/dubbal/favicon-16x16.png
+                    sizes: 16x16
+                    type: image/png
+            apple:
+                -   url: /assets/img/dubbal/apple-touch-icon.png
+                    sizes: 180x180
+                    type: image/png
         twitter:
             card: summary_large_image
             title: Shankara
@@ -302,6 +332,15 @@ sections:
                 index: true
                 follow: true
                 noimageindex: false
+        icons:
+            icon:
+                -   url: /assets/img/theecrow/TheeCrowLogo-Black-48x48-Transparent.png
+                    sizes: 48x48
+                    type: image/png
+            apple:
+                -   url: /assets/img/theecrow/TheeCrowLogo-Black-180x180-Transparent.png
+                    sizes: 180x180
+                    type: image/png
         twitter:
             card: summary_large_image
             title: Thee CROW
@@ -336,6 +375,21 @@ sections:
                 index: true
                 follow: true
                 noimageindex: false
+        icons:
+            icon:
+                -   url: /assets/favicon.ico
+                    sizes: 48x48
+                    type: image/png
+                -   url: /assets/img/dubbal/favicon-32x32.png
+                    sizes: 32x32
+                    type: image/png
+                -   url: /assets/img/dubbal/favicon-16x16.png
+                    sizes: 16x16
+                    type: image/png
+            apple:
+                -   url: /assets/img/dubbal/apple-touch-icon.png
+                    sizes: 180x180
+                    type: image/png
         twitter:
             card: summary_large_image
             title: Sonic Arcana Radio Show
@@ -345,4 +399,55 @@ sections:
             dc.description: "News, playlists and broadcasts from the Sonic Arcana Radio Show"
             dc.relation: https://andyradburn.co.uk/radioshow/
             dc.source: https://andyradburn.co.uk/radioshow/
+            dc.language: en_GB
+
+    discography:
+        title: Andy Radburn Discography
+        description: "Official discography of Andy Radburn"
+        category: music
+        openGraph:
+            title: "Andy Radburn's Discography"
+            description: "Official discography of Andy Radburn"
+            locale: en_GB
+            type: website
+            url: https://andyradburn.co.uk/discography/
+            siteName: Andy Radburn Discography
+            images:
+                -   url: https://andyradburn.co.uk/assets/img/home/AndyKeyboardv3-750x750.png
+                    width: 750
+                    height: 750
+        robots:
+            index: true
+            follow: true
+            nocache: false
+            googleBot:
+                index: true
+                follow: true
+                noimageindex: false
+        icons:
+            icon:
+                -   url: /assets/favicon.ico
+                    sizes: 48x48
+                    type: image/png
+                -   url: /assets/img/dubbal/favicon-32x32.png
+                    sizes: 32x32
+                    type: image/png
+                -   url: /assets/img/dubbal/favicon-16x16.png
+                    sizes: 16x16
+                    type: image/png
+            apple:
+                -   url: /assets/img/dubbal/apple-touch-icon.png
+                    sizes: 180x180
+                    type: image/png
+        twitter:
+            card: summary_large_image
+            title: Andy Radburn Discography
+            description: "Official discography of Andy Radburn"
+            images:
+                - https://andyradburn.co.uk/assets/img/home/AndyKeyboardv3-750x750.png
+        other:
+            dc.title: Andy Radburn
+            dc.description: "Official discography of Andy Radburn"
+            dc.relation: https://andyradburn.co.uk/discography/
+            dc.source: https://andyradburn.co.uk/discography/
             dc.language: en_GB
